@@ -1,0 +1,1 @@
+<a href="{{ url('/')}}"><img src="{{ asset('img/logo/logo.png')}}" alt="SolutionsTag logo" title="Solutions Tag - Better Tommorow" role="logo" /></a>

@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Morganite';
+    src: url('Morganite-Book.eot');
+    src: url('Morganite-Book.eot?#iefix') format('embedded-opentype'),
+        url('Morganite-Book.woff2') format('woff2'),
+        url('Morganite-Book.woff') format('woff'),
+        url('Morganite-Book.ttf') format('truetype'),
+        url('Morganite-Book.svg#Morganite-Book') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Morganite';
+    src: url('Morganite-BookItalic.eot');
+    src: url('Morganite-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('Morganite-BookItalic.woff2') format('woff2'),
+        url('Morganite-BookItalic.woff') format('woff'),
+        url('Morganite-BookItalic.ttf') format('truetype'),
+        url('Morganite-BookItalic.svg#Morganite-BookItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Morganite';
+    src: url('Morganite-Bold.eot');
+    src: url('Morganite-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Morganite-Bold.woff2') format('woff2'),
+        url('Morganite-Bold.woff') format('woff'),
+        url('Morganite-Bold.ttf') format('truetype'),
+        url('Morganite-Bold.svg#Morganite-Bold') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Morganite';
+    src: url('Morganite-Light.eot');
+    src: url('Morganite-Light.eot?#iefix') format('embedded-opentype'),
+        url('Morganite-Light.woff2') format('woff2'),
+        url('Morganite-Light.woff') format('woff'),
+        url('Morganite-Light.ttf') format('truetype'),
+        url('Morganite-Light.svg#Morganite-Light') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Morganite';
+    src: url('Morganite-SemiBold.eot');
+    src: url('Morganite-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Morganite-SemiBold.woff2') format('woff2'),
+        url('Morganite-SemiBold.woff') format('woff'),
+        url('Morganite-SemiBold.ttf') format('truetype'),
+        url('Morganite-SemiBold.svg#Morganite-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Morganite';
+    src: url('Morganite-Medium.eot');
+    src: url('Morganite-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Morganite-Medium.woff2') format('woff2'),
+        url('Morganite-Medium.woff') format('woff'),
+        url('Morganite-Medium.ttf') format('truetype'),
+        url('Morganite-Medium.svg#Morganite-Medium') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Morganite';
+    src: url('Morganite-Thin.eot');
+    src: url('Morganite-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Morganite-Thin.woff2') format('woff2'),
+        url('Morganite-Thin.woff') format('woff'),
+        url('Morganite-Thin.ttf') format('truetype'),
+        url('Morganite-Thin.svg#Morganite-Thin') format('svg');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
