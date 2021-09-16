@@ -60,6 +60,7 @@ class HomeController extends Controller
         ]);
     }
     public function createOrUpdate(Request $request){
+        
         $data = $this->home->createOrUpdate($request);
         return redirect()->to('/edit-home');
     }

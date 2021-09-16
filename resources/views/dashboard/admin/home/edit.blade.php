@@ -87,6 +87,8 @@
 										<div class="upload-button"></div>
 										<input class="file-upload" type="file" name="image1" accept="image/*" />
 									</div>
+									<!-- <input class="file-upload" type="file" name="image1" accept="image/*" /> -->
+
 								</div>
 							</div>
 
@@ -118,9 +120,9 @@
 								<label> Slide Image  </label>
 								<div class="submit-field">
 									<div class="avatar-wrapper" data-tippy-placement="bottom">
-										<img class="profile-pic" src="" alt="" />
-										<div class="upload-button"></div>
-										<input class="file-upload" type="file" name="image2" accept="image/*" />
+										<img class="profile-pic1" src="" alt="" />
+										<div class="upload-button1"></div>
+										<input class="file-upload1" type="file" name="image2" accept="image/*" />
 									</div>
 								</div>
 							</div>
@@ -153,13 +155,12 @@
 								<label> Slide Image </label>
 								<div class="submit-field">
 									<div class="avatar-wrapper" data-tippy-placement="bottom">
-										<img class="profile-pic" src="" alt="" />
-										<div class="upload-button"></div>
-										<input class="file-upload" type="file" name="image3" accept="image/*" />
+										<img class="profile-pic2" src="" alt="" />
+										<div class="upload-button2"></div>
+										<input class="file-upload2" type="file" name="image3" accept="image/*" />
 									</div>
 								</div>
 							</div>
-
 						</div>
 					</div>
 				</div>
@@ -194,9 +195,9 @@
 								<label> Segment Image </label>
 								<div class="submit-field">
 									<div class="avatar-wrapper" data-tippy-placement="bottom">
-										<img class="profile-pic" src="" alt="" />
-										<div class="upload-button"></div>
-										<input class="file-upload" type="file" name="intro_image" accept="image/*" />
+										<img class="profile-pic3" src="" alt="" />
+										<div class="upload-button3"></div>
+										<input class="file-upload3" type="file" name="intro_image" accept="image/*" />
 									</div>
 								</div>
 							</div>
@@ -242,9 +243,9 @@
 								<label> Segment Image </label>
 								<div class="submit-field">
 									<div class="avatar-wrapper" data-tippy-placement="bottom">
-										<img class="profile-pic" src="" alt="" />
-										<div class="upload-button"></div>
-										<input class="file-upload" type="file" name="sec3_image" accept="image/*" />
+										<img class="profile-pic4" src="" alt="" />
+										<div class="upload-button4"></div>
+										<input class="file-upload4" type="file" name="sec3_image" accept="image/*" />
 									</div>
 								</div>
 							</div>
@@ -284,9 +285,9 @@
 								<label> Segment Image </label>
 								<div class="submit-field">
 									<div class="avatar-wrapper" data-tippy-placement="bottom">
-										<img class="profile-pic" src="" alt="" />
-										<div class="upload-button"></div>
-										<input class="file-upload" type="file" name="sec4_content" accept="image/*" />
+										<img class="profile-pic5" src="" alt="" />
+										<div class="upload-button5"></div>
+										<input class="file-upload5" type="file" name="sec4_content" accept="image/*" />
 									</div>
 								</div>
 							</div>

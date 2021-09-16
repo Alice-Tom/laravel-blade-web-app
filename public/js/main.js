@@ -405,27 +405,21 @@ $(document).ready(function() {
 			})
 			.addClass('tooltip-visible');
 		});
+
+
+
+
+
 	
 		// Avatar Switcher
 	function avatarSwitcher() {
-	    var readURL = function(input) {
+	  
+		var readURL = function(input,className) {
 	        if (input.files && input.files[0]) {
 	            var reader = new FileReader();
 
 	            reader.onload = function (e) {
-	                $('.profile-pic').attr('src', e.target.result);
-	            };
-	    
-	            reader.readAsDataURL(input.files[0]);
-	        }
-	    };
-
-		var readURL1 = function(input) {
-	        if (input.files && input.files[0]) {
-	            var reader = new FileReader();
-
-	            reader.onload = function (e) {
-	                $('.profile-pic1').attr('src', e.target.result);
+	                $(className).attr('src', e.target.result);
 	            };
 	    
 	            reader.readAsDataURL(input.files[0]);
@@ -433,21 +427,54 @@ $(document).ready(function() {
 	    };
 	   
 	    $(".file-upload").on('change', function(){
-	        readURL(this);
+			readURL(this,".profile-pic");
 	    });
-	    
 	    $(".upload-button").on('click', function() {
 	       $(".file-upload").click();
 	    });
 		
+
 		$(".file-upload1").on('change', function(){
-	        readURL1(this);
+	        readURL(this,".profile-pic1");
 	    });
-	    
 	    $(".upload-button1").on('click', function() {
 	       $(".file-upload1").click();
 	    });
-	} avatarSwitcher();
+
+
+		$(".file-upload2").on('change', function(){
+	        readURL(this,".profile-pic2");
+	    });
+	    $(".upload-button2").on('click', function() {
+	       $(".file-upload1").click();
+	    });
+
+
+		$(".file-upload3").on('change', function(){
+	        readURL(this,".profile-pic3");
+	    });
+	    $(".upload-button3").on('click', function() {
+	       $(".file-upload1").click();
+	    });
+
+		
+		$(".file-upload4").on('change', function(){
+	        readURL(this,".profile-pic4");
+	    });
+	    $(".upload-button4").on('click', function() {
+	       $(".file-upload1").click();
+	    });
+
+
+		$(".file-upload5").on('change', function(){
+	        readURL(this,".profile-pic5");
+	    });
+	    $(".upload-button5").on('click', function() {
+	       $(".file-upload1").click();
+	    });
+	}
+	
+	avatarSwitcher();
 	
 	
 		/*----------------------------------------------------*/
