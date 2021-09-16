@@ -720,7 +720,7 @@ a:hover {
     font-size: 140px;
     opacity: .1;
     right: -50px;
-    overflow: ;
+    /* overflow: ; */
 }
 
 /*.cols2 {
@@ -883,6 +883,8 @@ a:hover {
     height: 30px;
     width: 30px;
 }
+
+
 
 body #magicMouseCursor {
     border: 1px solid var(--primary-stag) !important;

@@ -25,13 +25,17 @@ class Home
     }
 
     public function createOrUpdate($request,$id=null){
+
+   
+
         $arrayRequest = $request->all();
-        if(!empty($request['image1'])){
-            $arrayRequest =  $this->image->upload($arrayRequest ,$request,'uploads/home/','image1');
-        }
         if(!empty($request['image2'])){
             $arrayRequest =  $this->image->upload($arrayRequest ,$request,'uploads/home/','image2');
         }
+        if(!empty($request['image1'])){
+            $arrayRequest =  $this->image->upload($arrayRequest ,$request,'uploads/home/','image1');
+        }
+       
         if(!empty($request['image3'])){
             $arrayRequest =  $this->image->upload($arrayRequest ,$request,'uploads/home/','image3');
         }
@@ -45,10 +49,12 @@ class Home
             $arrayRequest =  $this->image->upload($arrayRequest ,$request,'uploads/home/','sec4_image');
         }
         if(empty($request['home_id'])){
+           
           return  $this->homeInterface->create($arrayRequest);
         }else{
             $home = $this->homeInterface->findById($request->home_id);
             if($home){
+                
                 return $this->homeInterface->update($home->id,$arrayRequest);
             }else{
                 return false;
