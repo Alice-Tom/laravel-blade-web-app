@@ -94,7 +94,7 @@
 								<li><i class="icon-material-outline-location-on"></i>{{ $sim->location }} </li>
 								<li><i class="icon-material-outline-business-center"></i> {{ $sim->type }}</li>
 								<li><i class="icon-material-outline-account-balance-wallet"></i> {{ $sim->min_salary? '$'.$sim->min_salary.'k' : '' }} - {{ $sim->max_salary? '$'.$sim->max_salary.'k' : '' }}</li>
-								<li><i class="icon-material-outline-access-time"></i>{{ $sim->created_at?->diffForHumans() }}</li>
+								<li><i class="icon-material-outline-access-time"></i>{{ $sim->created_at->diffForHumans() }}</li>
 							</ul>
 						</div>
 					</a>
@@ -164,7 +164,7 @@
 								<li>
 									<i class="icon-material-outline-access-time"></i>
 									<span>Date Posted</span>
-									<h5>{{ $job->created_at?->diffForHumans() }}</h5>
+									<h5>{{ $job->created_at->diffForHumans() }}</h5>
 								</li>
 							</ul>
 						</div>

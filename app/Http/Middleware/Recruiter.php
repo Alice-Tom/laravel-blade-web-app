@@ -16,6 +16,7 @@ class Recruiter
      */
     public function handle(Request $request, Closure $next)
     {
+       
         if(auth()->user()->account_type == 'recruiter'){
             return $next($request);
         }

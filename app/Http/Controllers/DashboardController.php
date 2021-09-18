@@ -111,6 +111,9 @@ class DashboardController extends Controller
         $similar = $this->job->all()
         ->where('category',$job->category)
         ->where('id','!=',$job->id);
+
+        
+
         return view('pages.view-job',[
             'job'=> $job,
             'similar'=>$similar
@@ -119,6 +122,7 @@ class DashboardController extends Controller
 
     public function showJob($id){
         $job = $this->job->findById($id);
+       
         return view('dashboard.recruiter.edit-job',[
             'job'=>$job
         ]);
@@ -178,6 +182,7 @@ class DashboardController extends Controller
         $job->active = !$job->active;
 
         $job->save();
+  
         return redirect()->back();
     }
 

@@ -34,8 +34,8 @@
 	</li>
 	<li><a href="{{ url('jobs')}}"> <i class="icon-material-outline-business-center"></i> Training </a>
 		<ul>
-			<li><a href="{{ url('jobs')}}"> Calendar </a></li>
-			<li><a href="{{ url('jobs')}}"> Add New </a></li>
+			<li><a href="{{ url('all-training')}}"> Calendar </a></li>
+			<li><a href="{{ url('new-training')}}"> Add New </a></li>
 		</ul>
 	</li>
 	<li><a href="{{ url('jobs')}}"> <i class="icon-material-outline-business-center"></i>Resources </a>

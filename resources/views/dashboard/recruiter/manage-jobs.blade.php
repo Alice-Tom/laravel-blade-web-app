@@ -80,7 +80,15 @@
 										<div class="job-listing-details">
 											<!-- Details -->
 											<div class="job-listing-description">
-												<h3 class="job-listing-title"><a href="#">{{ $job->title }}</a> <span class="dashboard-status-button green">Pending Approval</span></h3>
+												<h3 class="job-listing-title"><a href="#">{{ $job->title }}</a> 
+												<span class="dashboard-status-button green"> 
+													@if ($job->active)
+														Approved
+													@else
+														Pending Approval
+													@endif
+													
+												</span></h3>
 
 												<!-- Job Listing Footer -->
 												<div class="job-listing-footer">
@@ -96,7 +104,7 @@
 									<!-- Buttons -->
 									<div class="buttons-to-right always-visible">
 										<a href="{{ url('manage-applicants/'.$job->id)}}" class="button ripple-effect"><i class="icon-material-outline-supervisor-account"></i> Manage Applicants <span class="button-info">{{ $job->applicants->count() }}</span></a>
-										<a href="{{ url('edit-job/'.$job->id) }}" class="button gray ripple-effect ico" title="Edit" data-tippy-placement="top"><i class="icon-feather-edit"></i></a>
+										<a href="{{ url('edit-job-recruiter/'.$job->id) }}" class="button gray ripple-effect ico" title="Edit" data-tippy-placement="top"><i class="icon-feather-edit"></i></a>
 										<a href="{{ url('delete-job/'.$job->id) }}" class="button gray ripple-effect ico" title="Remove" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></a>
 									</div>
 								</li>

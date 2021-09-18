@@ -20,7 +20,8 @@ class Job extends Model
         'description',
         'attachment',
         'user_id',
-        'dead_line'
+        'dead_line',
+        'active'
     ];
 
     public function user(){

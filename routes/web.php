@@ -9,7 +9,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
-
+use App\Http\Controllers\TrainingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -117,6 +117,7 @@ Route::middleware([Authenticate::class])->group(function(){
     //notification 
     Route::get('mark-as-read/?{id}',[DashboardController::class,'markasRead']);
     
+ 
     Route::middleware([Expert::class])->group(function(){
         Route::get('/cv-profile', [DashboardController::class, 'profile'])->name('profile');
         Route::post('/update-profile', [DashboardController::class, 'updateProfile'])->name('update-profile');
@@ -131,7 +132,7 @@ Route::middleware([Authenticate::class])->group(function(){
 
     Route::middleware([Recruiter::class])->group(function(){
         //Route::post('/add-job', [DashboardController::class,'addJob'])->name('add-job');
-        Route::get('/edit-job/{id}',[DashboardController::class,'showJob']);
+        Route::get('/edit-job-recruiter/{id}',[DashboardController::class,'showJob']);
         Route::get('/delete-job/{id}',[DashboardController::class,'deleteJobById']);
         Route::get('manage-jobs', [DashboardController::class,'manageJob']);
         Route::get('manage-applicants/{jobId}',[DashboardController::class,'manageApplicants']);
@@ -175,7 +176,15 @@ Route::middleware([Authenticate::class])->group(function(){
 
         //add features expert
         Route::any('update-feature/{id}',[DashboardController::class,'changeFeature']);
-        
+
+
+
+
+        Route::post('new-training',[TrainingController::class,'store']);
+        Route::get('new-training',[TrainingController::class,'create']);
+        Route::get('all-training',[TrainingController::class,'index']);
+
+         
 
     });
 
