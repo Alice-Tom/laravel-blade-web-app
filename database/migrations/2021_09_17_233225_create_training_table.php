@@ -17,9 +17,13 @@ class CreateTrainingTable extends Migration
             $table->id();
             $table->string("title");
             $table->text('description');
-            $table->string('cover');
-            $table->timestamp('start');
-            $table->timestamp('end');
+            $table->string('cover')->default(0);;
+            $table->string('venue');
+            $table->string("trainer");
+            $table->date("start_day");
+            $table->time("start_time");
+            $table->date("end_day");
+            $table->time("end_time");
             $table->timestamps();
         });
     }

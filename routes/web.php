@@ -178,12 +178,15 @@ Route::middleware([Authenticate::class])->group(function(){
         Route::any('update-feature/{id}',[DashboardController::class,'changeFeature']);
 
 
+       
 
-
-        Route::post('new-training',[TrainingController::class,'store']);
         Route::get('new-training',[TrainingController::class,'create']);
+        Route::post('new-training',[TrainingController::class,'store']);
         Route::get('all-training',[TrainingController::class,'index']);
 
+        Route::get('edit-training/{id}',[TrainingController::class,'edit']);
+        Route::post('update-training/{id}',[TrainingController::class,'update']);
+        Route::get('delete-training/{id}',[TrainingController::class,'destroy']);
          
 
     });

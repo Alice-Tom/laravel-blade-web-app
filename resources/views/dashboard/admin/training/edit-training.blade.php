@@ -50,29 +50,27 @@
 				<h4> New Training Event </h4>
 			</div>
 
-			<form  method="post"  action="{{ url('new-training') }}" enctype="multipart/form-data">
+			<form  method="post"  action="{{ url('update-training/' . $training->id) }}" enctype="multipart/form-data">
 				@csrf
 				<div class="row m-0">
 					<label> Event Name</label>
-					<input class="with-border" name="title" required>
+					<input class="with-border" name="title" value="{{$training->title}}" required>
 				</div>
 				<!-- Segment -->
 				<div class="dashboard-box mt-3 mb-3">
 					<!-- Headline -->
 					
-
 					<div class="content with-padding padding-bottom-10">
-						
-
+					
 						<div class="row mt-2"> 
 							<div class="col-xl-12">
 								<label> Event Description </label>
-								<textarea rows="5" name="description"></textarea>
+								<textarea rows="5" name="description"> {{$training->description}} </textarea>
 							</div>
 						</div>
 						<div class="row m-0">
 							<label> Venue </label>
-							<input class="with-border" name="venue">
+							<input class="with-border" name="venue" value="{{$training->venue}}">
 						</div>
 
 						<div class="row mt-2">
@@ -90,14 +88,14 @@
 						</div>
 						<div class="row m-0">
 							<label> Trainer </label>
-							<input class="with-border" name="trainer">
+							<input class="with-border" name="trainer" value="{{$training->trainer}}">
 						</div>
 						<div class="row mt-2">
 							<div class="col-xl-6">
 								<label> Start Day </label>
 								<div class="keywords-container">
 									<div class="keyword-input-container">
-										<input type="date" class="form-control"  name="start_day" required>
+										<input type="date" class="form-control"  name="start_day" value="{{$training->start_day}}" required>
 									</div>
 								</div>
 							</div>
@@ -105,7 +103,7 @@
 								<label> Start Time </label>
 								<div class="keywords-container">
 									<div class="keyword-input-container">
-										<input type="time" class="form-control" name="start_time" required>
+										<input type="time" class="form-control" name="start_time" value="{{$training->start_time}}" required>
 									</div>
 								</div>
 							</div>
@@ -116,7 +114,7 @@
 								<label> End Day </label>
 								<div class="keywords-container">
 									<div class="keyword-input-container">
-										<input type="date" class="form-control"  name="end_day" required>
+										<input type="date" class="form-control"  name="end_day" value="{{$training->end_day}}" required>
 									</div>
 								</div>
 							</div>
@@ -124,7 +122,7 @@
 								<label> End Time </label>
 								<div class="keywords-container">
 									<div class="keyword-input-container">
-										<input type="time" class="form-control" name="end_time" required>
+										<input type="time" class="form-control" name="end_time" value="{{$training->end_time}}" required>
 									</div>
 								</div>
 							</div>
@@ -137,8 +135,15 @@
 				
 				<div class="row m-0 mt-5 mb-5">
 					<button type="submit" class="button btn-outline-primary ripple-effect" title="submit"> SUBMIT </button>
+					
 				</div>
 			</form>
+			<div class="col-lg-2">
+					<a href="{{ url('delete-training/'. $training->id)}}">
+						<button class="btn btn-st btn-danger light"> Delete </button>
+					</a>
+					
+				</div>
 
 		</div>
 	</div>

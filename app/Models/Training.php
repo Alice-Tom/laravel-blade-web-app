@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class cr extends Model
+class Training extends Model
 {
     use HasFactory;
     protected $table = 'training';
@@ -13,10 +13,13 @@ class cr extends Model
     protected $fillable = [
         'title',
         'description',
+        'venue',
         'cover',
-        'start',
-        'end',
+        'start_day',
+        'start_time',
+        'end_day',
+        'end_time',
         'trainer',
-
+        
     ];
 }

@@ -2,11 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\cr;
-use Illuminate\Http\Request;
+
+use App\Http\Requests\TrainingRequest;
+use App\Services\Training;
+
 
 class TrainingController extends Controller
 {
+
+
+    private $training;
+
+    public function __construct(Training $training){
+    $this->training = $training;
+    }
+
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +28,10 @@ class TrainingController extends Controller
     public function index()
     {
         //
-        return view('dashboard.admin.training.add');
+        $trainings=$this->training->all();
+        return view('dashboard.admin.training.all-trainings',[
+            'trainings'=>$trainings
+        ]);
 
     }
 
@@ -30,7 +46,6 @@ class TrainingController extends Controller
     {
         //
         return view('dashboard.admin.training.add');
-
         
     }
 
@@ -40,9 +55,13 @@ class TrainingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TrainingRequest $request)
     {
         //
+        $this->training->create($request);
+
+        return $this->index();
+       
     }
 
     /**
@@ -51,7 +70,7 @@ class TrainingController extends Controller
      * @param  \App\Models\cr  $cr
      * @return \Illuminate\Http\Response
      */
-    public function show(cr $cr)
+    public function show()
     {
         //
     }
@@ -62,9 +81,14 @@ class TrainingController extends Controller
      * @param  \App\Models\cr  $cr
      * @return \Illuminate\Http\Response
      */
-    public function edit(cr $cr)
+    public function edit($id)
     {
         //
+        $training=$this->training->findById($id);
+        
+         return view('dashboard.admin.training.edit-training',[
+             'training'=>$training
+         ]);
     }
 
     /**
@@ -74,9 +98,13 @@ class TrainingController extends Controller
      * @param  \App\Models\cr  $cr
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, cr $cr)
+    public function update($id, TrainingRequest $request)
     {
         //
+        $isUpdated=$this->training->update($id,$request);
+
+        return redirect('/all-training');
+        
     }
 
     /**
@@ -85,8 +113,13 @@ class TrainingController extends Controller
      * @param  \App\Models\cr  $cr
      * @return \Illuminate\Http\Response
      */
-    public function destroy(cr $cr)
+    public function destroy($id)
     {
         //
+        
+        $isDeleted=$this->training->deleteById($id);
+       
+        return redirect('/all-training');
+
     }
 }
