@@ -2,7 +2,7 @@
 @section('styles_login_register')
 <link href="{{ asset('css/icons.css') }}" rel="stylesheet">
 <link href="{{ asset('css/orange.css') }}" rel="stylesheet">
-@stop
+@stop	
 
 @section('content')
 

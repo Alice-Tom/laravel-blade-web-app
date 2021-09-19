@@ -97,7 +97,7 @@
 									<li><a href="#"> NEWS</a></li>	
 									<li><a href="#"> RESOURCES </a></li>
 									<li><a href="#"> FAQ </a></li>
-									<li><a href="#"> PRIVACY POLICY </a></li>
+									<li><a href="/privacy-policy"> PRIVACY POLICY </a></li>
 									<li><a href="#"> TERMS & CONDITIONS  </a></li>
 								</ul>
 							</div>
@@ -136,7 +136,8 @@
 				<div class="row m-0 p40">
 					<div class="footer-separator">
 						<div class="relative">
-							<span></span>
+							<span class="text-center">@2021 copywrite SolutionsTag Consulting Company Limited</span>
+
 							<!--<div class="footer-img-container">
 								<img src="{{ asset('img/logo/logo_white.png')}}" role="img" title="solutions tag white logo" alt="solutions tag logo" class="footer-logo">
 							</div>-->

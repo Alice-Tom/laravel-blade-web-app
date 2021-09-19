@@ -28,7 +28,9 @@ Route::get('/', [HomeController::class,'index']);
 Route::get('/about',[AboutController::class,'aboutPage']);
 
 
-
+Route::get('/privacy-policy',function(){
+    return view('pages.privacy-policy');
+});
 
 
 // Route::get('about', function () {
