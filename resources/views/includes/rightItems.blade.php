@@ -8,7 +8,9 @@
 	@guest
 	<a href="{{ url('login')}}"> <button class="btn btn-st btn-st-primary magic-hover magic-hover__square"> Login/Register</button> </a>
 	@else
-	<a  href="{{ route('logout') }}"
+	<a href="{{ url('dashboard')}}"> <button class="btn btn-st btn-st-primary magic-hover magic-hover__square"> Dashboard</button> </a>
+
+	<!-- <a  href="{{ route('logout') }}"
 	onclick="event.preventDefault();
 				  document.getElementById('logout-form').submit();">
 				  <button class="btn btn-st btn-st-primary"> Logout</button>
@@ -16,6 +18,6 @@
 
 	<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 		@csrf
-	</form>
+	</form> -->
 	@endguest
 </li>
