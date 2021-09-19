@@ -35,6 +35,13 @@ class TrainingController extends Controller
 
     }
 
+    public function indexPublic(){
+        $trainings=$this->training->all();
+        return view('pages.training',[
+            'trainings'=>$trainings
+        ]);
+       
+    }
    
 
     /**

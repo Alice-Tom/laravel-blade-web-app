@@ -44,78 +44,45 @@
 		</div>
 		<div class="row m-0 training-container">
 			<!-- Training -->
-			<div class="training-col">
-				<a href="{{ url('view-training')}}">
-					<div class="row m-0">
-						<div class="col-lg-3">
-							<img src="{{ asset('img/slide1.jpg')}}" class="event-img" role="img" title="local staff" alt="local staff solutions tag" />
-						</div>
-						<div class="col-lg-4">
-							<div class="inner-containers">
-								<div class="row">
-									<h4 class="primary-title"> TRAINING SESSION TITLE </h4>
-								</div>
-								<div class="row m-0">
-									<div class="col-lg-6">
-										<h5> STARTS </h5>
-										<label> May 6, 12:00 AM</label>
+			@foreach($trainings as $training)
+				<div class="training-col">
+					<a href="{{ url('view-training')}}">
+						<div class="row m-0">
+							<div class="col-lg-3">
+								<img src="{{ $training->cover }}" class="event-img" role="img" title="local staff" alt="local staff solutions tag" />
+							</div>
+							<div class="col-lg-4">
+								<div class="inner-containers">
+									<div class="row">
+										<h4 class="primary-title"> {{$training->title}} </h4>
 									</div>
-									<div class="col-lg-6">
-										<h5> ENDS </h5>
-										<label> May 6, 12:00 AM</label>
+									<div class="row m-0">
+										<div class="col-lg-6">
+											<h5> STARTS </h5>
+											<label> {{$training->start_day . "," . $training->start_time}}  </label>
+										</div>
+										<div class="col-lg-6">
+											<h5> ENDS </h5>
+											<label> {{$training->end_day . "," . $training->end_time}}  </label>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-lg-3 titles-faint">
-							<h5 class="primary-title"> KARIMJEE HALL </h5>
-							<span>
-								<h5> TRAINERS </h5>
-								<label> Solutions Tag Staff </label>
-							</span>
-						</div>
-						<div class="col-lg-2">
-							<button class="btn btn-st btn-st-primary light"> Book Now </button>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="training-col">
-				<a href="{{ url('view-training')}}">
-					<div class="row m-0">
-						<div class="col-lg-3">
-							<img src="{{ asset('img/slide1.jpg')}}" class="event-img" role="img" title="local staff" alt="local staff solutions tag" />
-						</div>
-						<div class="col-lg-4">
-							<div class="inner-containers">
-								<div class="row">
-									<h4 class="primary-title"> TRAINING SESSION TITLE </h4>
-								</div>
-								<div class="row m-0">
-									<div class="col-lg-6">
-										<h5> STARTS </h5>
-										<label> May 6, 12:00 AM</label>
-									</div>
-									<div class="col-lg-6">
-										<h5> ENDS </h5>
-										<label> May 6, 12:00 AM</label>
-									</div>
-								</div>
+							<div class="col-lg-3 titles-faint">
+								<h5 class="primary-title"> {{$training->venue}}  </h5>
+								<span>
+									<h5> TRAINERS </h5>
+									<label> {{$training->trainer}}  Solutions Tag Staff </label>
+								</span>
+							</div>
+							<div class="col-lg-2">
+								<button class="btn btn-st btn-st-primary light"> Book Now </button>
 							</div>
 						</div>
-						<div class="col-lg-3 titles-faint">
-							<h5 class="primary-title"> KARIMJEE HALL </h5>
-							<span>
-								<h5> TRAINERS </h5>
-								<label> Solutions Tag Staff </label>
-							</span>
-						</div>
-						<div class="col-lg-2">
-							<button class="btn btn-st btn-st-primary light"> Book Now </button>
-						</div>
-					</div>
-				</a>
-			</div>
+					</a>
+				</div>
+			@endforeach
+			
 		</div>
 	</div>
 

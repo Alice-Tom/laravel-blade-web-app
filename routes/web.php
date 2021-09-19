@@ -40,9 +40,12 @@ Route::get('services', function () {
     return view('pages.services');
 });
 
-Route::get('training', function () {
-    return view('pages.training');
-});
+
+
+
+Route::get('training',[TrainingController::class,'indexPublic']);
+
+
 
 Route::get('resources', function () {
     return view('pages.resources');
