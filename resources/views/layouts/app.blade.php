@@ -13,7 +13,7 @@
 	<link href="{{ asset('slick/slick-theme.css') }}" rel="stylesheet">
 	<!--<link href="{{ asset('font/stylesheet.css') }}" rel="stylesheet">-->
 
-	
+
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="https://res.cloudinary.com/veseylab/raw/upload/v1597754760/magicmouse/magic-mouse-1.0.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-	
+
 
 	<!-- CDNs -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -56,7 +56,7 @@
 						</div>
 				</div>
 			</div>
-			
+
 		</header>
 
 		<main class="stag_main">
@@ -84,7 +84,7 @@
 						<div class="row m-0">
 							<div class="col-lg-6">
 								<ul class="footer-menu-1 footer-links">
-									<li><a href="#"> HOME </a></li>	
+									<li><a href="#"> HOME </a></li>
 									<li><a href="#"> THE COMPANY </a></li>
 									<li><a href="#"> SERVICES </a></li>
 									<li><a href="#"> SOLUTIONS </a></li>
@@ -94,7 +94,7 @@
 							</div>
 							<div class="col-lg-6">
 								<ul class="footer-menu-2 footer-links">
-									<li><a href="#"> NEWS</a></li>	
+									<li><a href="#"> NEWS</a></li>
 									<li><a href="#"> RESOURCES </a></li>
 									<li><a href="#"> FAQ </a></li>
 									<li><a href="/privacy-policy"> PRIVACY POLICY </a></li>
@@ -110,7 +110,7 @@
 						</div>
 						<div class="row m-0">
 							<ul class="footer-social footer-links">
-								<li><a href="#"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.19795 21.5H13.198V13.4901H16.8021L17.198 9.50977H13.198V7.5C13.198 6.94772 13.6457 6.5 14.198 6.5H17.198V2.5H14.198C11.4365 2.5 9.19795 4.73858 9.19795 7.5V9.50977H7.19795L6.80206 13.4901H9.19795V21.5Z" fill="currentColor"/></svg> @solutionstag </a></li>	
+								<li><a href="#"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.19795 21.5H13.198V13.4901H16.8021L17.198 9.50977H13.198V7.5C13.198 6.94772 13.6457 6.5 14.198 6.5H17.198V2.5H14.198C11.4365 2.5 9.19795 4.73858 9.19795 7.5V9.50977H7.19795L6.80206 13.4901H9.19795V21.5Z" fill="currentColor"/></svg> @solutionstag </a></li>
 								<li><a href="#"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 3C9.10457 3 10 3.89543 10 5V8H16C17.1046 8 18 8.89543 18 10C18 11.1046 17.1046 12 16 12H10V14C10 15.6569 11.3431 17 13 17H16C17.1046 17 18 17.8954 18 19C18 20.1046 17.1046 21 16 21H13C9.13401 21 6 17.866 6 14V5C6 3.89543 6.89543 3 8 3Z" fill="currentColor" /></svg> @solutionstag </a></li>
 								<li><a href="#"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 7H19C19.5523 7 20 7.44771 20 8V16C20 16.5523 19.5523 17 19 17H5C4.44772 17 4 16.5523 4 16V8C4 7.44772 4.44772 7 5 7ZM2 8C2 6.34315 3.34315 5 5 5H19C20.6569 5 22 6.34315 22 8V16C22 17.6569 20.6569 19 19 19H5C3.34315 19 2 17.6569 2 16V8ZM10 9L14 12L10 15V9Z" fill="currentColor"/></svg> @solutionstag </a> </li>
 							</ul>

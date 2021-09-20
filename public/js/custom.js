@@ -3,7 +3,9 @@
 "use strict";
 
 $(document).ready(function(){
-	
+
+
+
 	/*--------------------------------------------------*/
 	/*  Mobile Menu - mmenu.js
 	/*--------------------------------------------------*/
@@ -50,17 +52,17 @@ $(document).ready(function(){
 
 		$(window).on('scroll load', function() {
 
-			if($(window).width() < '1099') { 
+			if($(window).width() < '1099') {
 				$("#header-container").removeClass("cloned");
 			}
-			
+
 			if($(window).width() > '1099') {
 
 				// CSS adjustment
 				$("#header-container").css({
 					position: 'fixed',
 				});
-		
+
 				var headerOffset = $("#header-container").height();
 
 				if($(window).scrollTop() >= headerOffset){
@@ -77,11 +79,11 @@ $(document).ready(function(){
 
 				if( $('.wrapper-with-transparent-header #header-container').hasClass('cloned')) {
 					$("#header-container.cloned #logo img").attr("src", stickyLogo);
-				} 
+				}
 
 				if( $('.wrapper-with-transparent-header #header-container').hasClass('transparent-header')) {
 					$("#header-container #logo img").attr("src", transparentLogo);
-				} 
+				}
 
 				$(window).on('load resize', function() {
 				    var headerOffset = $("#header-container").height();
@@ -132,7 +134,7 @@ $(document).ready(function(){
 	 $('html, body').animate({scrollTop:0}, scrollSpeed);
 	 return false;
 	});
-	
+
 
 	/*--------------------------------------------------*/
 	/*  Ripple Effect
@@ -244,7 +246,7 @@ $(document).ready(function(){
 	});
 
 	// Close with ESC
-	$(document).keyup(function(e) { 
+	$(document).keyup(function(e) {
 		if (e.keyCode == 27) {
 			close_user_dropdown();
 		}
@@ -294,7 +296,7 @@ $(document).ready(function(){
 			// Enables scrollbar if sidebar is higher than wrapper
 			if (sidebarContainerHeight > windowHeight) {
 				$(this).css({ height: windowHeight });
-		
+
 			} else {
 				$(this).find('.simplebar-track').hide();
 			}
@@ -307,7 +309,7 @@ $(document).ready(function(){
 		fullPageScrollbar();
 	});
 
-	// Sliding Sidebar 
+	// Sliding Sidebar
 	$('.enable-filters-button').on('click', function(){
 		$('.full-page-sidebar').toggleClass("enabled-sidebar");
 		$(this).toggleClass("active");
@@ -331,7 +333,7 @@ $(document).ready(function(){
 	            reader.onload = function (e) {
 	                $('.profile-pic').attr('src', e.target.result);
 	            };
-	    
+
 	            reader.readAsDataURL(input.files[0]);
 	        }
 	    };
@@ -343,23 +345,23 @@ $(document).ready(function(){
 	            reader.onload = function (e) {
 	                $('.profile-pic1').attr('src', e.target.result);
 	            };
-	    
+
 	            reader.readAsDataURL(input.files[0]);
 	        }
 	    };
-	   
+
 	    $(".file-upload").on('change', function(){
 	        readURL(this);
 	    });
-	    
+
 	    $(".upload-button").on('click', function() {
 	       $(".file-upload").click();
 	    });
-		
+
 		$(".file-upload1").on('change', function(){
 	        readURL1(this);
 	    });
-	    
+
 	    $(".upload-button1").on('click', function() {
 	       $(".file-upload1").click();
 	    });
@@ -553,7 +555,7 @@ $(document).ready(function(){
 			var scrollContainerList = $(this).find('ul');
 			var itemsCount = scrollContainerList.children("li").length;
       var notificationItems;
-      
+
 			// Determines how many items are displayed based on items height
       /* jshint shadow:true */
 			if (scrollContainerList.children("li").outerHeight() > 140) {
@@ -561,8 +563,8 @@ $(document).ready(function(){
 			} else {
 				var notificationItems = 3;
 			}
-    
-      
+
+
 			// Enables scrollbar if more than 2 items
 			if (itemsCount > notificationItems) {
 
@@ -573,7 +575,7 @@ $(document).ready(function(){
 			    });
 
 				$(this).css({ height: listHeight });
-		
+
 			} else {
 				$(this).css({ height: 'auto' });
 				$(this).find('.simplebar-track').hide();
@@ -586,7 +588,7 @@ $(document).ready(function(){
 
 
 	/*--------------------------------------------------*/
-	/*  Tippy JS 
+	/*  Tippy JS
 	/*--------------------------------------------------*/
     /* global tippy */
 	tippy('[data-tippy-placement]', {
@@ -602,7 +604,7 @@ $(document).ready(function(){
 		animateFill: true,
 		theme: 'dark',
 
-		// How far the tooltip is from its reference element in pixels 
+		// How far the tooltip is from its reference element in pixels
 		distance: 10,
 
 	});
@@ -612,46 +614,46 @@ $(document).ready(function(){
 	/*	Accordion @Lewis Briffa
 	/*----------------------------------------------------*/
 	var accordion = (function(){
-	  
+
 	  var $accordion = $('.js-accordion');
 	  var $accordion_header = $accordion.find('.js-accordion-header');
-	 
-	  // default settings 
+
+	  // default settings
 	  var settings = {
 	    // animation speed
 	    speed: 400,
-	    
+
 	    // close all other accordion items if true
 	    oneOpen: false
 	  };
-	    
+
 	  return {
 	    // pass configurable object literal
 	    init: function($settings) {
 	      $accordion_header.on('click', function() {
 	        accordion.toggle($(this));
 	      });
-	      
-	      $.extend(settings, $settings); 
-	      
+
+	      $.extend(settings, $settings);
+
 	      // ensure only one accordion is active if oneOpen is true
 	      if(settings.oneOpen && $('.js-accordion-item.active').length > 1) {
 	        $('.js-accordion-item.active:not(:first)').removeClass('active');
 	      }
-	      
+
 	      // reveal the active accordion bodies
 	      $('.js-accordion-item.active').find('> .js-accordion-body').show();
 	    },
 	    toggle: function($this) {
-	            
+
 	      if(settings.oneOpen && $this[0] != $this.closest('.js-accordion').find('> .js-accordion-item.active > .js-accordion-header')[0]) {
 	        $this.closest('.js-accordion')
-	               .find('> .js-accordion-item') 
+	               .find('> .js-accordion-item')
 	               .removeClass('active')
 	               .find('.js-accordion-body')
 	               .slideUp();
 	      }
-	      
+
 	      // show/hide the clicked accordion item
 	      $this.closest('.js-accordion-item').toggleClass('active');
 	      $this.next().stop().slideToggle(settings.speed);
@@ -670,7 +672,7 @@ $(document).ready(function(){
 	$(window).on('load resize', function() {
 	if ($(".tabs")[0]){
 		$('.tabs').each(function() {
-			
+
 			  var thisTab = $(this);
 
 			  // Intial Border Position
@@ -829,7 +831,7 @@ $(document).ready(function(){
 		});
 
 		// add via button
-		$('.keyword-input-button').on('click', function(){ 
+		$('.keyword-input-button').on('click', function(){
 			if((keywordInput.val()!=="")){
 				addKeyword();
 			}
@@ -866,8 +868,8 @@ $(document).ready(function(){
 			// Enables scrollbar if more than 3 items
 			if (keywordCount > 0) {
 				keywordsList.css({'height':'auto'}).height();
-		
-			} 
+
+			}
 		});
 
 	});
@@ -907,13 +909,13 @@ $(document).ready(function(){
 
 	// Default Bootstrap Range Slider
 	var currencyAttr = $(".range-slider").attr('data-slider-currency');
-	
+
 	$(".range-slider").slider({
 		formatter: function(value) {
 			return currencyAttr + ThousandSeparator(parseInt(value[0])) + " - " + currencyAttr + ThousandSeparator(parseInt(value[1]));
 		}
 	});
-	
+
 	$(".range-slider-single").slider();
 
 
@@ -921,11 +923,11 @@ $(document).ready(function(){
 	/*  Payment Accordion
 	/*----------------------------------------------------*/
     var radios = document.querySelectorAll('.payment-tab-trigger > input');
- 
+
     for (var i = 0; i < radios.length; i++) {
         radios[i].addEventListener('change', expandAccordion);
     }
- 
+
     function expandAccordion (event) {
       /* jshint validthis: true */
       var tabber = this.closest('.payment');
@@ -952,7 +954,7 @@ $(document).ready(function(){
 	        if(parseInt(arr[i].value))
 	            tot += parseInt(arr[i].value);
 	    }
-	} 
+	}
 	qtySum();
 
    $(".qtyDec, .qtyInc").on("click", function() {

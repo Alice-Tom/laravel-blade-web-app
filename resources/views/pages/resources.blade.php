@@ -27,7 +27,8 @@
 		<div class="row cols-resources m-0 mt-5 mb-5">
             @foreach($blogs as $blog)
 
-                    <div class="col-lg-4 " style="background-image: url('{{$blog->cover}}'); margin-bottom: 16px!important;">
+
+                     <div class="col-lg-4 blog-item-to-click" style="background-image: url('{{$blog->cover}}'); margin-bottom: 16px!important;">
                         <span class="overlay-inner"></span>
                         <div class="col-top-item-type">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +37,7 @@
                         </div>
                         <div class="title-resources">
                             <h4> {{$blog->title}}</h4>
-                            <a href="{{'view-blog/' . $blog->id }}"><button class="btn btn-st btn-st-primary"> Read More </button></a>
+                            <a href="{{'view-blog/' . $blog->id }}"><button class="btn btn-st btn-st-primary button-read-more"> Read More </button></a>
                         </div>
                     </div>
 
