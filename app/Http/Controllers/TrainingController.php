@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\TrainingRequest;
-use App\Services\Training;
+use App\Services\Blog;
 
 
 class TrainingController extends Controller
@@ -13,7 +13,7 @@ class TrainingController extends Controller
 
     private $training;
 
-    public function __construct(Training $training){
+    public function __construct(Blog $training){
     $this->training = $training;
     }
 
@@ -40,9 +40,9 @@ class TrainingController extends Controller
         return view('pages.training',[
             'trainings'=>$trainings
         ]);
-       
+
     }
-   
+
 
     /**
      * Show the form for creating a new resource.
@@ -53,7 +53,7 @@ class TrainingController extends Controller
     {
         //
         return view('dashboard.admin.training.add');
-        
+
     }
 
     /**
@@ -68,7 +68,7 @@ class TrainingController extends Controller
         $this->training->create($request);
 
         return $this->index();
-       
+
     }
 
     /**
@@ -92,7 +92,7 @@ class TrainingController extends Controller
     {
         //
         $training=$this->training->findById($id);
-        
+
          return view('dashboard.admin.training.edit-training',[
              'training'=>$training
          ]);
@@ -111,7 +111,7 @@ class TrainingController extends Controller
         $isUpdated=$this->training->update($id,$request);
 
         return redirect('/all-training');
-        
+
     }
 
     /**
@@ -123,9 +123,9 @@ class TrainingController extends Controller
     public function destroy($id)
     {
         //
-        
+
         $isDeleted=$this->training->deleteById($id);
-       
+
         return redirect('/all-training');
 
     }

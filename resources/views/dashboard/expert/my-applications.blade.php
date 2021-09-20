@@ -97,7 +97,7 @@
 												<!-- Job Listing Footer -->
 												<div class="job-listing-footer">
 													<ul>
-														<li><i class="icon-material-outline-date-range"></i> Deadline {{ \Carbon\Carbon::parse($job->dead_line)?->format('j F, Y') }}</li>
+														<li><i class="icon-material-outline-date-range"></i> Deadline {{ \Carbon\Carbon::parse($job->dead_line) }}</li>
 													</ul>
 												</div>
 											</div>

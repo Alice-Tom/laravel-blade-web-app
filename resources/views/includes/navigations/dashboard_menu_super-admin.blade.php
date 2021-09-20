@@ -40,8 +40,8 @@
 	</li>
 	<li><a href="{{ url('jobs')}}"> <i class="icon-material-outline-business-center"></i>Resources </a>
 		<ul>
-			<li><a href="{{ url('jobs')}}"> List </a></li>
-			<li><a href="{{ url('jobs')}}"> Add New </a></li>
+			<li><a href="{{ url('all-blog')}}"> List </a></li>
+			<li><a href="{{ url('new-blog')}}"> Add New </a></li>
 		</ul>
 	</li>
 </ul>

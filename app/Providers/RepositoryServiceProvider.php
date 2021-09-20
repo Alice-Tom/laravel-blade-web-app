@@ -22,6 +22,9 @@ use App\Repository\AboutRepositoryInterface;
 use App\Repository\Eloquent\AboutRepository;
 use App\Repository\Eloquent\TrainingRepository;
 use App\Repository\TrainingRepositoryInterface;
+use App\Repository\BlogRepositoryInterface;
+use App\Repository\Eloquent\BlogRepository;
+
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -43,6 +46,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(HomeRepositoryInterface::class,HomeRepository::class);
         $this->app->bind(AboutRepositoryInterface::class,AboutRepository::class);
         $this->app->bind(TrainingRepositoryInterface::class,TrainingRepository::class);
+        $this->app->bind(BlogRepositoryInterface::class,BlogRepository::class);
     }
 
     /**

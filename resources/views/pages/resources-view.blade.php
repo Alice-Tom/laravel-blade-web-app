@@ -24,15 +24,17 @@
 <section class="container-lg-stag">
 
 	<div class="row m-0 p40 resorces-header">
-		<h2 class="title"> RESOURCES MAIN TITLE </h2>
+		<h2 class="title"> {{$blog->title}} </h2>
 	</div>
 
 	<div class="row m-0">
-		<img src="{{ asset('img/largeImg.jpg')}}" role="img" class="img-page-main" alt="Oil and Gas">
+		<img src="{{URL::asset($blog->cover)}}" role="img" class="img-page-main" alt="">
 	</div>
 
 	<div class="row m40">
-		<span> </span>
+	    <p>
+            {{$blog->description}}
+        </p>
 	</div>
 
 </section>
