@@ -17,11 +17,11 @@
 			@foreach (App\Models\Service::all()->chunk(3) as $service )
 				@foreach ($service as $service )
 				@php
-				$service_slug = str_slug($service->title, '-');    
+				$service_slug = str_slug($service->title, '-');
 				@endphp
 				<div class="col-lg-4">
 					<label>
-						<h5> 
+						<h5>
 							<ul>
 								<li > <a href='{{ url('service/'.$service->id.'/'.$service_slug) }}'>{{ $service->title }}</a></li>
 							</ul>
@@ -29,11 +29,11 @@
 					</label>
 					@foreach ($service->subService as $sub )
 					@php
-					$sub_slug = str_slug($sub->title, '-');    
+					$sub_slug = str_slug($sub->title, '-');
 					@endphp
 					<li> <a href="{{ url('service-child/'.$sub->id.'/'.$sub_slug) }}"> {{ $sub->title }}</a></li>
 					@endforeach
-					
+
 
 				</div>
 				@endforeach

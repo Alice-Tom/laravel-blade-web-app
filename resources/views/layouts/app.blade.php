@@ -66,7 +66,7 @@
 		<footer class="main-footer">
 			<div class="container-lg-stag">
 				<div class="row m-0 row-cols-1 text-center p40">
-					<h1 class="title_01"> <span class="decor"> JOIN OUR NEWSLETTER </span>  </h1>
+					<h1 class="title_01"> <span class=" newsletter"> JOIN OUR NEWSLETTER </span>  </h1>
 					<div class="form-subscribe">
 						<form>
 							<div class="form-group subscribe">

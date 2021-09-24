@@ -15,7 +15,7 @@ class BaseRepository implements EloquentRepositoryInterface
 
     /**
      * BaseRepository constructor.
-     * 
+     *
      * @param Model $model
      */
     public function __construct(Model $model)
@@ -30,12 +30,12 @@ class BaseRepository implements EloquentRepositoryInterface
      */
     public function all(array $columns = ['*'], array $relations = []): Collection
     {
-        return $this->model->with($relations)->get($columns);
+        return $this->model->with($relations)->orderByDesc('updated_at') ->get($columns);
     }
 
     /**
      * Get all trashed models
-     * 
+     *
      * @return Collection
      */
     public function allTrashed(): Collection
@@ -45,7 +45,7 @@ class BaseRepository implements EloquentRepositoryInterface
 
     /**
      * Find model by id.
-     * 
+     *
      * @param int $modelId
      * @param array $columns
      * @param array $relations
@@ -65,7 +65,7 @@ class BaseRepository implements EloquentRepositoryInterface
 
     /**
      * Find trashed model by id.
-     * 
+     *
      * @param int $modelId
      * @return Model
      */
@@ -76,7 +76,7 @@ class BaseRepository implements EloquentRepositoryInterface
 
     /**
      * Find only trashed model by id.
-     * 
+     *
      * @param int $ModelId
      * @return Model
      */
@@ -87,20 +87,20 @@ class BaseRepository implements EloquentRepositoryInterface
 
     /**
      * Create a model.
-     * 
+     *
      * @param array $payload
      * @return Model
      */
     public function create(array $payload): ?Model
     {
         $model = $this->model->create($payload);
-         
+
         return $model->fresh();
     }
 
     /**
      * Update existing model.
-     * 
+     *
      * @param int $modelId
      * @param array $payload
      * @return bool
@@ -114,7 +114,7 @@ class BaseRepository implements EloquentRepositoryInterface
 
     /**
      * Delete model by id.
-     * 
+     *
      * @param int $modelId
      * @return bool
      */
@@ -125,7 +125,7 @@ class BaseRepository implements EloquentRepositoryInterface
 
     /**
      * Restore model by id.
-     * 
+     *
      * @param int $modelId
      * @return bool
      */
@@ -136,7 +136,7 @@ class BaseRepository implements EloquentRepositoryInterface
 
     /**
      * Permanently delete model by id.
-     * 
+     *
      * @param int $modelId
      * @return bool
      */
