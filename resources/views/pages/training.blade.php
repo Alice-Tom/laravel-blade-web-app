@@ -46,7 +46,7 @@
 			<!-- Training -->
 			@foreach($trainings as $training)
 				<div class="training-col">
-					<a href="{{ url('view-training')}}">
+					<a href="{{'view-training/'.$training->id}}">
 						<div class="row m-0">
 							<div class="col-lg-3">
 								<img src="{{ $training->cover }}" class="event-img" role="img" title="local staff" alt="local staff solutions tag" />
@@ -59,11 +59,11 @@
 									<div class="row m-0">
 										<div class="col-lg-6">
 											<h5> STARTS </h5>
-											<label> {{$training->start_day . "," . $training->start_time}}  </label>
+											<label> {{\Carbon\Carbon::parse($training->start_day . $training->start_time )->toDayDateTimeString() }} </label>
 										</div>
 										<div class="col-lg-6">
 											<h5> ENDS </h5>
-											<label> {{$training->end_day . "," . $training->end_time}}  </label>
+											<label> {{\Carbon\Carbon::parse($training->end_day . $training->end_time )->toDayDateTimeString() }}  </label>
 										</div>
 									</div>
 								</div>
@@ -72,17 +72,17 @@
 								<h5 class="primary-title"> {{$training->venue}}  </h5>
 								<span>
 									<h5> TRAINERS </h5>
-									<label> {{$training->trainer}}  Solutions Tag Staff </label>
+									<label> {{$training->trainer}}   </label>
 								</span>
 							</div>
 							<div class="col-lg-2">
-								<button class="btn btn-st btn-st-primary light"> Book Now </button>
+{{--								<button class="btn btn-st btn-st-primary light"> Book Now </button>--}}
 							</div>
 						</div>
 					</a>
 				</div>
 			@endforeach
-			
+
 		</div>
 	</div>
 

@@ -28,11 +28,11 @@
 		<div class="row mt-3 m-0 w-100">
 			<div class="col-lg-3">
 				<h5> STARTS </h5>
-				<label> {{$training->start_day . ", " . $training->start_time }}</label>
+				<label> {{\Carbon\Carbon::parse($training->start_day . $training->start_time )->toDayDateTimeString() }}</label>
 			</div>
 			<div class="col-lg-3">
 				<h5> ENDS </h5>
-				<label>{{$training->end_day . ", " . $training->end_time }}</label>
+				<label> {{\Carbon\Carbon::parse($training->end_day . $training->end_time )->toDayDateTimeString() }} </label>
 			</div>
 			<div class="col-lg-3">
 				<h5> VEMUE </h5>
@@ -57,7 +57,8 @@
 <section class="container-lg-stag">
 	<div class="row m-0">
 		<div class="col-lg-6">
-			<img src="{{ $training->cover}}}" class="event-img" role="img" title="local staff" alt="local staff solutions tag" />
+			<img src="{{ $training->cover}}" class="event-img" role="img" title="local staff" alt="local staff solutions tag" />
+
 		</div>
 		<div class="col-lg-6">
 {{--			<form>--}}

@@ -20,6 +20,6 @@ class Training extends Model
         'end_day',
         'end_time',
         'trainer',
-        
+
     ];
 }
