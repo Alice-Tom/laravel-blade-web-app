@@ -9,7 +9,7 @@
                      alt="slide image"/>
                 <span class="caption-container">
 				<h2 class="hero-title caption-animation-1"> {{$home->title1 ?? 'A BETTER TOMMOROW THROUGH OIL AND GAS'}} </h2>
-				<p class="caption-animation-2 description-title">{{$name->description1 ?? 'We are integrated oil and gas company specialized in providing technical (engineering, geophysical, consultance) services and trainings.'}}  </p>
+				<p class="caption-animation-2 description-title">{{$home->description1 ?? 'We are integrated oil and gas company specialized in providing technical (engineering, geophysical, consultance) services and trainings.'}}  </p>
 				<a href="{{ url('about')}}"
                    class="btn-type-1 magic-hover magic-hover__square light-text caption-animation-3">
 {{--					<span>--}}
@@ -27,7 +27,7 @@
                      alt="slide image"/>
                 <span class="caption-container">
 				<h2 class="hero-title caption-animation-1"> {{$home->title2 ?? 'A BETTER TOMMOROW THROUGH OIL AND GAS'}} </h2>
-				<p class="caption-animation-2"> {{$name->description2 ?? 'We are integrated oil and gas company specialized in providing technical (engineering, geophysical, consultance) services and trainings.'}} </p>
+				<p class="caption-animation-2 description-title"> {{$home->description2 ?? 'We are integrated oil and gas company specialized in providing technical (engineering, geophysical, consultance) services and trainings.'}} </p>
 				<a href="{{ url('about')}}"
                    class="btn-type-1 magic-hover magic-hover__square light-text caption-animation-3">
 {{--					<span>--}}
@@ -45,7 +45,7 @@
                      alt="slide image"/>
                 <span class="caption-container">
 				<h2 class="hero-title caption-animation-1"> {{$home->title3 ?? 'A BETTER TOMMOROW THROUGH OIL AND GAS'}} </h2>
-				<p class="caption-animation-2"> {{$name->description3 ?? 'We are integrated oil and gas company specialized in providing technical (engineering, geophysical, consultance) services and trainings.'}} </p>
+				<p class="caption-animation-2 description-title"> {{$home->description3 ?? 'We are integrated oil and gas company specialized in providing technical (engineering, geophysical, consultance) services and trainings.'}} </p>
 				<a href="{{ url('about')}}"
                    class="btn-type-1 magic-hover magic-hover__square light-text caption-animation-3">
 {{--					<span>--}}
@@ -67,7 +67,7 @@
                             <div class="row m-0">
                                 <h2 class="title_01"> {{$home->intro_title ?? ''}} </h2>
                                 <span class="empty_space_1"></span>
-                                <p class="introduction-section"> {{$home->content ?? 'Oil and gas sector requires fresh, innovative and disruptive minds that are motivated by the future rather than the present. The minds that are committed to present their ulttimate thoughts and providing the best solutions for the better tomorrow of the sector in Tanzania.'}} </p>
+                                <p class="introduction-section"> {{$home->intro_content ?? 'Oil and gas sector requires fresh, innovative and disruptive minds that are motivated by the future rather than the present. The minds that are committed to present their ulttimate thoughts and providing the best solutions for the better tomorrow of the sector in Tanzania.'}} </p>
                                 <a href="{{ url('about')}}" class="btn-type-1 magic-hover magic-hover__square">
 {{--								<span>--}}
 {{--									<svg width="24" height="24" viewBox="0 0 24 24" fill="none"--}}

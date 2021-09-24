@@ -98,7 +98,7 @@
 					<div class="content with-padding padding-bottom-10">
 						<div class="row m-0">
 							<label> Slide 2 Title </label>
-							<input class="with-border" name="tite2" value="{{$home->title2 ?? ''}}">
+							<input class="with-border" name="title2" value="{{$home->title2 ?? ''}}">
 						</div>
 
 						<div class="row mt-2">
