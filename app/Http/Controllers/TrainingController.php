@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\TrainingRequest;
-use App\Services\Blog;
+
+use App\Services\Training;
 
 
 class TrainingController extends Controller
@@ -13,7 +14,7 @@ class TrainingController extends Controller
 
     private $training;
 
-    public function __construct(Blog $training){
+    public function __construct(Training $training){
     $this->training = $training;
     }
 
@@ -46,6 +47,7 @@ class TrainingController extends Controller
 
     public function viewPublic($id){
         $training=$this->training->findById($id);
+
         return view('pages.view-training',[
             'training'=>$training
         ]);
