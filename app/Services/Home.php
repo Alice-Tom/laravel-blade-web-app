@@ -29,6 +29,8 @@ class Home
 
         $request["intro_video"] =str_replace("width=\"560\" height=\"315\"","width=\"100%\" height=\"100%\"", $request["intro_video"]);   //formatting size of video for display
 
+
+
         $arrayRequest = $request->all();
         if(!empty($request['image2'])){
             $arrayRequest =  $this->image->upload($arrayRequest ,$request,'uploads/home/','image2');

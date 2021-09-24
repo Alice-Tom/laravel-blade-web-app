@@ -276,7 +276,8 @@
 						<div class="row mt-2">
 							<div class="col-xl-12">
 								<label> Content </label>
-								<textarea rows="5" name="sec4_content">value="{{$home->sec4_content ??''}}"</textarea>
+                                <textarea rows="5" name="sec4_content">{{$home->sec4_content ??''}} </textarea>
+
 							</div>
 						</div>
 
@@ -287,7 +288,7 @@
 									<div class="avatar-wrapper" data-tippy-placement="bottom">
 										<img class="profile-pic5" src="" alt="" />
 										<div class="upload-button5"></div>
-										<input class="file-upload5" type="file" name="sec4_content" accept="image/*" />
+										<input class="file-upload5" type="file" name="sec4_image" accept="image/*" />
 									</div>
 								</div>
 							</div>

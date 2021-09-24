@@ -225,110 +225,63 @@
                 </div>
                 <div class="col-lg-10">
                     <div class="blogs">
-                        <div class="blog-item">
-                            <figure>
-                                <img src="{{ asset('img/slide2.jpg')}}" title="article" alt="blog solutionstag"
-                                     role="img"/>
-                                <figcaption>
-                                    An ilustrated guide to the state of the oil and gas industry in Tanzania
-                                </figcaption>
-                                <div class="card-footer-items">
-                                    <div class="row m-0">
-                                        <div class="col-lg-6">
-                                            <h5 class="date-blog"><span class="decor"> 12/06/2021 </span></h5>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <a href="#" class="float-right rdmore">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
-                                                        fill="currentColor"/>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="blog-item">
-                            <figure>
-                                <img src="{{ asset('img/training.jpg')}}" title="article" alt="blog solutionstag"
-                                     role="img"/>
-                                <figcaption>
-                                    An ilustrated guide to the state of the oil and gas industry in Tanzania
-                                </figcaption>
-                                <div class="card-footer-items">
-                                    <div class="row m-0">
-                                        <div class="col-lg-6">
-                                            <h5 class="date-blog"><span class="decor"> 12/06/2021 </span></h5>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <a href="#" class="float-right rdmore">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
-                                                        fill="currentColor"/>
-                                                </svg>
-                                            </a>
+                        @foreach($trainings as $training)
+                            <div class="blog-item">
+                                <figure>
+                                    <img src="{{$training->cover}}" title="article" alt="blog solutionstag"
+                                         role="img"/>
+                                    <figcaption>
+                                       {{$training->title}}
+                                    </figcaption>
+                                    <div class="card-footer-items">
+                                        <div class="row m-0">
+                                            <div class="col-lg-6">
+                                                <h5 class="date-blog"><span class="decor"> {{$training->start_day}} </span></h5>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <a href="#" class="float-right rdmore">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
+                                                            fill="currentColor"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="blog-item">
-                            <figure>
-                                <img src="{{ asset('img/stagvideo.jpg')}}" title="article" alt="blog solutionstag"
-                                     role="img"/>
-                                <figcaption>
-                                    An ilustrated guide to the state of the oil and gas industry in Tanzania
-                                </figcaption>
-                                <div class="card-footer-items">
-                                    <div class="row m-0">
-                                        <div class="col-lg-6">
-                                            <h5 class="date-blog"><span class="decor"> 12/06/2021 </span></h5>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <a href="#" class="float-right rdmore">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
-                                                        fill="currentColor"/>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="blog-item">
-                            <figure>
-                                <img src="{{ asset('img/largeImg.jpg')}}" title="article" alt="blog solutionstag"
-                                     role="img"/>
-                                <figcaption>
-                                    An ilustrated guide to the state of the oil and gas industry in Tanzania
-                                </figcaption>
-                                <div class="card-footer-items">
-                                    <div class="row m-0">
-                                        <div class="col-lg-6">
-                                            <h5 class="date-blog"><span class="decor"> 12/06/2021 </span></h5>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <a href="#" class="float-right rdmore">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
-                                                        fill="currentColor"/>
-                                                </svg>
-                                            </a>
+                                </figure>
+                            </div>
+                        @endforeach
+                        @foreach($blogs as $blog)
+                            <div class="blog-item">
+                                <figure>
+                                    <img src="{{ $blog->cover }}" title="article" alt="blog solutionstag"
+                                         role="img"/>
+                                    <figcaption>
+                                      {{$blog->title}}
+                                    </figcaption>
+                                    <div class="card-footer-items">
+                                        <div class="row m-0">
+                                            <div class="col-lg-6">
+                                                <h5 class="date-blog"><span class="decor"> Read More </span></h5>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <a href="#" class="float-right rdmore">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
+                                                            fill="currentColor"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </figure>
-                        </div>
+                                </figure>
+                            </div>
+                        @endforeach
+
                     </div>
                 </div>
             </div>
@@ -343,17 +296,22 @@
                         <h2 class="title_01"><span class="decor"> {{$home->staff_title ?? 'TECHNICAL STAFFING'}} </span>
                         </h2>
                         <p class="p40"> {{$home->staff_content ?? 'At SolutionsTag we are determined to promote local Tanzanian experts in the oil and gas industry. We offer staffing solutions for our clients.'}} </p>
-                        <a href="{{$home->staff_link ?? ''}}" class="btn-type-1 magic-hover magic-hover__square">
+
+                        @if($home->staff_link)
+                            <a href="{{$home->staff_link ?? ''}}" class="btn-type-1 magic-hover magic-hover__square">
 						<span>
-{{--							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"--}}
-{{--                                 xmlns="http://www.w3.org/2000/svg"><path--}}
-{{--                                    d="M12 4C11.4477 4 11 4.44772 11 5V11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H11V19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19V13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11H13V5C13 4.44772 12.5523 4 12 4Z"--}}
-{{--                                    fill="currentColor"/></svg>--}}
+
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg"><path
+                                    d="M12 4C11.4477 4 11 4.44772 11 5V11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H11V19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19V13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11H13V5C13 4.44772 12.5523 4 12 4Z"
+                                    fill="currentColor"/></svg>
 						</span>
-                            <label>
-{{--                                <em> Read more </em>--}}
-                            </label>
-                        </a>
+                                <label>
+                                    <em> Read more </em>
+                                </label>
+                            </a>
+                        @endif
+
                     </div>
                     @if(!$featured->isEmpty())
                         <div class="col-lg-6">
@@ -397,7 +355,7 @@
                                 class="light-text"> {{$home->bottom1_title ?? 'LOOKING FOR PROFESSIONALS IN THE OIL & GAS INDUSTRY IN TANZANIA?'}} </span>
                         </h2>
                         <p class="p40">
-                            {{$home->bottom1_link ?? 'It takes just a few steps to create an account and view profiles of local Tanzanian experts to hire.'}}
+                            {{$home->bottom1_description ?? 'It takes just a few steps to create an account and view profiles of local Tanzanian experts to hire.'}}
                         </p>
                         <a href="{{$home->bottom1_link ?? ''}}" class="btn btn-st btn-st-primary light-btn"> Discover
                             more </a>

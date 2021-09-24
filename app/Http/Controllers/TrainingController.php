@@ -44,6 +44,13 @@ class TrainingController extends Controller
     }
 
 
+    public function viewPublic($id){
+        $training=$this->training->findById($id);
+        return view('pages.view-training',[
+            'training'=>$training
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

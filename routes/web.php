@@ -67,9 +67,7 @@ Route::get('new-service-category', function () {
 });
 
 
-Route::get('view-training', function () {
-    return view('pages.view-training');
-});
+Route::get('view-training/{id}',  [TrainingController::class, 'viewPublic']);
 
 Route::get('team', function () {
     return view('pages.team');

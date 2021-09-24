@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Services\Blog;
 use App\Services\Client;
 use App\Services\Home;
 use App\Services\Service;
 use App\Services\SubService;
 use App\Services\Profile;
+use App\Services\Training;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
@@ -21,12 +23,17 @@ class HomeController extends Controller
     private $subService;
     private $user;
     private $client;
-    public function __construct(Home $home,Service $service,SubService $subService,Profile $profile,Client $client){
+    private $training;
+    private $blog;
+
+    public function __construct(Home $home,Service $service,SubService $subService,Profile $profile,Client $client,Training $training, Blog  $blog){
         $this->home = $home;
         $this->service = $service;
         $this->subService = $subService;
         $this->user = $profile;
         $this->client=$client;
+        $this->training=$training;
+        $this->blog=$blog;
     }
 
     /**
@@ -40,6 +47,9 @@ class HomeController extends Controller
         $services = $this->service->all();
         $subService=$this->subService->all();
         $clients=$this->client->all();
+        $trainings=$this->training->all()->take(3);
+        $blogs=$this->training->all()->take(3);
+
         $featured = $this->user->all()
                     ->where('account_type','expert')
                     ->where('feature',true)
@@ -52,7 +62,9 @@ class HomeController extends Controller
             'services' =>$services,
             'featured' =>$featured,
             'subService'=>$subService,
-            'clients'=>$clients
+            'clients'=>$clients,
+            'trainings' =>$trainings,
+            'blogs' =>$blogs
         ]);
     }
 
