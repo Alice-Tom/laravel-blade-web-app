@@ -236,10 +236,11 @@
                                     <div class="card-footer-items">
                                         <div class="row m-0">
                                             <div class="col-lg-6">
-                                                <h5 class="date-blog"><span class="decor"> {{$training->start_day}} </span></h5>
+                                                <h5 class="date-blog"><span class="decor"> {{  \Carbon\Carbon::parse($training->start_day)->shortEnglishDayOfWeek .", ". \Carbon\Carbon::parse($training->start_day)->format('d/m/Y') }} </span></h5>
                                             </div>
                                             <div class="col-lg-6">
-                                                <a href="{{'view-training/'. $training->id}}" class="float-right rdmore">
+                                                <a href="{{'view-training/'.$training->id}}" class="float-right rdmore">
+
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                          xmlns="http://www.w3.org/2000/svg">
                                                         <path

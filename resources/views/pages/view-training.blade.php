@@ -57,7 +57,8 @@
 <section class="container-lg-stag">
 	<div class="row m-0">
 		<div class="col-lg-6">
-			<img src="{{ $training->cover}}" class="event-img" role="img" title="local staff" alt="local staff solutions tag" />
+
+			<img src="{{ URL::asset($training->cover)}}" class="event-img" role="img" title="local staff" alt="local staff solutions tag" />
 
 		</div>
 		<div class="col-lg-6">
