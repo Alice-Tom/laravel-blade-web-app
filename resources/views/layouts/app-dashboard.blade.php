@@ -45,24 +45,25 @@
 		<header id="header-container" class="fullwidth dashboard-header not-sticky">
 			<div id="header">
 				<div class="container">
-					
+
 					<!-- Left Side Content -->
 					<div class="left-side">
-						
+
 						<!-- Logo -->
 						<div id="logo">
 								@include('includes.logo')
 						</div>
 
 						<!-- Main Navigation -->
-						<!--<nav id="navigation">
-							<ul id="responsive">
-								@include('includes.menu')
-							</ul>
-						</nav>-->
+{{--						<nav id="navigation">--}}
+{{--							<ul id="responsive">--}}
+{{--                                @include('includes.menu')--}}
+{{--							</ul>--}}
+{{--						</nav>--}}
+
 						<div class="clearfix"></div>
 						<!-- Main Navigation / End -->
-						
+
 					</div>
 					<!-- Left Side Content / End -->
 
@@ -72,7 +73,7 @@
 
 						<!--  User Notifications -->
 						<div class="header-widget hide-on-mobile">
-							
+
 							<!-- Notifications -->
 							<div class="header-notifications">
 
@@ -104,7 +105,7 @@
 								@endif
 
 							</div>
-							
+
 						</div>
 						<!--  User Notifications / End -->
 
@@ -129,9 +130,9 @@
 												{{ auth::user()->firstname }} {{ auth::user()->lastname }}<span class="text-uppercase">{{ auth::user()->account_type }}</span>
 											</div>
 										</div>
-										
+
 								</div>
-								
+
 								<ul class="user-menu-small-nav">
 									@include('includes.userprofilemenu')
 								</ul>
@@ -162,7 +163,7 @@
 			@yield('content')
 		</main>
 
-		
+
 
 <!-- Scripts
 ================================================== -->
@@ -186,7 +187,7 @@
 <!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
 <script>
 // Snackbar for user status switcher
-$('#snackbar-user-status label').click(function() { 
+$('#snackbar-user-status label').click(function() {
 	Snackbar.show({
 		text: 'Your status has been changed!',
 		pos: 'bottom-center',
@@ -195,8 +196,8 @@ $('#snackbar-user-status label').click(function() {
 		duration: 3000,
 		textColor: '#fff',
 		backgroundColor: '#383838'
-	}); 
-}); 
+	});
+});
 </script>
 
 <!-- Chart.js // documentation: http://www.chartjs.org/docs/latest/ -->
@@ -252,7 +253,7 @@ $('#snackbar-user-status label').click(function() {
 	            	},
 				}],
 				xAxes: [{
-					scaleLabel: { display: false },  
+					scaleLabel: { display: false },
 					gridLines:  { display: false },
 				}],
 			},

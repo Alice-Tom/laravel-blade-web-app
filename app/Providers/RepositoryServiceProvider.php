@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Repository\ClientRepositoryInterface;
 use App\Repository\Eloquent\BaseRepository;
+use App\Repository\Eloquent\ClientRepository;
 use App\Repository\Eloquent\EducationRepository;
 use App\Repository\EducationRepositoryInterface;
 use App\Repository\EloquentRepositoryInterface;
@@ -47,6 +49,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(AboutRepositoryInterface::class,AboutRepository::class);
         $this->app->bind(TrainingRepositoryInterface::class,TrainingRepository::class);
         $this->app->bind(BlogRepositoryInterface::class,BlogRepository::class);
+        $this->app->bind(ClientRepositoryInterface::class,ClientRepository::class);
     }
 
     /**

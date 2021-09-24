@@ -24,7 +24,7 @@
 					</span>
 					<span class="trigger-title">Dashboard Navigation</span>
 				</a>
-				
+
 				<!-- Navigation -->
 				<div class="dashboard-nav">
 					<div class="dashboard-nav-inner">
@@ -54,14 +54,22 @@
 					</thead>
 					<tr>
 						<td> <a > Homepage </a> </td>
-						<td> 
+						<td>
 							<a href="{{ url('edit-home')}}" class="button btn-outline ripple-effect" title="edit"> <i class="icon-line-awesome-pencil"></i> </a>
 							<!-- <a href="#" class="button ripple-effect" title="delete"> <i class="icon-material-outline-delete"></i> </a> -->
 						 </td>
 					</tr>
+                    <tr>
+                        <td> <a > Clients </a> </td>
+                        <td>
+                            <a href="{{ url('all-client')}}" class="button btn-outline ripple-effect" title="all"> <i class="icon-line-awesome-users"></i> </a>
+                            <a href="{{ url('edit-client')}}" class="button btn-outline ripple-effect" title="add"> <i class="icon-line-awesome-pencil"></i> </a>
+
+                        </td>
+                    </tr>
 					<tr>
 						<td> <a > About us </a> </td>
-						<td> 
+						<td>
 							<a href="{{ url('edit-about')}}" class="button btn-outline ripple-effect" title="edit"> <i class="icon-line-awesome-pencil"></i> </a>
 							<!-- <a href="#" class="button ripple-effect" title="delete"> <i class="icon-material-outline-delete"></i> </a> -->
 						 </td>

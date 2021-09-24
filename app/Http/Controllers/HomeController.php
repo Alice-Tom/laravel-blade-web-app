@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Services\Client;
 use App\Services\Home;
 use App\Services\Service;
 use App\Services\SubService;
@@ -19,11 +20,13 @@ class HomeController extends Controller
     private $service;
     private $subService;
     private $user;
-    public function __construct(Home $home,Service $service,SubService $subService,Profile $profile){
+    private $client;
+    public function __construct(Home $home,Service $service,SubService $subService,Profile $profile,Client $client){
         $this->home = $home;
         $this->service = $service;
         $this->subService = $subService;
         $this->user = $profile;
+        $this->client=$client;
     }
 
     /**
@@ -36,18 +39,20 @@ class HomeController extends Controller
         $home = $this->home->all();
         $services = $this->service->all();
         $subService=$this->subService->all();
+        $clients=$this->client->all();
         $featured = $this->user->all()
                     ->where('account_type','expert')
                     ->where('feature',true)
                     ->sortBy('name');
 
-          
+
 
         return view('welcome',[
             'home'=>$home,
             'services' =>$services,
             'featured' =>$featured,
-            'subService'=>$subService
+            'subService'=>$subService,
+            'clients'=>$clients
         ]);
     }
 
@@ -60,7 +65,7 @@ class HomeController extends Controller
         ]);
     }
     public function createOrUpdate(Request $request){
-        
+
         $data = $this->home->createOrUpdate($request);
         return redirect()->to('/edit-home');
     }
@@ -68,7 +73,7 @@ class HomeController extends Controller
 
     public function changePassword(Request $request){
 
-        
+
         $user = User::findOrFail(auth::id());
         /*
         * Validate all input fields
@@ -84,7 +89,7 @@ class HomeController extends Controller
             return back()->with('error','Unmatch new password with confirmation');
         }
 
-        if (Hash::check($request->old_password, $user->password)) { 
+        if (Hash::check($request->old_password, $user->password)) {
         $user->fill([
             'password' => Hash::make($request->old_password)
             ])->save();

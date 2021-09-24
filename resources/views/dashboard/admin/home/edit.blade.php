@@ -71,7 +71,7 @@
 							</div>
 						</div>
 
-						<div class="row mt-2"> 
+						<div class="row mt-2">
 							<div class="col-xl-12">
 								<label> Description </label>
 								<textarea rows="2" name="description1">{{$home->description1 ?? ''}}</textarea>
@@ -108,7 +108,7 @@
 							</div>
 						</div>
 
-						<div class="row mt-2"> 
+						<div class="row mt-2">
 							<div class="col-xl-12">
 								<label> Description </label>
 								<textarea rows="2" name="description2">{{$home->description2 ?? '' }}</textarea>
@@ -143,7 +143,7 @@
 							</div>
 						</div>
 
-						<div class="row mt-2"> 
+						<div class="row mt-2">
 							<div class="col-xl-12">
 								<label> Description </label>
 								<textarea rows="2" name="description3">{{$home->description3 ?? ''}}</textarea>
@@ -183,13 +183,13 @@
 							<input type="url" class="with-border" name="intro_link" value="{{$home->intro_link ??''}}">
 						</div>
 
-						<div class="row mt-2"> 
+						<div class="row mt-2">
 							<div class="col-xl-12">
 								<label> Content </label>
 								<textarea rows="5" name="intro_content">{{$home->intro_content ??''}}</textarea>
 							</div>
 						</div>
-						
+
 						<div class="row mt-2">
 							<div class="col-xl-12">
 								<label> Segment Image </label>
@@ -206,13 +206,13 @@
 
 						<div class="row m-0">
 							<label> Video Link </label>
-							<input  type="url" class="with-border" name="intro_video" value="{{$home->intro_video ??''}}">
+							<input  type="text" class="with-border" name="intro_video" value="{{$home->intro_video ??''}}">
 						</div>
 
 					</div>
 				</div>
 
-				
+
 				<!-- Segment -->
 				<div class="dashboard-box mt-3 mb-3">
 					<!-- Headline -->
@@ -231,13 +231,13 @@
 							<input type="url" class="with-border" name="sec3_link" value="{{$home->sec3_link ??''}}">
 						</div>
 
-						<div class="row mt-2"> 
+						<div class="row mt-2">
 							<div class="col-xl-12">
 								<label> Content </label>
 								<textarea rows="5" name="sec3_content">{{$home->sec3_content ??''}}</textarea>
 							</div>
 						</div>
-						
+
 						<div class="row mt-2">
 							<div class="col-xl-12">
 								<label> Segment Image </label>
@@ -273,13 +273,13 @@
 							<input type="url" class="with-border" name="sec4_link" value="{{$home->sec4_link ??''}}">
 						</div>
 
-						<div class="row mt-2"> 
+						<div class="row mt-2">
 							<div class="col-xl-12">
 								<label> Content </label>
 								<textarea rows="5" name="sec4_content">value="{{$home->sec4_content ??''}}"</textarea>
 							</div>
 						</div>
-						
+
 						<div class="row mt-2">
 							<div class="col-xl-12">
 								<label> Segment Image </label>
@@ -315,7 +315,7 @@
 							<input type="url" class="with-border" name="staff_link" value="{{$home->staff_link??''}}">
 						</div>
 
-						<div class="row mt-2"> 
+						<div class="row mt-2">
 							<div class="col-xl-12">
 								<label> Content </label>
 								<textarea rows="5" name="staff_content">{{$home->staff_content ??''}} </textarea>
@@ -342,7 +342,7 @@
 							<input type="url" class="with-border" name="bottom1_link" value="{{$home->bottom1_link ??''}}">
 						</div>
 
-						<div class="row mt-2"> 
+						<div class="row mt-2">
 							<div class="col-xl-12">
 								<label> Segment 1 Description </label>
 								<textarea rows="5" name="bottom1_description">{{$home->bottom1_description ??''}}</textarea>
@@ -350,7 +350,7 @@
 						</div>
 
 					</div>
-					<hr> 
+					<hr>
 					<div class="content with-padding padding-bottom-10">
 						<div class="row m-0">
 							<label> Segment 2 Title </label>
@@ -362,7 +362,7 @@
 							<input type="url" class="with-border" name="bottom2_link" value="{{$home->bottom2_link ??''}}">
 						</div>
 
-						<div class="row mt-2"> 
+						<div class="row mt-2">
 							<div class="col-xl-12">
 								<label> Segment 2 Description </label>
 								<textarea rows="5" name="bottom2_description">{{$home->bottom2_description ??''}} </textarea>

@@ -2,6 +2,12 @@ $("#company-dropdown-nav").on("click", function() {
     $("#company-dropdown").toggle();
 });
 
+$("#company-dropdown-nav").on("mouseover",function (){
+    $("#company-dropdown-nav").click();
+});
+
+
+
 $("#services-drop-nav").on("click", function() {
     $("#services-dropdown").toggle();
 });

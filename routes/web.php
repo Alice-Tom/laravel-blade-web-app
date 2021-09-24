@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\Expert;
 use App\Http\Middleware\Recruiter;
@@ -55,9 +56,7 @@ Route::get('resources-view', function () {
     return view('pages.resources-view');
 });
 
-Route::get('all-pages', function () {
-    return view('pages.all-pages');
-});
+
 
 Route::get('services-categories', function () {
     return view('pages.services-categories');
@@ -193,6 +192,17 @@ Route::middleware([Authenticate::class])->group(function () {
         Route::get('edit-blog/{id}', [BlogController::class, 'edit']);
         Route::post('update-blog/{id}', [BlogController::class, 'update']);
         Route::get('delete-blog/{id}', [BlogController::class, 'destroy']);
+
+
+        Route::get('all-pages', function () {
+            return view('pages.all-pages');
+        });
+
+
+        Route::get('edit-client',[ClientsController::class,'create']);
+        Route::post('new-client',[ClientsController::class,'store']);
+        Route::get('all-client',[ClientsController::class,'index']);
+        Route::get('delete-client/{id}',[ClientsController::class,'destroy']);
 
 
     });

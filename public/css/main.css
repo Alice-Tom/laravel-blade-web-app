@@ -2,7 +2,7 @@
 :root {
 	--primary-stag: #f05a2b;
 	--alternative-stag: #616161;
-	--text: #292928; 
+	--text: #292928;
 	--light-text: #f8f8f8;
 	--grey: #ccc;
 	--grey-alt: #eeeeee;
@@ -139,7 +139,7 @@ a {
 		background-image: linear-gradient(var(--gradient-primary));
 		color: var(--light-text);
 	}
-	
+
 	.btn-st-primary:hover {
 		background-position: right center;
 		background-size: 200% auto;
@@ -194,6 +194,10 @@ a {
 	line-height: 1;
 	width: 70%;
   }
+
+.description-title{
+    width: 70%;
+}
 
   .hero-intro-section {
     position: absolute;
@@ -396,8 +400,8 @@ span.decor {
 }
 
 /*.service-item:hover .service-item::before {
-	content: url('../img/icons/math-plus.svg'); 
-	position:absolute; 
+	content: url('../img/icons/math-plus.svg');
+	position:absolute;
 	bottom: 0;
 	right: 0;
 	z-index: 9999;
@@ -562,17 +566,16 @@ span.expt-profession {
 	overflow: hidden;
 }
 
-.inner-logo-container img {
-    height: 50px;
-    width: 100%;
-	padding: 10px;
-    object-fit: contain;
-}
 
 .inner-logo-container {
     overflow: hidden;
-    background: var(--grey-alt);
+    background-color: white;
     margin: 5px;
+
+    width: auto;
+    height: 50px;
+    background-size: contain;
+    background-repeat:no-repeat;
 }
 
 .main-footer {
@@ -1019,7 +1022,7 @@ a {
     .form-group.subscribe {
         width: 100%;
     }
-    
+
     .lg-txt {
         font-size: 60px;
     }
@@ -1048,7 +1051,7 @@ a {
 		left: 10%;
 		color: var(--light-text);
 	}
-	
+
 
 	/*.mobi-menu {
 		display: none;
@@ -1092,7 +1095,7 @@ a {
 	.mobile-show {
 		display: inherit;
 	}
-	
+
   }
 
   .form-check-input1 {
