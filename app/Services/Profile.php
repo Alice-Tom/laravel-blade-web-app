@@ -31,13 +31,18 @@ class Profile
         return $this->profileInterface->update(auth::id(),$params);
     }
 
-    public function findById($id){
-        return $this->profileInterface->findById($id);
+    public function findById(    int $modelId,
+                                 array $columns = ['*'],
+                                 array $relations = [],
+                                 array $appends = []
+    ){
+        return $this->profileInterface->findById($modelId,$columns,$relations,$appends);
     }
 
     public function all(){
         return $this->profileInterface->all();
     }
+
 
 
     public function updateFeature($userId,$value){

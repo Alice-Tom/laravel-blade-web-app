@@ -63,6 +63,9 @@ class BaseRepository implements EloquentRepositoryInterface
                     ->append($appends);
     }
 
+
+
+
     /**
      * Find trashed model by id.
      *

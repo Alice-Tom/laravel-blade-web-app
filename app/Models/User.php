@@ -25,7 +25,7 @@ class User extends Authenticatable
         'lastname',
         'avator',
         'feature',
-        'active_homepage'
+
     ];
 
     /**
@@ -48,15 +48,15 @@ class User extends Authenticatable
     ];
 
     public function education(){
-        return $this->hasMany(Education::class);
+        return $this->hasMany(Education::class,'user_id');
     }
 
     public function experiences(){
-        return $this->hasMany(Experience::class);
+        return $this->hasMany(Experience::class,'user_id');
     }
 
     public function jobs(){
-        return $this->hasMany(Job::class);
+        return $this->hasMany(Job::class,"user_id");
     }
 
     public function applications(){

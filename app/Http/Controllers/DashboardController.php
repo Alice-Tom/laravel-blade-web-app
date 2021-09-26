@@ -11,7 +11,8 @@ use App\Http\Requests\ExperienceRequest;
 use App\Http\Requests\JobRequest;
 use App\Notifications\ActivatedJob;
 use App\Notifications\NewJobExpert;
-use auth;
+
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -157,12 +158,29 @@ class DashboardController extends Controller
         ]);
     }
 
+
+
+
+
+
     public function viewApplicant($id){
         $applicant = $this->profile->findById($id);
+
+        $education=$applicant->education()->get();
+        $experience=$applicant->experiences()->get();
+
         return view('dashboard.recruiter.view-applicant',[
-            'applicant' => $applicant
+            'applicant' => $applicant,
+            'educations'=>$education,
+            'experiences'=>$experience
         ]);
     }
+
+
+
+
+
+
 
     public function jobVisibility($id){
         $job  = $this->job->findById($id);
