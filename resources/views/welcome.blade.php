@@ -109,27 +109,27 @@
     <section class="container-lg-stag">
 
         <div class="after-hero">
-            <div class="squash">
-                <div class="row w-100 m250">
-                    <div class="col-lg-6">
-                        <img src="{{ asset($home->sec3_image ?? 'img/staff.png')}}" class="leftimage" role="img"
-                             title="local staff" alt="local staff solutions tag"/>
-                    </div>
-                    <div class="col-lg-6">
-                        <h2 class="title_01"> {{$home->sec3_title ?? ''}} </h2>
-                        <p class="m40"> {{$home->sec3_content ?? 'With creative minds and disruptive thinking, we are able to deliver higher values to our clients. This is attributed by our readiness as local expertise to make difference in the industry for the better tomorrow'}} </p>
-                        <a href="{{$home->sec3_link ?? ''}}" class="btn-type-1 magic-hover magic-hover__square">
-                            {{--						<span>--}}
-                            {{--							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"--}}
-                            {{--                                 xmlns="http://www.w3.org/2000/svg"><path--}}
-                            {{--                                    d="M12 4C11.4477 4 11 4.44772 11 5V11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H11V19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19V13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11H13V5C13 4.44772 12.5523 4 12 4Z"--}}
-                            {{--                                    fill="currentColor"/></svg>--}}
-                            {{--						</span>--}}
-                            {{--                            <label> <em> Read more </em></label>--}}
-                        </a>
-                    </div>
+
+            <div class="row squash w-100 m250">
+                <div class="col-lg-6">
+                    <img src="{{ asset($home->sec3_image ?? 'img/staff.png')}}" class="leftimage" role="img"
+                         title="local staff" alt="local staff solutions tag"/>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="title_01"> {{$home->sec3_title ?? ''}} </h2>
+                    <p class="m40"> {{$home->sec3_content ?? 'With creative minds and disruptive thinking, we are able to deliver higher values to our clients. This is attributed by our readiness as local expertise to make difference in the industry for the better tomorrow'}} </p>
+                    <a href="{{$home->sec3_link ?? ''}}" class="btn-type-1 magic-hover magic-hover__square">
+                        {{--						<span>--}}
+                        {{--							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"--}}
+                        {{--                                 xmlns="http://www.w3.org/2000/svg"><path--}}
+                        {{--                                    d="M12 4C11.4477 4 11 4.44772 11 5V11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H11V19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19V13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11H13V5C13 4.44772 12.5523 4 12 4Z"--}}
+                        {{--                                    fill="currentColor"/></svg>--}}
+                        {{--						</span>--}}
+                        {{--                            <label> <em> Read more </em></label>--}}
+                    </a>
                 </div>
             </div>
+
         </div>
 
     </section>

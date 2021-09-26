@@ -288,13 +288,14 @@ a.btn-type-1 {
 }
 
 .after-hero {
-    margin-top: 15rem;
+
+    margin-top: 20rem;
 }
 
 .squash {
     width: 100%;
     min-height: 400px;
-    background-image: url(../img/bg_squash-01.svg);
+    background-image: url(../img/bg_squash.png);
     background-repeat: no-repeat;
     background-size: contain;
 	display: flex;
