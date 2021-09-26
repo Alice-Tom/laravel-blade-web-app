@@ -26,6 +26,7 @@ class HomeController extends Controller
     private $training;
     private $blog;
 
+
     public function __construct(Home $home,Service $service,SubService $subService,Profile $profile,Client $client,Training $training, Blog  $blog){
         $this->home = $home;
         $this->service = $service;

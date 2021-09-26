@@ -20,7 +20,7 @@ class Profile
     public function update($request){
         $params = [];
         if($request->avator!=''){
-            $destinationPath = public_path('uploads/avator/'); 
+            $destinationPath = public_path('uploads/avator/');
             $profile = "avator-".$request->firstname."-".time().'.'.request()->avator->getClientOriginalExtension();
             $request->avator->move($destinationPath, $profile);
             $params['avator'] = 'uploads/avator/'.$profile;

@@ -59,9 +59,9 @@
 			<li><a href="{{ url('add-job')}}"> Add new job </a></li>
 		</ul>
 	</li>
-	<li><a ><i class="icon-material-outline-file-copy"></i> Applicants Management </a>
+	<li><a ><i class="icon-material-outline-file-copy"></i> Experts Management </a>
 		<ul>
-			<li><a href="{{ url('show-applicants')}}"> All Applicants </a></li>
+			<li><a href="{{ url('all-experts')}}"> All Experts </a></li>
 		</ul>
 	</li>
 

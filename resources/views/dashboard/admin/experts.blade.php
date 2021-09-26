@@ -66,7 +66,7 @@
 
 						<!-- Headline -->
 						<div class="headline">
-							<h3><i class="icon-material-outline-business-center"></i> Applicants List </h3>
+							<h3><i class="icon-material-outline-business-center"></i> Experts List </h3>
 						</div>
 
 						<div class="content">
@@ -92,10 +92,17 @@
 											</div>
 
 											<div class="form-check">
+
 												@if($expert->feature)
-												<a href="{{url('update-feature/'.$expert->id)}}"><span>featured</span></a>
+												<a href="{{url('update-feature/'.$expert->id)}}" class="button gray ripple-effect ico" title="Remove from Homepage " >
+                                                    <i class="{{'icon-feather-unlock' }}"></i>
+
+                                                </a>
 												@else
-												<a href="{{url('update-feature/'.$expert->id)}}"><span>add</span></a>
+												<a href="{{url('update-feature/'.$expert->id)}}" class="button gray ripple-effect ico" title="Add to Homepage" >
+                                                    <i class="{{'icon-feather-lock' }}"></i>
+
+                                                </a>
 												@endif
 											</div>
 

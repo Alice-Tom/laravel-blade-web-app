@@ -37,7 +37,7 @@ class DashboardController extends Controller
                     'notifications'=>$notifications
                 ]);
             break;
-            
+
             case 'recruiter':
                 return view('dashboard.recruiter.dashboard',[
                     'notifications'=>$notifications
@@ -55,7 +55,7 @@ class DashboardController extends Controller
 
                 ]
             );
-            
+
             default:
                 dd('404');
 
@@ -112,7 +112,7 @@ class DashboardController extends Controller
         ->where('category',$job->category)
         ->where('id','!=',$job->id);
 
-        
+
 
         return view('pages.view-job',[
             'job'=> $job,
@@ -122,7 +122,7 @@ class DashboardController extends Controller
 
     public function showJob($id){
         $job = $this->job->findById($id);
-       
+
         return view('dashboard.recruiter.edit-job',[
             'job'=>$job
         ]);
@@ -156,7 +156,7 @@ class DashboardController extends Controller
             'job' => $job
         ]);
     }
-       
+
     public function viewApplicant($id){
         $applicant = $this->profile->findById($id);
         return view('dashboard.recruiter.view-applicant',[
@@ -167,7 +167,7 @@ class DashboardController extends Controller
     public function jobVisibility($id){
         $job  = $this->job->findById($id);
         if(!$job->active){
-            foreach (auth::user()->unreadNotifications as $notification) {      
+            foreach (auth::user()->unreadNotifications as $notification) {
                 if($id == $notification->data['id']){
                     $notification->markAsRead();
                 }
@@ -182,7 +182,7 @@ class DashboardController extends Controller
         $job->active = !$job->active;
 
         $job->save();
-  
+
         return redirect()->back();
     }
 
@@ -207,7 +207,7 @@ class DashboardController extends Controller
     public function changeFeature(Request $request){
         $expert = $this->profile->findById($request->id);
 
-        if(($expert->education)){
+        if(($expert->education==null)){
             return back()->with('error','This user doesnt have any education details');
         }
 
@@ -217,7 +217,7 @@ class DashboardController extends Controller
 
             $this->profile->updateFeature($expert->id,!$expert->feature);
             return back()->with('success','successfully added to featured');
-       
+
     }
 
     public function markasRead($id=''){
@@ -225,7 +225,7 @@ class DashboardController extends Controller
             foreach (auth::user()->unreadNotifications as $notification) {
                 if($notification->id === $id){
                     $notification->markAsRead();
-                }    
+                }
             }
         }else{
             auth::user()->unreadNotifications->markAsRead();

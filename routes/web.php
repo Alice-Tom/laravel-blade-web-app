@@ -141,7 +141,7 @@ Route::middleware([Authenticate::class])->group(function () {
         Route::get('job-visibility/{id}', [DashboardController::class, 'jobVisibility']);
 
         Route::get('show-employers', [DashboardController::class, 'showEmployer']);
-        Route::get('show-applicants', [DashboardController::class, 'showExpert']);
+        Route::get('all-experts', [DashboardController::class, 'showExpert']);
 
         Route::get('new-service', [ServiceController::class, 'addServiceForm']);
         Route::post('new-service', [ServiceController::class, 'addService']);

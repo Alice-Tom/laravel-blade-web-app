@@ -24,7 +24,8 @@ class User extends Authenticatable
         'firstname',
         'lastname',
         'avator',
-        'feature'
+        'feature',
+        'active_homepage'
     ];
 
     /**
