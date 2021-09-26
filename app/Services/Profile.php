@@ -28,6 +28,7 @@ class Profile
         }
             $params['firstname'] = $request->firstname;
             $params['lastname'] = $request->lastname;
+            $params["about"]=$request->about;
         return $this->profileInterface->update(auth::id(),$params);
     }
 

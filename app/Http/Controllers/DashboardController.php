@@ -69,6 +69,7 @@ class DashboardController extends Controller
     }
 
     public function updateProfile(Request $request){
+
         $this->profile->update($request);
         return redirect()->back();
     }
