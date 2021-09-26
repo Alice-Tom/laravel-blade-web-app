@@ -921,7 +921,18 @@ body #magicPointer {
 
 #company-dropdown {
 	display: none;
+    position: absolute;
 }
+
+#company-dropdown-nav:hover{
+    display: block !important;
+}
+
+#company-dropdown:hover{
+    display: block !important;
+}
+
+
 
 .footer-links a:hover {
     color: var(--primary-stag) !important;

@@ -1,16 +1,24 @@
-$("#company-dropdown-nav").on("click", function() {
-    $("#company-dropdown").toggle();
+$("#company-dropdown-nav").on("mouseover", function() {
+    $("#company-dropdown").css("display","block");
+    $("#services-dropdown").css("display","none")
 });
 
-$("#company-dropdown-nav").on("mouseover",function (){
-    $("#company-dropdown-nav").click();
+$("#company-dropdown").on("mouseout",function () {
+    $("#company-dropdown").css("display","none")
+})
+
+
+$("#services-drop-nav").on("mouseover", function() {
+    // $("#services-dropdown").toggle();
+    $("#services-dropdown").css("display","block")
+    $("#company-dropdown").css("display","none")
+
 });
+$("#services-dropdown").on("mouseout",function () {
+    $("#services-dropdown").css("display","none")
+})
 
 
-
-$("#services-drop-nav").on("click", function() {
-    $("#services-dropdown").toggle();
-});
 
 window.addEventListener("mouseup", function(event) {
     var box = document.getElementById("company-dropdown");
