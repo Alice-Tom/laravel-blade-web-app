@@ -135,6 +135,8 @@ Route::middleware([Authenticate::class])->group(function () {
         Route::get('manage-jobs', [DashboardController::class, 'manageJob']);
         Route::get('manage-applicants/{jobId}', [DashboardController::class, 'manageApplicants']);
         Route::get('view-applicant/{id}', [DashboardController::class, 'viewApplicant']);
+
+        Route::post('/update-profile', [DashboardController::class, 'updateProfile'])->name('update-profile');
     });
 
     Route::middleware([Admin::class])->group(function () {
