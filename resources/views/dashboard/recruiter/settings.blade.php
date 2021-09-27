@@ -23,7 +23,7 @@
 					</span>
 					<span class="trigger-title">Dashboard Navigation</span>
 				</a>
-				
+
 				<!-- Navigation -->
 				<div class="dashboard-nav">
 					<div class="dashboard-nav-inner">
@@ -41,7 +41,7 @@
 	================================================== -->
 	<div class="dashboard-content-container" data-simplebar>
 		<div class="dashboard-content-inner" >
-			
+
 			<!-- Dashboard Headline -->
 			<div class="dashboard-headline">
 				<h3>Settings</h3>
@@ -55,7 +55,7 @@
 				</nav>
 			</div>
 			@include('includes.alert')
-	
+
 			<!-- Row -->
 			<div class="row">
 
@@ -76,9 +76,12 @@
 
 								<div class="col-auto">
 									<div class="avatar-wrapper" data-tippy-placement="bottom" title="Change Avatar">
-										<img class="profile-pic" src="images/user-avatar-placeholder.png" alt="" />
+										<img class="profile-pic"
+                                             src="{{ asset(auth::user()->avator??'images/user-avatar-placeholder.png') }}"
+
+                                             alt="" />
 										<div class="upload-button"></div>
-										<input class="file-upload" type="file" accept="image/*"/>
+										<input class="file-upload" name="avator" type="file" accept="image/*"/>
 									</div>
 								</div>
 
@@ -88,14 +91,14 @@
 										<div class="col-xl-6">
 											<div class="submit-field">
 												<h5>First Name</h5>
-												<input type="text" class="with-border" value="{{ auth::user()->firstname }}">
+												<input type="text" class="with-border" name="firstname" value="{{ auth::user()->firstname }}">
 											</div>
 										</div>
 
 										<div class="col-xl-6">
 											<div class="submit-field">
 												<h5>Last Name</h5>
-												<input type="text" class="with-border" value="{{ auth::user()->lastname }}">
+												<input type="text" class="with-border" name="lastname" value="{{ auth::user()->lastname }}">
 											</div>
 										</div>
 
@@ -181,7 +184,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<!-- Button -->
 				<div class="col-xl-12">
 					<button type="submit" class="button ripple-effect big margin-top-30">Save Changes</button>

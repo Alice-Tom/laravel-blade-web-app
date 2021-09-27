@@ -115,10 +115,11 @@ Route::middleware([Authenticate::class])->group(function () {
     //notification
     Route::get('mark-as-read/?{id}', [DashboardController::class, 'markasRead']);
 
+    Route::post('/update-profile', [DashboardController::class, 'updateProfile'])->name('update-profile');
 
     Route::middleware([Expert::class])->group(function () {
         Route::get('/cv-profile', [DashboardController::class, 'profile'])->name('profile');
-        Route::post('/update-profile', [DashboardController::class, 'updateProfile'])->name('update-profile');
+//        Route::post('/update-profile', [DashboardController::class, 'updateProfile'])->name('update-profile');
         Route::post('/update-education', [DashboardController::class, 'updateEducation'])->name('update-education');
         Route::post('/update-experience', [DashboardController::class, 'updateExperience'])->name('update-experience');
         // Route::get('/jobs',[DashboardController::class,'jobsList']);
@@ -136,7 +137,7 @@ Route::middleware([Authenticate::class])->group(function () {
         Route::get('manage-applicants/{jobId}', [DashboardController::class, 'manageApplicants']);
         Route::get('view-applicant/{id}', [DashboardController::class, 'viewApplicant']);
 
-        Route::post('/update-profile', [DashboardController::class, 'updateProfile'])->name('update-profile');
+
     });
 
     Route::middleware([Admin::class])->group(function () {

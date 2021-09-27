@@ -24,7 +24,7 @@
 					</span>
 					<span class="trigger-title">Dashboard Navigation</span>
 				</a>
-				
+
 				<!-- Navigation -->
 				<div class="dashboard-nav">
 					<div class="dashboard-nav-inner">
@@ -42,7 +42,7 @@
 	================================================== -->
 	<div class="dashboard-content-container" data-simplebar>
 		<div class="dashboard-content-inner" >
-			
+
 			<!-- Dashboard Headline -->
 			<div class="dashboard-headline">
 				<h3>Manage Applicants</h3>
@@ -57,7 +57,7 @@
 					</ul>
 				</nav>
 			</div>
-	
+
 			<!-- Row -->
 			<div class="row">
 
@@ -94,20 +94,20 @@
 
 												<!-- Rating -->
 												<div class="freelancer-rating">
-													<div class="star-rating" data-rating="5.0"></div>
+{{--													<div class="star-rating" data-rating="5.0"></div>--}}
 												</div>
 
 												<!-- Buttons -->
-												<div class="buttons-to-right always-visible margin-top-25 margin-bottom-5">
-													<a href="" class="button ripple-effect"><i class="icon-feather-file-text"></i> Download CV</a>
-													<a href="#" class="button gray ripple-effect ico" title="Remove Candidate" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></a>
-												</div>
+{{--												<div class="buttons-to-right always-visible margin-top-25 margin-bottom-5">--}}
+{{--													<a href="" class="button ripple-effect"><i class="icon-feather-file-text"></i> Download CV</a>--}}
+{{--													<a href="#" class="button gray ripple-effect ico" title="Remove Candidate" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></a>--}}
+{{--												</div>--}}
 											</div>
 										</div>
 									</div>
 								</li>
 								@endforeach
-							
+
 
 								{{-- <li>
 									<!-- Overview -->
@@ -122,7 +122,7 @@
 											<!-- Name -->
 											<div class="freelancer-name">
 												<h4><a href="{{ url('view-applicant')}}">Sebastiano Piccio <img class="flag" src="images/flags/it.svg" alt="" title="Italy" data-tippy-placement="top"></a></h4>
-											
+
 
 												<!-- Details -->
 												<span class="freelancer-detail-item"><a href="#"><i class="icon-feather-mail"></i> sebastiano@example.com</a></span>
@@ -208,17 +208,17 @@
 
 			<!-- Tab -->
 			<div class="popup-tab-content" id="tab">
-				
+
 				<!-- Welcome Text -->
 				<div class="welcome-text">
 					<h3>Direct Message To Sindy</h3>
 				</div>
-					
+
 				<!-- Form -->
 				<form method="post" id="send-pm">
 					<textarea name="textarea" cols="10" placeholder="Message" class="with-border" required></textarea>
 				</form>
-				
+
 				<!-- Button -->
 				<button class="button full-width button-sliding-icon ripple-effect" type="submit" form="send-pm">Send <i class="icon-material-outline-arrow-right-alt"></i></button>
 

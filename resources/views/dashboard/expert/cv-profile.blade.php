@@ -139,7 +139,7 @@
                                                         <h5>About me </h5>
                                                         <div class="col-xl-12">
 
-                                                            <textarea rows="5"  name="about">{{auth::user()->about}}  </textarea>
+                                                            <textarea rows="5" name="about">{{auth::user()->about}}  </textarea>
 
                                                         </div>
                                                     </div>
