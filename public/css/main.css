@@ -919,17 +919,9 @@ body #magicPointer {
     border-radius: 0 !important;
 }
 
-#company-dropdown {
+#company-dropdown,#solution-dropdown {
 	display: none;
-    position: absolute;
-}
 
-#company-dropdown-nav:hover{
-    display: block !important;
-}
-
-#company-dropdown:hover{
-    display: block !important;
 }
 
 

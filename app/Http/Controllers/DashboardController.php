@@ -42,6 +42,7 @@ class DashboardController extends Controller
             case 'recruiter':
                 return view('dashboard.recruiter.dashboard',[
                     'notifications'=>$notifications
+
                 ]);
             break;
 
