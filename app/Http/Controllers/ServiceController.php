@@ -101,8 +101,10 @@ class ServiceController extends Controller
 
     public function showSubService($id,$title){
         $service  = $this->subService->findById($id);
+        $subService = $this->subService->all();
         return view('pages.service-child',[
-            'service' => $service
+            'service' => $service,
+            'subServices' =>$subService,
         ]);
     }
 
