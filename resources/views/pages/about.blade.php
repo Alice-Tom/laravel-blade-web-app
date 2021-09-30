@@ -2,17 +2,17 @@
 @section('styles_login_register')
 <link href="{{ asset('css/icons.css') }}" rel="stylesheet">
 <link href="{{ asset('css/orange.css') }}" rel="stylesheet">
-@stop	
+@stop
 
 @section('content')
 
 <!-- Titlebar
 ================================================== -->
-<div class="soltag-header-single" style="background-image: url('img/slide2.jpg');">
+<div class="soltag-header-single" style="background-image: url('img/largeImg.jpg');">
 	<div class="container-lg-stag inner-title">
 		<div class="row m-0 w-100">
 			<div class="col-lg-6">
-				<h2 class="title"> The Company <span class="circle"></span> About us</h2>
+				<h2 class="title "> The Company <span class="circle"></span> About us</h2>
 			</div>
 		</div>
 	</div>
@@ -66,7 +66,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="row">
 		<div class="col-lg-6 cta-col-2 pt-5 pb-5">
 			<i class="icon-feather-sun abs-inner-item"></i>
@@ -88,7 +88,7 @@
 		<div class="row m-0">
 			<div class="col-lg-4 greybg">
 				<!--<div class="lg-icon-cont">
-					
+
 				</div>-->
 				<p class="quot1">
 					{{$about->culture_description_blockquote ?? ''}}
@@ -105,7 +105,7 @@
 
 <section class="bgtxt">
 	<div class="container-lg-stag bgcutout">
-		<h1 class="lg-txt"> A better tommorow </h1>
+		<h1 class="lg-txt"> A better tomorrow </h1>
 	</div>
 </section>
 

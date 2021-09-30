@@ -84,18 +84,18 @@
 						<div class="row m-0">
 							<div class="col-lg-6">
 								<ul class="footer-menu-1 footer-links">
-									<li><a href="#"> HOME </a></li>
-									<li><a href="#"> THE COMPANY </a></li>
+									<li><a href="/"> HOME </a></li>
+									<li><a href="/about"> THE COMPANY </a></li>
 									<li><a href="#"> SERVICES </a></li>
 									<li><a href="#"> SOLUTIONS </a></li>
-									<li><a href="#"> TRAINING  </a></li>
-									<li><a href="#"> CONTACT US </a></li>
+									<li><a href="/training"> TRAINING  </a></li>
+
 								</ul>
 							</div>
 							<div class="col-lg-6">
 								<ul class="footer-menu-2 footer-links">
-									<li><a href="#"> NEWS</a></li>
-									<li><a href="#"> RESOURCES </a></li>
+									<li><a href="/training"> NEWS</a></li>
+									<li><a href="/resources"> RESOURCES </a></li>
 									<li><a href="#"> FAQ </a></li>
 									<li><a href="/privacy-policy"> PRIVACY POLICY </a></li>
 									<li><a href="#"> TERMS & CONDITIONS  </a></li>
