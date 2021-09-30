@@ -285,6 +285,7 @@ a.btn-type-1 {
 .container-lg-stag {
     width: 70%;
     margin: auto;
+    padding: 35px 25px;
 }
 
 .after-hero {
@@ -802,6 +803,23 @@ a:hover {
     overflow: hidden;
 }
 
+.img-page-subservice {
+    width: 100%;
+
+    overflow: hidden;
+
+}
+
+.subservice-image{
+    overflow: hidden;
+    margin: 5px;
+    width: auto;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
 .pt-10 {
     padding: 7rem 0;
 }
@@ -998,8 +1016,45 @@ a {
 	display: none;
 }
 
+@media only screen and   (max-width: 425px) {
+    .subservice-image{
+        overflow: hidden;
+        margin: 5px;
+        width: auto;
+        height: 250px;
+        background-position: center;
+        background-size: cover;
+        background-repeat:no-repeat;
+    }
+}
+
+
+@media only screen and (max-width: 320px)  {
+    .subservice-image{
+        overflow: hidden;
+        margin: 5px;
+        width: auto;
+        height: 150px;
+        background-position: center;
+        background-size: cover;
+        background-repeat:no-repeat;
+    }
+}
+@media only screen and  (max-width: 375px)  {
+    .subservice-image{
+        overflow: hidden;
+        margin: 5px;
+        width: auto;
+        height: 300px;
+        background-position: center;
+        background-size: cover;
+        background-repeat:no-repeat;
+    }
+}
+
 /* Mobile Responsiveness */
 @media only screen and (max-width: 600px) {
+
 	.web-menu {
 		flex-flow: column;
 		padding: 0 !important;

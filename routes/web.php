@@ -103,7 +103,7 @@ Route::middleware([Authenticate::class])->group(function () {
     Route::get('/jobs', [DashboardController::class, 'jobsList']);
 
     Route::get('settings', function () {
-        return view('dashboard.recruiter.settings');
+        return view('dashboard.recruiter.settdings');
     });
 
     Route::get('add-job', function () {

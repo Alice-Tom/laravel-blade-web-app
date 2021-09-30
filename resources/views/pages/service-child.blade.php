@@ -21,7 +21,7 @@
 <!-- Page Content
 ================================================== -->
 <section class="fullwidthbg bgprimary-main">
-	<div class="container-lg-stag p200">
+	<div class="container-lg-stag">
 		<div class="row m-0">
 			<div class="col-lg-4">
 				<div class="title-big-icon">
@@ -39,8 +39,8 @@
 <section class="whoweare">
 	<div class="forcetocenter">
 		<div class="videolg-container container-lg-stag">
-			<div class="video-container">
-				<img src="{{ asset($service->image)}}" role="img" class="img-page-main" alt="Oil and Gas">
+			<div class="subservice-image" style="background-image: url('{{URL::asset($service->image)}}') ;" >
+{{--				<img src="{{ asset($service->image)}}" role="img" class="img-page-subservice" alt="Oil and Gas">--}}
 			</div>
 	</div>
 	</div>
@@ -59,7 +59,7 @@
 			</p>
 		</div>
 
-		
+
 	</div>
 </section>
 
