@@ -255,6 +255,13 @@ video#videostag {
     letter-spacing: 1px;
 }
 
+.title_02 {
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+
 .introduction-section {
     margin: 40px 0;
 }
@@ -591,7 +598,7 @@ span.expt-profession {
     margin: 5px;
 
     width: auto;
-    height: 50px;
+    height: 100px;
     background-size: contain;
     background-repeat:no-repeat;
 }

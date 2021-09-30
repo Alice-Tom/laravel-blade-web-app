@@ -383,7 +383,7 @@
         <div class="container-lg-stag ">
             <div class="m200">
                 <div class="row m-0">
-                    <h2 class="title_01"><span class="light-text"> CLIENTS </span></h2>
+                    <h3 class="title_02"><span class="light-text"> CLIENTS </span></h3>
                 </div>
                 <div class="client-logos">
                     @foreach($clients as $client)
