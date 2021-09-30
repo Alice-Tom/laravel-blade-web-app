@@ -93,9 +93,11 @@ class ServiceController extends Controller
 
     //show service
     public function showService($id,$title){
+        $services=$this->service->all();
         $service = $this->service->findById($id);
         return view('pages.service-parent',[
-            'service' => $service
+            'service' => $service,
+            'services'=>$services
         ]);
     }
 
