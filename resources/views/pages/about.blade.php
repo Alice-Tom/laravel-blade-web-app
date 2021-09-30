@@ -21,18 +21,21 @@
 <!-- Page Content
 ================================================== -->
 <section class="fullwidthbg bgprimary-main">
-	<div class="container-lg-stag p200">
-		<div class="row m-0">
-			<div class="col-lg-4">
-				<div class="title-big-icon">
-					<i class="icon-line-awesome-question"></i>
-					<h1> {{$about->intro_title ?? ''}} </h1>
-				</div>
-			</div>
-			<div class="col-lg-8">
-				<p> {{$about->intro_description ?? 'Oil and gas sector requires fresh, innovative and disruptive minds that are motivated by the future rather than the present. The minds that are committed to present their ulttimate thoughts and providing the best solutions for the better tomorrow of the sector in Tanzania.'}} </p>
-			</div>
-		</div>
+	<div class="container-lg-stag ">
+        <div class="">
+            <div class="row m-2 py-5">
+                <div class="col-lg-4">
+                    <div class="title-big-icon">
+                        <i class="icon-line-awesome-question"></i>
+                        <h1> {{$about->intro_title ?? ''}} </h1>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <p> {{$about->intro_description ?? 'Oil and gas sector requires fresh, innovative and disruptive minds that are motivated by the future rather than the present. The minds that are committed to present their ulttimate thoughts and providing the best solutions for the better tomorrow of the sector in Tanzania.'}} </p>
+                </div>
+            </div>
+        </div>
+
 	</div>
 </section>
 
@@ -43,7 +46,7 @@
 				<video playsinline="playsinline" id="videostag" poster="{{ asset('img/stagvideo.jpg') }}">
 					<source src="{{ asset('video/stagvideo.mp4') }}" type="video/mp4">
 				</video>
-				<a href="{{$about->intro_link ?? ''}}" class="btn-type-1 magic-hover magic-hover__square light-text">
+				<a href="{{$about->intro_link ?? ''}}" target="_blank" class="btn-type-1 magic-hover magic-hover__square light-text">
 						<span>
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 12.3301L9 16.6603L9 8L15 12.3301Z" fill="currentColor" /></svg>
 						</span>
@@ -57,7 +60,7 @@
 <section class="container-lg-stag">
 	<div class="row m-0">
 		<div class="whowearesegment m40">
-			<h2 class="title_01 text-center"> WHO <span class="decor"> WE ARE </span> </h2>
+			<h2 class="title_01 text-center"> WHO <span class=""> WE ARE </span> </h2>
 			<div class="row m-0 p40">
 				<p class="text-center">
 					{{$about->who_are_we ?? 'We are integrated oil and gas company specialized in providing technical (engineering, geophysical, consultance) services and trainings. We are motivated by the better oil and gas industry we want to see each tomorrow. We believe, we, local experts in collaboration with value chain stakeholders, are the one responsible for better tomorrow of the industry we want to see.
