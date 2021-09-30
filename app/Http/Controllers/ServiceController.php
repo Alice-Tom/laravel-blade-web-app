@@ -54,6 +54,8 @@ class ServiceController extends Controller
 
     //Edit
     public function editService($id){
+
+
         $service = $this->service->findById($id);
         return view('dashboard.admin.services.edit-service',[
             'service' => $service

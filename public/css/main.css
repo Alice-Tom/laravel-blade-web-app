@@ -108,12 +108,14 @@ a {
 		background: var(--primary-stag);
 		z-index: 9999;
 		width: 200px;
-		padding: 10px;
-		line-height: 2;
+		padding: 5px;
+		line-height: 1;
+        border-radius: 8px;
 	}
 
 	.dropmenu li {
-		padding: 10px;
+		padding: 10px !important;
+
 	}
 
 	.dropmenu a {

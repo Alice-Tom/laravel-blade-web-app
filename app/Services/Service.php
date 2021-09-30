@@ -18,7 +18,7 @@ class Service
 
     public function create($request){
         $params = [];
-        if( empty($request->cover) && empty($request->bottom_cover) && 
+        if( empty($request->cover) && empty($request->bottom_cover) &&
             empty($request->title) && empty($request->description) &&
             empty($request->bottom_title) && empty($request->bottom_description)  ){
             return false;
@@ -50,10 +50,11 @@ class Service
         }else{
             return false;
         }
-        
+
     }
 
     public function findById($id){
+        dd($id);
         return $this->ServiceInterface->findById($id);
     }
 

@@ -79,26 +79,25 @@
 				<div class="row m-0 p40">
 					<div class="col-lg-5">
 						<div class="row m-0 pb-3">
-							<span class="titlefooter"> NEED HELP? </span>  </h1>
+							<span class="titlefooter"> Need Help? </span>  </h1>
 						</div>
 						<div class="row m-0">
 							<div class="col-lg-6">
 								<ul class="footer-menu-1 footer-links">
-									<li><a href="/"> HOME </a></li>
-									<li><a href="/about"> THE COMPANY </a></li>
-									<li><a href="#"> SERVICES </a></li>
-									<li><a href="#"> SOLUTIONS </a></li>
-									<li><a href="/training"> TRAINING  </a></li>
+									<li><a href="/"> Home </a></li>
+									<li><a href="/about"> The Company </a></li>
+									<li><a href="#"> Services </a></li>
+									<li><a href="#"> Solutions </a></li>
+									<li><a href="/training"> Training  </a></li>
 
 								</ul>
 							</div>
 							<div class="col-lg-6">
 								<ul class="footer-menu-2 footer-links">
-									<li><a href="/training"> NEWS</a></li>
-									<li><a href="/resources"> RESOURCES </a></li>
+									<li><a href="/training"> News</a></li>
+									<li><a href="/resources"> Resources </a></li>
 									<li><a href="#"> FAQ </a></li>
-									<li><a href="/privacy-policy"> PRIVACY POLICY </a></li>
-									<li><a href="#"> TERMS & CONDITIONS  </a></li>
+									<li><a href="/privacy-policy"> Privacy Policy </a></li>
 								</ul>
 							</div>
 						</div>
@@ -106,7 +105,7 @@
 
 					<div class="col-lg-3">
 						<div class="row m-0 pb-3">
-							<span class="titlefooter"> FOLLOW US </span>  </h1>
+							<span class="titlefooter"> Follow Us </span>  </h1>
 						</div>
 						<div class="row m-0">
 							<ul class="footer-social footer-links">
@@ -139,16 +138,16 @@
 
 					<div class="col-lg-4">
 						<div class="row m-0 pb-3">
-							<span class="titlefooter"> CONTACT US </span>  </h1>
+							<span class="titlefooter"> Contact Us </span>  </h1>
 						</div>
 						<div class="row m-0">
 							<p>Conservation House, 3rd Floor, Morocco <br/> Dar es Salaam, Tanzania</p>
-							<p> <label> CALL US </label><br />
+							<p> <label> Call Us </label><br />
 								+255 716 610 846
                                 <br />
                                 +255 688 064 389
 							</p>
-							<p> <label> EMAIL </label><br />
+							<p> <label> Email </label><br />
 								info@solutionstag.co.tz
 							</p>
 						</div>

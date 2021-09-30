@@ -24,7 +24,7 @@
 					</span>
 					<span class="trigger-title">Dashboard Navigation</span>
 				</a>
-				
+
 				<!-- Navigation -->
 				<div class="dashboard-nav">
 					<div class="dashboard-nav-inner">
@@ -51,11 +51,11 @@
 							<th> Services </th>
 							<th> Actions </th>
 						</tr>
-					</thead> 
+					</thead>
 					@foreach ($services as $service )
 					<tr>
 						<td> <a > {{ $service->title }} </a> </td>
-						<td> 
+						<td>
 							<a href="{{ url('service/edit/'.$service->id)}}" class="button btn-outline ripple-effect" title="edit"> <i class="icon-line-awesome-pencil"></i> </a>
 							<a href="{{ url('service/delete/'.$service->id) }}" class="button ripple-effect" title="delete"> <i class="icon-material-outline-delete"></i> </a>
 						 </td>
