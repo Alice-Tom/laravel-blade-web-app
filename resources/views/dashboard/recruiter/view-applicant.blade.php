@@ -20,7 +20,7 @@
 							<h3>{{ $applicant->name }} <span></span></h3>
 							<ul>
 {{--								<li><div class="star-rating" data-rating="5.0"></div></li>--}}
-								<li><img class="flag"  alt=""> {{$applicant->email}}</li>
+{{--								<li><img class="flag"  alt=""> {{$applicant->email}}</li>--}}
 								<li><div class="verified-badge-with-title">Verified</div></li>
 							</ul>
 						</div>

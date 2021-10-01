@@ -56,6 +56,7 @@ class ServiceController extends Controller
     public function editService($id){
 
 
+
         $service = $this->service->findById($id);
         return view('dashboard.admin.services.edit-service',[
             'service' => $service
@@ -95,6 +96,8 @@ class ServiceController extends Controller
 
     //show service
     public function showService($id,$title){
+
+
         $services=$this->service->all();
         $service = $this->service->findById($id);
         return view('pages.service-parent',[

@@ -152,10 +152,10 @@ Route::middleware([Authenticate::class])->group(function () {
         Route::post('new-service', [ServiceController::class, 'addService']);
         Route::get('all-services', [ServiceController::class, 'allService']);
 
-        Route::get('service/edit/{id}', [ServiceController::class, 'editService']);
+        Route::get('service-edit/{id}', [ServiceController::class, 'editService']);
         Route::post('service/update/{id}', [ServiceController::class, 'updateService']);
 
-        Route::get('service/delete/{id}', [ServiceController::class, 'deleteService']);
+        Route::get('service-delete/{id}', [ServiceController::class, 'deleteService']);
 
 
         //sub service

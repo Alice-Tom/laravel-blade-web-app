@@ -56,8 +56,8 @@
 					<tr>
 						<td> <a > {{ $service->title }} </a> </td>
 						<td>
-							<a href="{{ url('service/edit/'.$service->id)}}" class="button btn-outline ripple-effect" title="edit"> <i class="icon-line-awesome-pencil"></i> </a>
-							<a href="{{ url('service/delete/'.$service->id) }}" class="button ripple-effect" title="delete"> <i class="icon-material-outline-delete"></i> </a>
+							<a href="{{ url('service-edit/'.$service->id)}}" class="button btn-outline ripple-effect" title="edit"> <i class="icon-line-awesome-pencil"></i> </a>
+							<a href="{{ url('service-delete/'.$service->id) }}" class="button ripple-effect" title="delete"> <i class="icon-material-outline-delete"></i> </a>
 						 </td>
 					</tr>
 					@endforeach

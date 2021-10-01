@@ -89,7 +89,7 @@
 												<h4><a href="{{ url('view-applicant/'.$applicant->id)}}">{{ $applicant->name }} <img class="flag" src="images/flags/au.svg" alt="" title="Australia" data-tippy-placement="top"></a></h4>
 
 												<!-- Details -->
-												<span class="freelancer-detail-item"><a href=""><i class="icon-feather-mail"></i> {{ $applicant->email }}</a></span>
+{{--												<span class="freelancer-detail-item"><a href=""><i class="icon-feather-mail"></i> {{ $applicant->email }}</a></span>--}}
 												{{-- <span class="freelancer-detail-item"><i class="icon-feather-phone"></i> (+61) 123-456-789</span> --}}
 
 												<!-- Rating -->

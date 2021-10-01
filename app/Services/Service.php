@@ -54,7 +54,7 @@ class Service
     }
 
     public function findById($id){
-        dd($id);
+
         return $this->ServiceInterface->findById($id);
     }
 
