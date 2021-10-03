@@ -58,30 +58,41 @@
             d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
             fill="currentColor"/>
     </svg>
-    <ul id="services-dropdown" class="dropdown-nav ">
+    <ul id="services-dropdown" class="dropdown-nav">
+
         @foreach (App\Models\Service::all()->chunk(10) as $service )
+            @php
+                session(['counterServiceClass' => 1]);
+            @endphp
             @foreach ($service as $service )
                 @php
                     $service_slug = str_slug($service->title, '-');
+
                 @endphp
-                <li>
+                <li id="{{Session::get('counterServiceClass')}}">
                     <a href='{{ url('service/'.$service->id.'/'.$service_slug) }}'>{{ $service->title }}</a>
 
-                        <ul id="subservice-subtab" class="dropdown-nav">
-                            @foreach ($service->subService as $sub )
-                                @php
-                                    $sub_slug = str_slug($sub->title, '-');
-                                @endphp
-                                <li>
-                                    <a href="{{ url('service-child/'.$sub->id.'/'.$sub_slug) }}"> {{ $sub->title }}</a>
-                                </li>
-                            @endforeach
+                    <ul id="subservice-subtab" class="dropdown-nav">
+                        @foreach ($service->subService as $sub )
+                            @php
+                                $sub_slug = str_slug($sub->title, '-');
+                            @endphp
+                            <li>
+                                <a href="{{ url('service-child/'.$sub->id.'/'.$sub_slug) }}"> {{ $sub->title }}</a>
+                            </li>
+                        @endforeach
 
 
-                        </ul>
+                    </ul>
 
                 </li>
+                @php
+                    //updating service class for next service
+                    session()->put('counterServiceClass', 2);
+
+                @endphp
             @endforeach
+
         @endforeach
     </ul>
 

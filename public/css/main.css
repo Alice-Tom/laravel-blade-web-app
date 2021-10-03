@@ -123,8 +123,8 @@ a {
 	}
 
     #subservice-subtab{
-        /*display:none*/
-
+        display:none;
+        top: auto;
         width: 150px !important;
         left: 150px !important;
         position: absolute;
@@ -621,6 +621,16 @@ span.expt-profession {
     background-repeat:no-repeat;
 }
 
+
+.training-cover-container{
+    overflow: hidden;
+
+    height: 100px;
+    background-size: contain;
+    background-size: 200px 150px;
+    background-repeat:no-repeat;
+}
+
 .main-footer {
     background: var(--alternative-stag);
     color: var(--light-text);
@@ -874,17 +884,14 @@ a:hover {
     color: var(--primary-stag);
 }
 
-.training-col {
-    background: var(--grey);
-    border-radius: .5rem;
-    padding: 5px;
-}
 
 .training-col {
     background: var(--grey-alt);
     border-radius: .5rem;
     padding: 5px;
     margin: 0 0 1rem 0;
+    width: 100%;
+
 }
 
 .btn-st-primary.light:hover, .btn-st-primary:hover {

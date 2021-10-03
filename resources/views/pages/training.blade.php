@@ -8,7 +8,7 @@
 
 <!-- Titlebar
 ================================================== -->
-<div class="soltag-header-single" style="background-image: url('img/slide2.jpg');">
+<div class="soltag-header-single" style="background-image: url('img/largeImg.jpg');">
 	<div class="container-lg-stag inner-title">
 		<div class="row m-0 w-100">
 			<div class="col-lg-6">
@@ -21,7 +21,7 @@
 <!-- Page Content
 ================================================== -->
 <section class="fullwidthbg bgprimary-main">
-	<div class="container-lg-stag p200">
+	<div class="container-lg-stag ">
 		<div class="row m-0">
 			<div class="col-lg-4">
 				<div class="title-big-icon">
@@ -47,10 +47,15 @@
 			@foreach($trainings as $training)
 				<div class="training-col">
 					<a href="{{'view-training/'.$training->id}}">
-						<div class="row m-0">
-							<div class="col-lg-3">
-								<img src="{{URL::asset($training->cover) }}" class="event-img" role="img" title="local staff" alt="local staff solutions tag" />
-							</div>
+						<div class="row m-0 ">
+
+
+                            <div class="col-lg-3 mr-1 training-cover-container" style="background-image: url('{{$training->cover}}') ;">
+
+                            </div>
+
+
+
 							<div class="col-lg-4">
 								<div class="inner-containers">
 									<div class="row">
