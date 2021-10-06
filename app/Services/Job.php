@@ -6,16 +6,19 @@ use App\Notifications\NewJob;
 use App\Repository\JobRepositoryInterface as JobInterface;
 use App\Repository\ProfileRepositoryInterface as UserInterface;
 use auth;
+use App\Services\Utils\Image;
 
 class Job
 {
     protected $jobInterface;
     protected $userInterface;
+    protected $image;
 
-    public function __construct(JobInterface $jobInterface,UserInterface $userInterface)
+    public function __construct(JobInterface $jobInterface,UserInterface $userInterface,Image $image)
     {
         $this->jobInterface = $jobInterface;
         $this->userInterface = $userInterface;
+        $this->image=$image;
     }
 
 
@@ -33,10 +36,12 @@ class Job
         ];
 
         if($request->attachment!=''){
-            $destinationPath = public_path('uploads/jobs/'); 
-            $job = "job-".$request->firstname."-".time().'.'.request()->attachment->getClientOriginalExtension();
-            $request->attachment->move($destinationPath, $job);
-            $params['attachment'] = 'uploads/jobs/'.$job;
+            // $destinationPath = public_path('uploads/jobs/'); 
+            // $job = "job-".$request->firstname."-".time().'.'.request()->attachment->getClientOriginalExtension();
+            // $request->attachment->move($destinationPath, $job);
+            // $params['attachment'] = 'uploads/jobs/'.$job;
+
+            $params=$this->image->upload($params ,$request,'uploads/jobs/','attachment');
         }
         //save or update condition
         $response = !empty($request->job_id) ? $this->jobInterface->update($request->job_id,$params) : $this->jobInterface->create($params);

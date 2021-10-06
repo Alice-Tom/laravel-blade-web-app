@@ -2,6 +2,8 @@
 
 namespace App\Services;
 use App\Repository\TrainingRepositoryInterface;
+use App\Services\Utils\Image;
+
 
 class Training
 {
@@ -9,8 +11,9 @@ class Training
     protected $trainingInterface;
 
 
-    public function __construct(TrainingRepositoryInterface $trainingInterface){
+    public function __construct(TrainingRepositoryInterface $trainingInterface,Image $image){
         $this->trainingInterface=$trainingInterface;
+        $this->image=$image;
     }
 
     private function getAllParams($request){
@@ -26,10 +29,12 @@ class Training
     
         ];
         if($request->cover!=""){
-            $destinationPath=public_path('uploads/training/');
-            $cover='training'.$request->title."-".time().'.'.request()->cover->getClientOriginalExtension();
-            $request->cover->move($destinationPath,$cover);
-            $params["cover"]='uploads/training/'.$cover;
+            // $destinationPath=public_path('uploads/training/');
+            // $cover='training'.$request->title."-".time().'.'.request()->cover->getClientOriginalExtension();
+            // $request->cover->move($destinationPath,$cover);
+            // $params["cover"]='uploads/training/'.$cover;
+
+            $params=$this->image->upload($params ,$request,'uploads/training/','cover');
         }
 
         return $params;

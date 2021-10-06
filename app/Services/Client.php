@@ -5,15 +5,18 @@ namespace App\Services;
 
 use App\Repository\BlogRepositoryInterface;
 use App\Repository\ClientRepositoryInterface;
+use App\Services\Utils\Image;
 
 class Client
 {
 
     protected $clientRepositoryInterface;
+    protected $image;
 
 
-    public function __construct(ClientRepositoryInterface $clientRepositoryInterface){
+    public function __construct(ClientRepositoryInterface $clientRepositoryInterface,Image $image){
         $this->clientRepositoryInterface=$clientRepositoryInterface;
+        $this->image=$image;
     }
 
     private function getAllParams($request){
@@ -21,11 +24,9 @@ class Client
             'name'=>$request->name,
 
         ];
+
         if($request->cover!=""){
-            $destinationPath=public_path('uploads/client/');
-            $cover='client'.$request->title."-".time().'.'.request()->cover->getClientOriginalExtension();
-            $request->cover->move($destinationPath,$cover);
-            $params["cover"]='uploads/client/'.$cover;
+            $params=$this->image->upload($params ,$request,'uploads/client/','cover');
         }
 
         return $params;

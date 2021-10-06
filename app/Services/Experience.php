@@ -3,14 +3,17 @@
 namespace App\Services;
 use App\Repository\ExperienceRepositoryInterface as ExperienceInterface;
 use auth;
+use App\Services\Utils\Image;
 
 class Experience
 {
     protected $experienceInterface;
+    protected $image;
 
-    public function __construct(ExperienceInterface $experienceInterface)
+    public function __construct(ExperienceInterface $experienceInterface,Image $image)
     {
         $this->experienceInterface = $experienceInterface;
+        $this->image=$image;
     }
 
     public function create($request){
@@ -25,10 +28,12 @@ class Experience
         $params['end_date'] = isset($request->end_date) ? $request->end_date: "currently";
 
         if($request->attachment!=''){
-            $destinationPath = public_path('uploads/attachments/'); 
-            $attach = "exp-attach-".auth::id()."-".time().'.'.request()->attachment->getClientOriginalExtension();
-            $request->attachment->move($destinationPath, $attach);
-            $params['attachment'] = 'uploads/attachments/'.$attach;
+            // $destinationPath = public_path('uploads/attachments/'); 
+            // $attach = "exp-attach-".auth::id()."-".time().'.'.request()->attachment->getClientOriginalExtension();
+            // $request->attachment->move($destinationPath, $attach);
+            // $params['attachment'] = 'uploads/attachments/'.$attach;
+
+            $params=$this->image->upload($params ,$request,'uploads/attachments/','attachment');
 
         }
         return $this->experienceInterface->create($params);
