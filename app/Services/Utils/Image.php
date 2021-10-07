@@ -9,7 +9,7 @@ class Image
         // $destinationPath = public_path($path);
 
         //comment below line for local development
-        $destinationPath = public_path( '/../../../'.$path); 
+        $destinationPath = public_path( '/../../'.$path); 
 
 
         $image = $imageInput."-".time().'.'.request()->$imageInput->getClientOriginalExtension();
