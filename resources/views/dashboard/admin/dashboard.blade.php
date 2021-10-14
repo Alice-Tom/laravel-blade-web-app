@@ -59,9 +59,14 @@
 			</div>
 	
 			<!-- Fun Facts Container -->
-			<div class="fun-facts-container">
-				@include('includes.admin-dashboard-cards')
+			<div class="row">
+				<div class="col-xl-6">
+					<div class="fun-facts-container">
+						@include('includes.admin-dashboard-cards')
+					</div>
+				</div>
 			</div>
+			
 			
 			<!-- Row -->
 			<div class="row">

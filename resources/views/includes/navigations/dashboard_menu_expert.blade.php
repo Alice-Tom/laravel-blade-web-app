@@ -1,6 +1,6 @@
 <ul data-submenu-title="Your Dashboard">
-	<li class="active"><a href="{{ url('dashboard')}}"><i class="icon-material-outline-dashboard"></i> Dashboard</a></li>
-	<li><a href="#"><i class="icon-material-outline-business-center"></i> Jobs</a>
+	<li><a href="{{ url('dashboard')}}"><i class="icon-material-outline-dashboard"></i> Dashboard</a></li>
+	<li class="active"><a href="#"><i class="icon-material-outline-business-center"></i> Jobs</a>
 		<ul>
 			<li><a href="{{ url('my-applications')}}">My Applications <span class="nav-tag">{{ auth::user()->applications->count() }}</span></a></li>
 			<li><a href="{{ url('jobs')}}">Job</a></li>
