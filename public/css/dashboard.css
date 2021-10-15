@@ -14219,9 +14219,9 @@ ul.dashboard-box-list > li:hover {
 
 /* Dashbaord Media Queries
 ------------------------------------- */
-@media (min-width: 1365px) and (max-width: 1600px) {
+/* @media (min-width: 1365px) and (max-width: 1600px) {
 	.fun-fact:last-child { display: none; }
-}
+} */
 
 @media (max-width: 1365px) {
 	.fun-fact {

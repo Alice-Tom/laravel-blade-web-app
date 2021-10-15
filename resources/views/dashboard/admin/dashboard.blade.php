@@ -16,7 +16,7 @@
 			<div class="dashboard-nav-container">
 
 				<!-- Responsive Navigation Trigger -->
-				<a href="#" class="dashboard-responsive-nav-trigger">
+				<a href="includes.navigations.index" class="dashboard-responsive-nav-trigger">
 					<span class="hamburger hamburger--collapse" >
 						<span class="hamburger-box">
 							<span class="hamburger-inner"></span>
@@ -60,7 +60,7 @@
 	
 			<!-- Fun Facts Container -->
 			<div class="row">
-				<div class="col-xl-6">
+				<div class="col-xl-12">
 					<div class="fun-facts-container">
 						@include('includes.admin-dashboard-cards')
 					</div>

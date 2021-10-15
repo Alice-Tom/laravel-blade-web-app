@@ -83,7 +83,8 @@
 								<div class="col-xl-4">
 									<div class="submit-field">
 										<h5>Job Type</h5>
-										<select class="selectpicker with-border" data-size="7" title="Select Job Type" name="type">
+										<select data-size="7" title="Select Job Type" name="type">
+											<option value="Status" disabled selected hidden>Select Job Type</option>
 											<option>Full Time</option>
 											<option>Freelance</option>
 											<option>Part Time</option>
@@ -96,7 +97,8 @@
 								<div class="col-xl-4">
 									<div class="submit-field">
 										<h5>Job Category</h5>
-										<select class="selectpicker with-border" data-size="7" title="Select Category" name="category">
+										<select data-size="7" title="Select Category" name="category">
+											<option value="Status" disabled selected hidden>Select Job Category</option>
 											<option>Accounting and Finance</option>
 											<option>Clerical & Data Entry</option>
 											<option>Counseling</option>

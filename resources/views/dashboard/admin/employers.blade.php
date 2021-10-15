@@ -66,7 +66,7 @@
 
 						<!-- Headline -->
 						<div class="headline">
-							<h3><i class="icon-material-outline-business-center"></i> EMployers List </h3>
+							<h3><i class="icon-material-outline-business-center"></i> Employers List </h3>
 						</div>
 
 						<div class="content">
