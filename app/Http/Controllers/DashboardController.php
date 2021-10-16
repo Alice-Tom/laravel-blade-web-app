@@ -28,6 +28,11 @@ class DashboardController extends Controller
         $this->job = $job;
     }
 
+    function setActive($path)
+    {
+        return Request::is($path . '*') ? ' class=active' :  '';
+    }
+
     public function dashboard(){
         $notifications = auth::user()->notifications;
         switch(auth::user()->account_type){
@@ -161,11 +166,6 @@ class DashboardController extends Controller
         ]);
     }
 
-
-
-
-
-
     public function viewApplicant($id){
         $applicant = $this->profile->findById($id);
 
@@ -178,12 +178,6 @@ class DashboardController extends Controller
             'experiences'=>$experience
         ]);
     }
-
-
-
-
-
-
 
     public function jobVisibility($id){
         $job  = $this->job->findById($id);
