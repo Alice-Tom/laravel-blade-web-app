@@ -61,14 +61,17 @@
     <ul id="services-dropdown" class="dropmenu">
 
         <li class="has-chevron" id="services-drop-nav"><a href="{{ url('#')}}"> UPSTREAM </a>
-            <ul id="services-dropdown" class="dropmenu">
-                	<li> <a href="{{ url('team')}}"> upstream sub1 </a></li>
-                    <li> <a href="{{ url('projects')}}"> upstream sub2 </a></li>
+            <ul id="company-dropdown" class="dropmenu">
+                <ul class="dropmenu" id="sub1upstream-dropdown">
+                    <li><a href="{{ url('#')}}">upstream sub1 </a></li>
+                    		<li> <a href="{{ url('#')}}"> upstream sub2 </a></li>
+                    {{--		<li> <a href="{{ url('projects')}}"> Projects </a></li>--}}
+                </ul>
             </ul>
         </li>
         <li class="has-chevron" id="services-drop-nav"><a href="{{ url('#')}}"> DOWNSTREAM </a>
             <ul class="dropmenu" id="sub1upstream-dropdown">
-                <li><a href="{{ url('about')}}">downstream sub1 </a></li>
+                <li><a href="{{ url('#')}}">downstream sub1 </a></li>
                 {{--		<li> <a href="{{ url('team')}}"> The team </a></li>--}}
                 {{--		<li> <a href="{{ url('projects')}}"> Projects </a></li>--}}
             </ul>
@@ -110,7 +113,6 @@
     </ul>
 
 </li>
-
 
 <li class="has-chevron" id="solution-drop-nav"> Solutions
     <svg class="chevdown" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
