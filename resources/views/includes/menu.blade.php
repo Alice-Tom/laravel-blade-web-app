@@ -58,9 +58,22 @@
             d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
             fill="currentColor"/>
     </svg>
-    <ul id="services-dropdown" class="dropdown-nav">
+    <ul id="services-dropdown" class="dropmenu">
 
-        @foreach (App\Models\Service::all()->chunk(10) as $service )
+        <li class="has-chevron" id="services-drop-nav"><a href="{{ url('#')}}"> UPSTREAM </a>
+            <ul id="services-dropdown" class="dropmenu">
+                	<li> <a href="{{ url('team')}}"> upstream sub1 </a></li>
+                    <li> <a href="{{ url('projects')}}"> upstream sub2 </a></li>
+            </ul>
+        </li>
+        <li class="has-chevron" id="services-drop-nav"><a href="{{ url('#')}}"> DOWNSTREAM </a>
+            <ul class="dropmenu" id="sub1upstream-dropdown">
+                <li><a href="{{ url('about')}}">downstream sub1 </a></li>
+                {{--		<li> <a href="{{ url('team')}}"> The team </a></li>--}}
+                {{--		<li> <a href="{{ url('projects')}}"> Projects </a></li>--}}
+            </ul>
+        </li>
+        {{-- @foreach (App\Models\Service::all()->chunk(10) as $service )
             @php
                 session(['counterServiceClass' => 1]);
             @endphp
@@ -93,7 +106,7 @@
                 @endphp
             @endforeach
 
-        @endforeach
+        @endforeach --}}
     </ul>
 
 </li>
@@ -107,9 +120,13 @@
     </svg>
     <ul class="dropmenu" id="solution-dropdown">
         <li><a href="{{ url('#')}}"> Experts </a></li>
+        <li><a href="{{ url('#')}}"> Job Vacancies </a></li>
+        {{-- <li><a href="{{ url('#')}}"> Experts </a></li>
+        <li><a href="{{ url('#')}}"> Experts </a></li> --}}
 
     </ul>
 </li>
+
 <li class="">
     <a href="{{ url('training')}}"> Training </a>
 </li>

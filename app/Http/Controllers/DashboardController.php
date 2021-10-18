@@ -93,7 +93,7 @@ class DashboardController extends Controller
 
     public function addJob(JobRequest $request){
         $exp = $this->job->create($request);
-        return redirect()->back();
+        return redirect()->route('manage-jobs');
     }
 
     public function manageJob(){
