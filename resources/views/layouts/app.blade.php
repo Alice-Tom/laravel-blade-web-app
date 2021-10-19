@@ -61,9 +61,6 @@
 
 		</header>
 
-{{--        <header>--}}
-{{--            @include('includes.newMenu')--}}
-{{--        </header>--}}
 
 		<main class="stag_main">
 			@yield('content')
