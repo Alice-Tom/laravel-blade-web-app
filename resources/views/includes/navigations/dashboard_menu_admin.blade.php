@@ -1,16 +1,16 @@
 <ul data-submenu-title="Your Dashboard">
-	<li class="active"><a href="{{ url('dashboard')}}"><i class="icon-material-outline-dashboard"></i> Dashboard</a></li>
+	<li class="{{ (request()->is('dashboard')) ? 'active' : '' }}"><a href="{{ url('dashboard')}}"><i class="icon-material-outline-dashboard"></i> Dashboard</a></li>
 	<!--<li><a href="#"><i class="icon-material-outline-question-answer"></i> Messages <span class="nav-tag">2</span></a></li>-->
-	<li><a href="#"><i class="icon-material-outline-business-center"></i> Jobs</a>
+	<li class="{{ (request()->is('manage-jobs', 'add-job')) ? 'active' : '' }}"><a href="#"><i class="icon-material-outline-business-center"></i> Jobs</a>
 		<ul>
-			<li><a href="{{ url('manage-jobs')}}">Manage Jobs & Applicants </a></li>
-			<li><a href="{{ url('add-job')}}"> Post a Job</a></li>
+			<li class="{{ (request()->is('manage-jobs')) ? 'active' : '' }}"><a href="{{ url('manage-jobs')}}">- Manage Jobs & Applicants </a></li>
+			<li class="{{ (request()->is('add-job')) ? 'active' : '' }}"><a href="{{ url('add-job')}}">- Post a Job</a></li>
 		</ul>	
 	</li>
 </ul>
 
 <ul data-submenu-title="Account">
-	<li><a href="{{ url('settings')}}"><i class="icon-material-outline-settings"></i> Settings</a></li>
+	<li class="{{ (request()->is('settings')) ? 'active' : '' }}"><a href="{{ url('settings')}}"><i class="icon-material-outline-settings"></i>Settings</a></li>
 	<li>
 			<a  href="{{ route('logout') }}"
 			   onclick="event.preventDefault();

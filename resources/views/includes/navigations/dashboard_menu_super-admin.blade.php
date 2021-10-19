@@ -28,7 +28,7 @@
 			</li>
 		</ul>
 	</li>
-	<li class="{{ (request()->is('all-services', 'edit-service', 'new-service')) ? 'active' : '' }}"><a href="{{ url('jobs')}}"> <i class="icon-material-outline-business-center"></i> Solutions </a>
+	<li class="{{ (request()->is(' ', 'edit-service', 'new-service')) ? 'active' : '' }}"><a href="{{ url('jobs')}}"> <i class="icon-material-outline-business-center"></i> Solutions </a>
 		<ul>
 			<li class="{{ (request()->is('all-experts')) ? 'active' : '' }}"><a href="{{ url('all-experts')}}">- List </a></li>
 			<li class="{{ (request()->is('edit-service')) ? 'active' : '' }}"><a href="{{ url('edit-service')}}">- Services Categories </a></li>

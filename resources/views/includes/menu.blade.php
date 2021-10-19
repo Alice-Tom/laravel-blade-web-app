@@ -58,9 +58,25 @@
             d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
             fill="currentColor"/>
     </svg>
-    <ul id="services-dropdown" class="dropdown-nav">
+    <ul id="services-dropdown" class="dropmenu">
 
-        @foreach (App\Models\Service::all()->chunk(10) as $service )
+        <li class="has-chevron" id="services-drop-nav"><a href="{{ url('#')}}"> UPSTREAM </a>
+            <ul id="company-dropdown" class="dropmenu">
+                <ul class="dropmenu" id="sub1upstream-dropdown">
+                    <li><a href="{{ url('#')}}">upstream sub1 </a></li>
+                    		<li> <a href="{{ url('#')}}"> upstream sub2 </a></li>
+                    {{--		<li> <a href="{{ url('projects')}}"> Projects </a></li>--}}
+                </ul>
+            </ul>
+        </li>
+        <li class="has-chevron" id="services-drop-nav"><a href="{{ url('#')}}"> DOWNSTREAM </a>
+            <ul class="dropmenu" id="sub1upstream-dropdown">
+                <li><a href="{{ url('#')}}">downstream sub1 </a></li>
+                {{--		<li> <a href="{{ url('team')}}"> The team </a></li>--}}
+                {{--		<li> <a href="{{ url('projects')}}"> Projects </a></li>--}}
+            </ul>
+        </li>
+        {{-- @foreach (App\Models\Service::all()->chunk(10) as $service )
             @php
                 session(['counterServiceClass' => 1]);
             @endphp
@@ -93,11 +109,10 @@
                 @endphp
             @endforeach
 
-        @endforeach
+        @endforeach --}}
     </ul>
 
 </li>
-
 
 <li class="has-chevron" id="solution-drop-nav"> Solutions
     <svg class="chevdown" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -107,9 +122,13 @@
     </svg>
     <ul class="dropmenu" id="solution-dropdown">
         <li><a href="{{ url('#')}}"> Experts </a></li>
+        <li><a href="{{ url('#')}}"> Job Vacancies </a></li>
+        {{-- <li><a href="{{ url('#')}}"> Experts </a></li>
+        <li><a href="{{ url('#')}}"> Experts </a></li> --}}
 
     </ul>
 </li>
+
 <li class="">
     <a href="{{ url('training')}}"> Training </a>
 </li>

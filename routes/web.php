@@ -133,7 +133,7 @@ Route::middleware([Authenticate::class])->group(function () {
         //Route::post('/add-job', [DashboardController::class,'addJob'])->name('add-job');
         Route::get('/edit-job-recruiter/{id}', [DashboardController::class, 'showJob']);
         Route::get('/delete-job/{id}', [DashboardController::class, 'deleteJobById']);
-        Route::get('manage-jobs', [DashboardController::class, 'manageJob']);
+        Route::get('manage-jobs', [DashboardController::class, 'manageJob'])->name('manage-jobs');
         Route::get('manage-applicants/{jobId}', [DashboardController::class, 'manageApplicants']);
         Route::get('view-applicant/{id}', [DashboardController::class, 'viewApplicant']);
 

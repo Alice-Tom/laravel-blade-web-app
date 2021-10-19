@@ -81,9 +81,9 @@
 					</div>
 					<div class="fun-fact-icon"><i class="icon-material-outline-rate-review"></i></div>
 				</div>
-				<div class="fun-fact" data-fun-fact-color="#efa80f">
+				{{-- <div class="fun-fact" data-fun-fact-color="#efa80f">
 					<div class="fun-fact-icon"><i class="icon-material-outline-rate-review"></i></div>
-				</div>
+				</div> --}}
 			</div>
 			
 			<!-- Row -->
