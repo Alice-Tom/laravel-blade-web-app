@@ -1,3 +1,13 @@
+// $('.ui.dropdown')
+//     .dropdown(
+//
+//         {
+//             // click:true
+// }
+//     );
+
+
+
 $("#company-dropdown-nav").on("mouseover", function () {
     $("#company-dropdown").css("display", "block");
     $("#services-dropdown").css("display", "none");
@@ -32,26 +42,9 @@ $("#solution-dropdown").on("mouseout", function () {
 })
 
 
-$("#1").on("mouseover", function () {
-    $("#1 > #subservice-subtab").css("display", "block")
-})
-
-$("#1").on("mouseout", function () {
-    $("#1 > #subservice-subtab").css("display", "none")
-})
-
-// while(let i=1;i<10;i++){
-//     $("#1").on("mouseover",function (){
-//         $("#1 > #subservice-subtab").css("display","block")
-//     })
-//
-//     $("#1").on("mouseout",function (){
-//         $("#1 > #subservice-subtab").css("display","none")
-//     })
-// }
-
 $(document).ready(function () {
-    for (let i = 2; i < 10; i++) {
+    for (let i = 1; i < 10; i++) {
+
         let selector="#"+i
         $(selector).on("mouseover", function () {
             $(`${selector}`+ " > #subservice-subtab").css("display", "block")
@@ -61,8 +54,23 @@ $(document).ready(function () {
             $(`${selector}`+ " > #subservice-subtab").css("display", "none")
         })
     }
+
 });
 
+
+$(document).ready(function(){
+    let dropdowns = document.querySelectorAll('.dropdown-toggle')
+    dropdowns.forEach((dd)=>{
+        dd.addEventListener('mouseover', function (e) {
+            var el = this.nextElementSibling
+            el.style.display = el.style.display==='block'?'none':'block'
+        })
+        dd.addEventListener('mouseout', function (e) {
+            var el = this.nextElementSibling
+            el.style.display = el.style.display==='block'?'block':'none'
+        })
+    })
+});
 
 // $(".web-menu").on("mouseout",function(){
 //     $("#solution-dropdown").css("display","none")
