@@ -122,20 +122,16 @@ a {
 		color: var(--light-text);
 	}
 
-    #subservice-subtab{
+    #subservice-subtab {
         display:none;
         top: auto;
         width: 150px !important;
-        left: 150px !important;
+        left: 153px !important;
         position: absolute;
-
         background: var(--primary-stag);
         color: var(--light-text);
         padding: 0;
-
         border-radius: 8px;
-
-
     }
 
 	.web-menu li:hover .web-menu li::before {
@@ -1077,7 +1073,7 @@ body #magicPointer {
     width: 150px !important;
     left: auto !important;
     position: absolute;
-    /* top: 50px; */
+    top: 50px;
     background: var(--primary-stag);
     color: var(--light-text);
     padding: 0;
@@ -1129,6 +1125,7 @@ ul #sub1upstream-dropdown{
 
 #services-dropdown li {
     list-style: none !important;
+    
 }
 
 .footer-links a:hover {
@@ -1154,9 +1151,9 @@ a {
 	color: inherit;
 }
 
-#services-dropdown li {
+/* #services-dropdown li {
     list-style: none !important;
-}
+} */
 
 .floating-search {
     position: absolute;
