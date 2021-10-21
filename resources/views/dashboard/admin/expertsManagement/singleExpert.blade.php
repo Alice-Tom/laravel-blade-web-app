@@ -187,7 +187,6 @@
 
 
 
-
         <!-- Added Education -->
             @if(!$experiences->isEmpty())
                 <div class="container-lg-stag">
@@ -228,37 +227,34 @@
             @endif
             <div class=" container-lg-stag">
                 <div class="row">
+                    <div class="col-8">
+                        <form method="post" action="{{ url('expertShortDescription') }}">
+                            @csrf
+                            <h5>Short Expert Description (maximum 50 words) </h5>
+                            <input type="hidden" name="expert_id" value="{{$expert->id}}">
+                            <textarea maxlength="300" rows="5"
+                                      name="short_description">{{$expert->short_description}}  </textarea>
+                            <button class="button ripple-effect big margin-top-30" type="submit"> Update</button>
+                        </form>
+                    </div>
+                    <div class="col-4 form-check">
 
-                </div>
-                <div class="col-8">
-                    <form method="post"
-                         >
-                        <h5>Short Expert Description (maximum 50 words) </h5>
-                        <div class="col-8">
-
-                            <textarea maxlength="300" rows="5" name="short_description">{{$expert->about}}  </textarea>
-
-                        </div>
-                        <button class="button ripple-effect big margin-top-30" type="submit"> Update
-                        </button>
-                    </form>
-                </div>
-                <div class=" col-4 form-check">
-
-                    @if($expert->feature)Add
-                    <a href="{{url('update-feature/'.$expert->id)}}" class="button gray ripple-effect ico"
-                       title="Activate">
-                        <i class="{{'icon-feather-unlock' }}"></i>
-
-                    </a>
-                    @else
+                        @if($expert->feature)Add
                         <a href="{{url('update-feature/'.$expert->id)}}" class="button gray ripple-effect ico"
-                           title="Deactivate">
-                            <i class="{{'icon-feather-lock' }}"></i>
+                           title="Activate">
+                            <i class="{{'icon-feather-unlock' }}"></i>
 
                         </a>
-                    @endif
+                        @else
+                            <a href="{{url('update-feature/'.$expert->id)}}" class="button gray ripple-effect ico"
+                               title="Deactivate">
+                                <i class="{{'icon-feather-lock' }}"></i>
+
+                            </a>
+                        @endif
+                    </div>
                 </div>
+
             </div>
 
             <!-- Education list end -->

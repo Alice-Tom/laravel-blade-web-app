@@ -179,7 +179,7 @@ Route::middleware([Authenticate::class])->group(function () {
 
         //add features expert
         Route::any('update-feature/{id}', [DashboardController::class, 'changeFeature']);
-        Route::post("/expertShortDescription",[DashboardController::class,'expertShortDescription']);
+        Route::post('expertShortDescription',[DashboardController::class,'expertShortDescription']);
 
         Route::get('new-training', [TrainingController::class, 'create']);
         Route::post('new-training', [TrainingController::class, 'store']);

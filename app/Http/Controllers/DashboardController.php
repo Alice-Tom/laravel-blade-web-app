@@ -235,12 +235,12 @@ class DashboardController extends Controller
     }
 
 
-    public function expertShortDescription($request){
-        dd($request);
+    public function expertShortDescription(Request $request){
+
+        $this->profile->updateShortDescription($request);
+        return redirect()->back();
+
     }
-
-
-
 
 
     public function changeFeature(Request $request){

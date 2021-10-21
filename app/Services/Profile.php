@@ -24,10 +24,6 @@ class Profile
     public function update($request){
         $params = [];
         if($request->avator!=''){
-            // $destinationPath = public_path('uploads/avator/');
-            // $profile = "avator-".$request->firstname."-".time().'.'.request()->avator->getClientOriginalExtension();
-            // $request->avator->move($destinationPath, $profile);
-            // $params['avator'] = 'uploads/avator/'.$profile;
 
             $params=$this->image->upload($params ,$request,'uploads/avator/','avator');
 
@@ -36,6 +32,7 @@ class Profile
             $params['firstname'] = $request->firstname;
             $params['lastname'] = $request->lastname;
             $params["about"]=$request->about;
+
         return $this->profileInterface->update(auth::id(),$params);
     }
 
@@ -56,6 +53,12 @@ class Profile
     public function updateFeature($userId,$value){
         $param['feature'] = $value;
         return $this->profileInterface->update($userId,$param);
+    }
+
+    public function updateShortDescription($request){
+        $expertId =$request->expert_id;
+        $param["short_description"]=$request->short_description;
+        return $this->profileInterface->update($expertId,$param);
     }
 
 }
