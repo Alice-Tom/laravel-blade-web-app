@@ -122,6 +122,7 @@ Route::middleware([Authenticate::class])->group(function () {
 //        Route::post('/update-profile', [DashboardController::class, 'updateProfile'])->name('update-profile');
         Route::post('/update-education', [DashboardController::class, 'updateEducation'])->name('update-education');
         Route::post('/update-experience', [DashboardController::class, 'updateExperience'])->name('update-experience');
+
         // Route::get('/jobs',[DashboardController::class,'jobsList']);
 
         //apply job
@@ -147,6 +148,7 @@ Route::middleware([Authenticate::class])->group(function () {
 
         Route::get('show-employers', [DashboardController::class, 'showEmployer']);
         Route::get('all-experts', [DashboardController::class, 'showExpert']);
+        Route::get('single-expert/{id}',[DashboardController::class,'singleExpert']);
 
         Route::get('new-service', [ServiceController::class, 'addServiceForm']);
         Route::post('new-service', [ServiceController::class, 'addService']);
@@ -177,7 +179,7 @@ Route::middleware([Authenticate::class])->group(function () {
 
         //add features expert
         Route::any('update-feature/{id}', [DashboardController::class, 'changeFeature']);
-
+        Route::post("/expertShortDescription",[DashboardController::class,'expertShortDescription']);
 
         Route::get('new-training', [TrainingController::class, 'create']);
         Route::post('new-training', [TrainingController::class, 'store']);

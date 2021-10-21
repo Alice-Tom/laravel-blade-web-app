@@ -7,7 +7,6 @@
 	<title> Solutions Tag - Better Tomorrow</title>
 
 	<!-- Main -->
-
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/main.css') }}" rel="stylesheet">
 	<link href="{{ asset('slick/slick.css') }}" rel="stylesheet">

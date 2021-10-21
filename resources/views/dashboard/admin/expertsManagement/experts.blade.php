@@ -72,7 +72,8 @@
 						<div class="content">
 							<ul class="dashboard-box-list">
 								@foreach ($experts as $expert )
-								<li>
+								<li> <a href="{{"/single-expert/".$expert->id}}">
+
 									<!-- Job Listing -->
 									<div class="job-listing">
 
@@ -91,20 +92,7 @@
 												</h5>
 											</div>
 
-											<div class="form-check">
 
-												@if($expert->feature)
-												<a href="{{url('update-feature/'.$expert->id)}}" class="button gray ripple-effect ico" title="Remove from Homepage " >
-                                                    <i class="{{'icon-feather-unlock' }}"></i>
-
-                                                </a>
-												@else
-												<a href="{{url('update-feature/'.$expert->id)}}" class="button gray ripple-effect ico" title="Add to Homepage" >
-                                                    <i class="{{'icon-feather-lock' }}"></i>
-
-                                                </a>
-												@endif
-											</div>
 
 										</div>
 									</div>
@@ -122,8 +110,8 @@
 									<a href="{{ url('delete-job/'.$job->id) }}" class="button gray ripple-effect ico" title="Remove" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></a>
 									@endif
 						</div> --}}
-						</li>
-						@endforeach
+						</li>  </a>
+                                @endforeach
 						</ul>
 					</div>
 				</div>

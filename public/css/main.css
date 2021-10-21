@@ -945,12 +945,6 @@ a:hover {
     z-index: 1;
     color: var(--light-text);
     position: absolute;
-}
-
-.title-resources {
-    z-index: 1;
-    color: var(--light-text);
-    position: absolute;
     bottom: 20px;
 }
 

@@ -214,10 +214,34 @@ class DashboardController extends Controller
         $experts = $this->profile->all()
                     ->where('account_type','expert')
                     ->sortBy('name');
-        return view('dashboard.admin.experts',[
+        return view('dashboard.admin.expertsManagement.experts',[
             'experts'=>$experts
         ]);
     }
+
+
+
+    public function singleExpert($id){
+        $expert =$this->profile->findById($id);
+        $education=$expert->education()->get();
+            $experience=$expert->experiences()->get();
+
+
+        return view('dashboard.admin.expertsManagement.singleExpert',[
+            'expert'=>$expert,
+            'educations'=>$education,
+            'experiences'=>$experience
+        ]);
+    }
+
+
+    public function expertShortDescription($request){
+        dd($request);
+    }
+
+
+
+
 
     public function changeFeature(Request $request){
         $expert = $this->profile->findById($request->id);

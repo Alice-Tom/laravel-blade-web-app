@@ -136,10 +136,10 @@
                                                 </div>
                                                 <div class="account-type">
                                                     <div>
-                                                        <h5>About me </h5>
+                                                        <h5>About me (maximum 100 words) </h5>
                                                         <div class="col-xl-12">
 
-                                                            <textarea rows="5" name="about">{{auth::user()->about}}  </textarea>
+                                                            <textarea maxlength="600"  rows="5" name="about">{{auth::user()->about}}  </textarea>
 
                                                         </div>
                                                     </div>
@@ -183,7 +183,7 @@
                                                 <h5>Qualification</h5>
                                                 <select class="selectpicker with-border" data-size="7"
                                                         name="qualification" title="Select Job Type"
-                                                        data-live-search="true">
+                                                            data-live-search="true">
                                                     <option>Secondary / High School</option>
                                                     <option>Certificate</option>
                                                     <option>Advanced Diploma</option>
@@ -328,7 +328,7 @@
                                     <div class="submit-field">
                                         <h5>Start Date</h5>
                                         <!--<input type="text" class="with-border">-->
-                                        <input type="date" class="form-control" data-toggle="datepicker"
+                                        <input required type="date" class="form-control" data-toggle="datepicker"
                                                name="start_date">
                                     </div>
                                 </div>
@@ -337,7 +337,7 @@
                                     <div class="submit-field">
                                         <h5>End Date</h5>
                                         <!--<input type="text" class="with-border">-->
-                                        <input type="date" class="form-control" id="exp-end-date"
+                                        <input  type="date" class="form-control" id="exp-end-date"
                                                data-toggle="datepicker" name="end_date">
                                     </div>
                                 </div>

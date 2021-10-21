@@ -68,8 +68,8 @@
                 <i class="icon-material-outline-account-balance-wallet s-icon"></i>
                 <h3 class="title_03"> {{ $service->bottom_title }} </h3>
                 <p style=" text-align: justify;">
-                    {{ $service->bottom_description }}<i
-                        class="icon-material-outline-account-balance-wallet s-icon"></i>
+                    {{ $service->bottom_description }}
+
                 </p>
             </div>
 
