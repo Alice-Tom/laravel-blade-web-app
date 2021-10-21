@@ -374,6 +374,16 @@
                         <a href="{{$home->bottom2_link ?? ''}}" class="btn btn-st btn-st-primary light-btn"> Discover
                             more </a>
                     </div>
+                    <div class="col-lg-6 cta-col-2 pt-5 pb-5">
+                        <h2 class="title_01"><span
+                                class="light-text"> {{$home->bottom3_title ?? 'ARE YOU AN EXPERT IN THE OIL & GAS INDUSTRY?'}} </span>
+                        </h2>
+                        <p class="p40">
+                            {{$home->bottom3_description ?? 'We welcome local Tanzanian experts in the oil & gas industry to join our expert network, create an account and make yourself visible to prospective employers.'}}
+                        </p>
+                        <a href="{{$home->bottom3_link ?? ''}}" class="btn btn-st btn-st-primary light-btn"> Discover
+                            more </a>
+                    </div>
                 </div>
             </div>
         </div>
