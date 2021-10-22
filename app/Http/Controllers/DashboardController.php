@@ -74,8 +74,13 @@ class DashboardController extends Controller
     public function profile(){
 
         $allSkills=Skill::all();
+
+        $userSkills=Auth::user()->skills()->get();
+
+
         return view('dashboard.expert.cv-profile',[
-            'allSkills'=>$allSkills
+            'allSkills'=>$allSkills,
+            'userSkills'=>$userSkills
         ]);
     }
 

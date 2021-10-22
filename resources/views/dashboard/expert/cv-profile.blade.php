@@ -147,14 +147,14 @@
 
                 <div class="row dashboard-box ">
                     <div class="col-6 margin-left-30">
-                        <form method="post">
+                        <form method="post" action="{{url('update-user-skill')}}">
                             @csrf
                             <div class="headline">
                                 <h3><i class="icon-material-outline-lock"></i> Skills </h3>
                             </div>
                             <label>Select a skill</label>
-                            <select class="form-select form-select m-3 w-50">
-                                <option selected>Select a skill</option>
+                            <select name="skill" class="form-select form-select m-3 w-50">
+                                <option value="0" selected>Select a skill</option>
                                 @foreach($allSkills as $skill)
                                     <option value="{{$skill->id}}">{{$skill->skill}}</option>
                                 @endforeach
@@ -164,7 +164,6 @@
                             <button class="button ripple-effect big margin-bottom-20 margin-left-30" type="submit">
                                 Update
                             </button>
-
                         </form>
                     </div>
                     <div class="col-6 margin-left-30">
@@ -181,6 +180,18 @@
                         </form>
                     </div>
                 </div>
+
+                <!-- Skills List  -->
+                <div class="margin-top-30 margin-left-30">
+                    <h3><i class="icon-material-outline-business "></i> My Skills List </h3>
+                    <ol class="list-group list-group-numbered">
+                        @foreach($userSkills  as $skill)
+                            <li class="list-group-item">{{$skill->skill}}</li>
+                        @endforeach
+                    </ol>
+                </div>
+                <!-- end Skills List  -->
+
 
                 <!-- Education  -->
                 <form method="post" action="{{ route('update-education') }}" enctype="multipart/form-data">

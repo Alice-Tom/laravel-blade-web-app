@@ -606,7 +606,7 @@ span.expt-profession {
     color: var(--alternative-stag);
     letter-spacing: 1px;
     font-size: 10px;
-    text-transform: uppercase;
+
 }
 
 .col-lg-4.experts-items:nth-child(even) .member-names {
@@ -1145,7 +1145,7 @@ ul #sub1upstream-dropdown{
 
 #services-dropdown li {
     list-style: none !important;
-    
+
 }
 
 .footer-links a:hover {
