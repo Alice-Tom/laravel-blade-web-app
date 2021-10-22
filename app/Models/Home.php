@@ -60,5 +60,9 @@ class Home extends Model
         'bottom2_link',
         'bottom2_description',
 
+        'bottom3_title',
+        'bottom3_link',
+        'bottom3_description',
+
     ];
 }

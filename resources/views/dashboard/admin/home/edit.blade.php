@@ -371,6 +371,26 @@
 						</div>
 
 					</div>
+					<hr>
+					<div class="content with-padding padding-bottom-10">
+						<div class="row m-0">
+							<label> Segment 3 Title </label>
+							<input class="with-border" name="bottom3_title" value="{{$home->bottom3_title ??''}}">
+						</div>
+
+						<div class="row m-0">
+							<label> Segment 3 Description Link </label>
+							<input type="url" class="with-border" name="bottom3_link" value="{{$home->bottom3_link ??''}}">
+						</div>
+
+						<div class="row mt-2">
+							<div class="col-xl-12">
+								<label> Segment 3 Description </label>
+								<textarea rows="5" name="bottom3_description">{{$home->bottom3_description ??''}} </textarea>
+							</div>
+						</div>
+
+					</div>
 				</div>
 
 				<div class="row m-0 mt-5 mb-5">

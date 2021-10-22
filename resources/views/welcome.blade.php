@@ -268,7 +268,7 @@
                         </div>
                     @endif
                 </div>
-                <div class="row">
+                <div class="row" id="bottom">
                     <div class="col-lg-6 cta-col-2 pt-5 pb-5">
                         <h2 class="title_01"><span
                                 class="light-text"> {{$home->bottom1_title ?? 'LOOKING FOR PROFESSIONALS IN THE OIL & GAS INDUSTRY IN TANZANIA?'}} </span>
@@ -279,6 +279,7 @@
                         <a href="{{$home->bottom1_link ?? ''}}" class="btn btn-st btn-st-primary light-btn"> Discover
                             more </a>
                     </div>
+                    &nbsp;
                     <div class="col-lg-6 cta-col-1 pt-5 pb-5">
                         <h2 class="title_01"><span
                                 class="light-text"> {{$home->bottom2_title ?? 'ARE YOU AN EXPERT IN THE OIL & GAS INDUSTRY?'}} </span>
@@ -287,6 +288,17 @@
                             {{$home->bottom2_description ?? 'We welcome local Tanzanian experts in the oil & gas industry to join our expert network, create an account and make yourself visible to prospective employers.'}}
                         </p>
                         <a href="{{$home->bottom2_link ?? ''}}" class="btn btn-st btn-st-primary light-btn"> Discover
+                            more </a>
+                    </div>
+                    &nbsp;
+                    <div class="col-lg-6 cta-col-2 pt-5 pb-5">
+                        <h2 class="title_01"><span
+                                class="light-text"> {{$home->bottom3_title ?? 'ARE YOU AN EXPERT IN THE OIL & GAS INDUSTRY?'}} </span>
+                        </h2>
+                        <p class="p40">
+                            {{$home->bottom3_description ?? 'We welcome local Tanzanian experts in the oil & gas industry to join our expert network, create an account and make yourself visible to prospective employers.'}}
+                        </p>
+                        <a href="{{$home->bottom3_link ?? ''}}" class="btn btn-st btn-st-primary light-btn"> Discover
                             more </a>
                     </div>
                 </div>
