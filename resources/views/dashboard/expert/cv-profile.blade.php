@@ -145,8 +145,8 @@
                 </div>
 
 
-                <div class="row dashboard-box">
-                    <div class="col-6">
+                <div class="row dashboard-box ">
+                    <div class="col-6 margin-left-30">
                         <form method="post">
                             @csrf
                             <div class="headline">
@@ -155,9 +155,10 @@
                             <label>Select a skill</label>
                             <select class="form-select form-select m-3 w-50">
                                 <option selected>Select a skill</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                @foreach($allSkills as $skill)
+                                    <option value="{{$skill->id}}">{{$skill->skill}}</option>
+                                @endforeach
+
                             </select>
 
                             <button class="button ripple-effect big margin-bottom-20 margin-left-30" type="submit">
@@ -166,14 +167,14 @@
 
                         </form>
                     </div>
-                    <div class="col-6">
-                        <form method="post">
+                    <div class="col-6 margin-left-30">
+                        <form method="post" action="{{url('add-skill')}}">
                             @csrf
                             <div class="headline">
-                                <h3>Add A New Skills </h3>
+                                <h4>Add A New Skills </h4>
                             </div>
                             <label>Skill Name</label>
-                            <input type="text" class="w-50 with-border" name="skill">
+                            <input required type="text" class="w-50 with-border" name="skill">
                             <button class="button ripple-effect big margin-bottom-20 margin-left-30" type="submit"> Add
                                 New
                             </button>

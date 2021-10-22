@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Skills;
+use App\Models\Skill;
 use Illuminate\Http\Request;
 
 class SkillsController extends Controller
@@ -15,6 +15,7 @@ class SkillsController extends Controller
     public function index()
     {
         //
+
     }
 
     /**
@@ -36,7 +37,8 @@ class SkillsController extends Controller
     public function store(Request $request)
     {
         //
-        $skill=new Skills;
+
+        $skill=new Skill;
         $skill->skill=$request->skill;
         $skill->save();
 
@@ -54,6 +56,8 @@ class SkillsController extends Controller
     public function show(Skills $skills)
     {
         //
+
+
     }
 
     /**

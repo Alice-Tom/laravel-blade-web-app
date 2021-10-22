@@ -12,6 +12,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\SkillsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -119,9 +120,11 @@ Route::middleware([Authenticate::class])->group(function () {
 
     Route::middleware([Expert::class])->group(function () {
         Route::get('/cv-profile', [DashboardController::class, 'profile'])->name('profile');
-//        Route::post('/update-profile', [DashboardController::class, 'updateProfile'])->name('update-profile');
+//      Route::post('/update-profile', [DashboardController::class, 'updateProfile'])->name('update-profile');
         Route::post('/update-education', [DashboardController::class, 'updateEducation'])->name('update-education');
         Route::post('/update-experience', [DashboardController::class, 'updateExperience'])->name('update-experience');
+
+      Route::post('/add-skill',[SkillsController::class,'store']);
 
         // Route::get('/jobs',[DashboardController::class,'jobsList']);
 

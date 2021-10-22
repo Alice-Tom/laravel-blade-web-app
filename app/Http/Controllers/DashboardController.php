@@ -11,6 +11,7 @@ use App\Http\Requests\ExperienceRequest;
 use App\Http\Requests\JobRequest;
 use App\Notifications\ActivatedJob;
 use App\Notifications\NewJobExpert;
+use App\Models\Skill;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -72,7 +73,10 @@ class DashboardController extends Controller
 
     public function profile(){
 
-        return view('dashboard.expert.cv-profile');
+        $allSkills=Skill::all();
+        return view('dashboard.expert.cv-profile',[
+            'allSkills'=>$allSkills
+        ]);
     }
 
     public function updateProfile(Request $request){
