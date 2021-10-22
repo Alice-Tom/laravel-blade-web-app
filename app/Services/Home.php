@@ -26,10 +26,7 @@ class Home
 
     public function createOrUpdate($request,$id=null){
 
-
         $request["intro_video"] =str_replace("width=\"560\" height=\"315\"","width=\"100%\" height=\"100%\"", $request["intro_video"]);   //formatting size of video for display
-
-
 
         $arrayRequest = $request->all();
         if(!empty($request['image2'])){
@@ -51,9 +48,6 @@ class Home
         if(!empty($request['sec4_image'])){
             $arrayRequest =  $this->image->upload($arrayRequest ,$request,'uploads/home/','sec4_image');
         }
-
-
-
 
 
         if(empty($request['home_id'])){

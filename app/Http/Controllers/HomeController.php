@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Services\Blog;
 use App\Services\Client;
+use App\Services\Education;
 use App\Services\Home;
 use App\Services\Profile;
 use App\Services\Service;
@@ -24,9 +25,10 @@ class HomeController extends Controller
     private $client;
     private $training;
     private $blog;
+    private $education;
 
 
-    public function __construct(Home $home, Service $service, SubService $subService, Profile $profile, Client $client, Training $training, Blog $blog)
+    public function __construct(Home $home, Service $service, SubService $subService, Profile $profile, Client $client, Training $training, Blog $blog,Education $education)
     {
         $this->home = $home;
         $this->service = $service;
@@ -35,6 +37,7 @@ class HomeController extends Controller
         $this->client = $client;
         $this->training = $training;
         $this->blog = $blog;
+        $this->education=$education;
     }
 
     /**
@@ -51,25 +54,32 @@ class HomeController extends Controller
         $trainings = $this->training->all()->take(3);
         $blogs = $this->training->all()->take(3);
 
-        $all_featured=[];
+        $all_featured = [];
         $featured = $this->user->all()
-            ->where('account_type','expert')
-            ->where('feature',"1")
+            ->where('account_type', 'expert')
+            ->where('feature', "1")
             ->sortByDesc('experience_years')->first(function ($value) {
 
                 return true;
             });
 
-        $featured2=($this->user->all()
+        $featured2 =
+            ($this->user->all()
             ->where('account_type', 'expert')
-            ->where('feature', "1")->where('experience_years','<',"5")
-            ->sortByDesc('experience_years')->first(function($value){
-                return $value!=null;
+            ->where('feature', "1")->where('experience_years', '<', "5")
+            ->sortByDesc('experience_years')->first(function ($value) {
+                return true;
             }
             ));
-//        $technical_expert = 3;
-        array_push($all_featured,$featured,$featured2);
-        $all_featured=collect($all_featured);
+
+        $featured3=$this->education->getTechnicalExperts()
+            ->sortByDesc('experience_years')->first(function ($value) {
+            return true;
+        });
+
+
+        array_push($all_featured, $featured, $featured2,$featured3);
+        $all_featured = collect($all_featured);
 
 
         return view('welcome', [

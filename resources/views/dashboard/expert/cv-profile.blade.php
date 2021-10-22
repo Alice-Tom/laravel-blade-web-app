@@ -188,11 +188,11 @@
                                                     <option>Certificate</option>
                                                     <option>Advanced Diploma</option>
                                                     <option>Higher National Diploma</option>
-                                                    <option> Degree</option>
-                                                    <option> Post Graduate Degree</option>
-                                                    <option> Masters</option>
-                                                    <option> Doctorate (Phd)</option>
-                                                    <option> Professorship</option>
+                                                    <option>Degree</option>
+                                                    <option>Post Graduate Degree</option>
+                                                    <option>Masters</option>
+                                                    <option>Doctorate (Phd)</option>
+                                                    <option>Professorship</option>
                                                 </select>
                                             </div>
                                         </div>
