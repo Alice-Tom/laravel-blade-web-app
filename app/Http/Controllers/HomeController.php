@@ -84,10 +84,14 @@ class HomeController extends Controller
             $skills = User::find($item->id)->skills()->limit(2)->get();
 //            $item->concat($skills)->all();
 
-            $feat = ["id" => $item->id, "avator" => $item->avator, "firstname" => $item->firstname, "lastname" => $item->lastname, "name" => $item->name, "skills" =>
-                $skills->map(function ($sk) {
-                    return $sk->skill;
-                })
+            $feat = [
+                "id" => $item->id, "avator" => $item->avator,
+                "firstname" => $item->firstname, "lastname" => $item->lastname,
+                "name" => $item->name, "bio" => $item->short_description,
+                "skills" =>
+                    $skills->map(function ($sk) {
+                        return $sk->skill;
+                    })
             ];
             return $feat;
 

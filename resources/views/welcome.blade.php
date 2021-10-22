@@ -255,7 +255,12 @@
                                                         {{ $f["name"] }}
                                                     @endif
                                                 </span>
+
                                                 <span class="expt-profession">
+                                                       {{$f["bio"]}} <br>
+                                                    @if(!$f["skills"]->isEmpty())
+                                                        SKILLS:
+                                                    @endif
                                                     @foreach($f["skills"] as $sk)
                                                         {{$sk . ", "}}
                                                     @endforeach
