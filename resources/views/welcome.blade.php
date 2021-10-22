@@ -85,19 +85,7 @@
                             {!! $home->intro_video ?? '' !!}
 
 
-                            {{--                            <video playsinline="playsinline" id="videostag" poster="{{$home->intro_video ?? '' }}">--}}
-                            {{--                                <source src="{{$home->intro_video ?? '' }}" type="video/mp4">--}}
-                            {{--                                <iframe width="560" height="315" src="https://www.youtube.com/embed/gIWH5b1_bRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--}}
-                            {{--                            </video>--}}
-                            {{--                            <a href="{{$home->intro_link ?? '' }}"--}}
-                            {{--                               class="btn-type-1 magic-hover magic-hover__square light-text">--}}
-                            {{--								<span>--}}
-                            {{--									<svg width="24" height="24" viewBox="0 0 24 24" fill="none"--}}
-                            {{--                                         xmlns="http://www.w3.org/2000/svg"><path--}}
-                            {{--                                            d="M15 12.3301L9 16.6603L9 8L15 12.3301Z" fill="currentColor"/></svg>--}}
-                            {{--								</span>--}}
-                            {{--                                <label> <em> Watch our story </em></label>--}}
-                            {{--                            </a>--}}
+
                         </div>
                     </div>
                 </div>
@@ -156,12 +144,12 @@
             </div>
 
             <div class="row m-0 p40 service-items">
-                @foreach ($subService as $service )
+                @foreach ($services as $service )
                     @php
                         $service_slug = str_slug($service->title, '-');
                     @endphp
                     <div class="col-lg-3 service-item"
-                         onclick="location.href='{{ url('service-child/'.$service->id.'/'.$service_slug) }}'">
+                         onclick="location.href='{{ url('service/'.$service->id.'/'.$service_slug) }}'">
                         <div class="icon-item">
 
                             <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
@@ -217,80 +205,7 @@
 
     </section>
 
-    <section class="full-type-2">
-        <div class="container-lg-stag">
-            <div class="row m-0">
-                <div class="col-lg-2">
-                    <h1 class="title_03"><span class="decor"> BLOG & RESOURCES </span></h1>
-                </div>
-                <div class="col-lg-10">
-                    <div class="blogs">
-                        @foreach($trainings as $training)
-                            <div class="blog-item">
-                                <figure>
-                                    <img src="{{$training->cover}}" title="article" alt="blog solutionstag"
-                                         role="img"/>
-                                    <figcaption>
-                                        {{$training->title}}
-                                    </figcaption>
-                                    <div class="card-footer-items">
-                                        <div class="row m-0">
-                                            <div class="col-lg-6">
-                                                <h5 class="date-blog"><span
-                                                        class="decor"> {{  \Carbon\Carbon::parse($training->start_day)->shortEnglishDayOfWeek .", ". \Carbon\Carbon::parse($training->start_day)->format('d/m/Y') }} </span>
-                                                </h5>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <a href="{{'view-training/'.$training->id}}" class="float-right rdmore">
-
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                         xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
-                                                            fill="currentColor"/>
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </figure>
-                            </div>
-                        @endforeach
-                        @foreach($blogs as $blog)
-                            <div class="blog-item">
-                                <figure>
-                                    <img src="{{ $blog->cover }}" title="article" alt="blog solutionstag"
-                                         role="img"/>
-                                    <figcaption>
-                                        {{$blog->title}}
-                                    </figcaption>
-                                    <div class="card-footer-items">
-                                        <div class="row m-0">
-                                            <div class="col-lg-6">
-                                                <h5 class="date-blog"><span class="decor"> Read More </span></h5>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <a href="#" class="float-right rdmore">
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                         xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
-                                                            fill="currentColor"/>
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </figure>
-                            </div>
-                        @endforeach
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    {{--    featured experts--}}
     <section class="recruit-members-home-view">
         <div class="container-lg-stag">
             <div class="m200">
@@ -378,6 +293,83 @@
             </div>
         </div>
     </section>
+
+
+    {{--    blogs and resource--}}
+    <section class="full-type-2">
+        <div class="container-lg-stag">
+            <div class="row m-0">
+                <div class="col-lg-2">
+                    <h1 class="title_03"><span class="decor"> BLOG & RESOURCES </span></h1>
+                </div>
+                <div class="col-lg-10">
+                    <div class="blogs">
+                        @foreach($trainings as $training)
+                            <div class="blog-item">
+                                <figure>
+                                    <img src="{{$training->cover}}" title="article" alt="blog solutionstag"
+                                         role="img"/>
+                                    <figcaption>
+                                        {{$training->title}}
+                                    </figcaption>
+                                    <div class="card-footer-items">
+                                        <div class="row m-0">
+                                            <div class="col-lg-6">
+                                                <h5 class="date-blog"><span
+                                                        class="decor"> {{  \Carbon\Carbon::parse($training->start_day)->shortEnglishDayOfWeek .", ". \Carbon\Carbon::parse($training->start_day)->format('d/m/Y') }} </span>
+                                                </h5>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <a href="{{'view-training/'.$training->id}}" class="float-right rdmore">
+
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
+                                                            fill="currentColor"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </div>
+                        @endforeach
+                        @foreach($blogs as $blog)
+                            <div class="blog-item">
+                                <figure>
+                                    <img src="{{ $blog->cover }}" title="article" alt="blog solutionstag"
+                                         role="img"/>
+                                    <figcaption>
+                                        {{$blog->title}}
+                                    </figcaption>
+                                    <div class="card-footer-items">
+                                        <div class="row m-0">
+                                            <div class="col-lg-6">
+                                                <h5 class="date-blog"><span class="decor"> Read More </span></h5>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <a href="#" class="float-right rdmore">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
+                                                            fill="currentColor"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </div>
+                        @endforeach
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section class="client-logos-section">
         <div class="container-lg-stag ">

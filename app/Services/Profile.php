@@ -58,6 +58,7 @@ class Profile
     public function updateShortDescription($request){
         $expertId =$request->expert_id;
         $param["short_description"]=$request->short_description;
+        $param["experience_years"]=$request->experience_years;
         return $this->profileInterface->update($expertId,$param);
     }
 

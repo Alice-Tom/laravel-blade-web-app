@@ -26,7 +26,8 @@ class User extends Authenticatable
         'avator',
         'feature',
         'about',
-        'short_description'
+        'short_description',
+        'experience_years',
 
     ];
 

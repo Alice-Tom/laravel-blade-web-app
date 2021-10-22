@@ -234,12 +234,16 @@
                             <input type="hidden" name="expert_id" value="{{$expert->id}}">
                             <textarea maxlength="300" rows="5"
                                       name="short_description">{{$expert->short_description}}  </textarea>
+
+                            <h5>Expert years of experience</h5>
+                                <input type="number" name="experience_years" value="{{$expert->experience_years}}">
+
                             <button class="button ripple-effect big margin-top-30" type="submit"> Update</button>
                         </form>
                     </div>
-                    <div class="col-4 form-check">
+                    <div class="col-4 form-check mt-3">
 
-                        @if($expert->feature)Add
+                        @if($expert->feature)Approve
                         <a href="{{url('update-feature/'.$expert->id)}}" class="button gray ripple-effect ico"
                            title="Activate">
                             <i class="{{'icon-feather-unlock' }}"></i>
