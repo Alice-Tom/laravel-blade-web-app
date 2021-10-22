@@ -7,7 +7,7 @@
 	<title> Solutions Tag - Better Tomorrow</title>
 
 	<!-- Main -->
-	
+
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/main.css') }}" rel="stylesheet">
 	<link href="{{ asset('slick/slick.css') }}" rel="stylesheet">
@@ -35,7 +35,7 @@
 	<section id="app">
 
 		<header class="main-header bg-white">
-			
+
 			<div class="header container-fluid">
 				<div class="header-inner-container">
 					<nav class="main-nav-nav row">
@@ -61,11 +61,12 @@
 
 		</header>
 
+
 		<main class="stag_main">
 			@yield('content')
 		</main>
 
-		@include('includes.footer') 
+		@include('includes.footer')
 
 	</section>
 
@@ -75,7 +76,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> --}}
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-	
+
 	<script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1597754761/magicmouse/magic_mouse-1.0.js"></script>
 	<script src="{{ asset('js/app.js') }}" defer></script>
 	<script src="{{ asset('js/main.js') }}" defer></script>

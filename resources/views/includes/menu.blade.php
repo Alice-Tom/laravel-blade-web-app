@@ -6,113 +6,12 @@
     </svg>
 
     <ul class="dropmenu" id="company-dropdown">
-        <li><a href="{{ url('about')}}"> About us </a></li>
-        <li> <a href="{{ url('team')}}"> The team </a></li>
-        <li> <a href="{{ url('projects')}}"> Projects </a></li>
+        <li><a href="{{ url('about') }}"> About us </a></li>
+        {{--		<li> <a href="{{ url('team')}}"> The team </a></li>--}}
+        {{--		<li> <a href="{{ url('projects')}}"> Projects </a></li>--}}
     </ul>
 </li>
 
-
-{{--<li class="has-chevron" id="services-drop-nav"> Services--}}
-{{--    <svg class="chevdown" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
-{{--        <path--}}
-{{--            d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"--}}
-{{--            fill="currentColor"/>--}}
-{{--    </svg>--}}
-{{--    <ul id="services-dropdown" class="dropdown-nav">--}}
-{{--        <div class="row m-0">--}}
-{{--            @foreach (App\Models\Service::all()->chunk(3) as $service )--}}
-{{--                @foreach ($service as $service )--}}
-{{--                    @php--}}
-{{--                        $service_slug = str_slug($service->title, '-');--}}
-{{--                    @endphp--}}
-{{--                    <div class="col-lg-4">--}}
-{{--                        <label>--}}
-{{--                            <h5>--}}
-{{--                                <ul>--}}
-{{--                                    <li>--}}
-{{--                                        <a href='{{ url('service/'.$service->id.'/'.$service_slug) }}'>{{ $service->title }}</a>--}}
-{{--                                    </li>--}}
-{{--                                </ul>--}}
-{{--                            </h5>--}}
-{{--                        </label>--}}
-{{--                        @foreach ($service->subService as $sub )--}}
-{{--                            @php--}}
-{{--                                $sub_slug = str_slug($sub->title, '-');--}}
-{{--                            @endphp--}}
-{{--                            <li><a href="{{ url('service-child/'.$sub->id.'/'.$sub_slug) }}"> {{ $sub->title }}</a></li>--}}
-{{--                        @endforeach--}}
-
-
-{{--                    </div>--}}
-{{--                @endforeach--}}
-{{--            @endforeach--}}
-{{--        </div>--}}
-{{--    </ul>--}}
-{{--</li>--}}
-
-
-{{-- <li class="has-chevron" id="services-drop-nav"> Services
-    <svg class="chevdown" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-            d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
-            fill="currentColor"/>
-    </svg>
-    <ul id="services-dropdown" class="dropmenu">
-
-        <li class="has-chevron" id="services-drop-nav"><a href="{{ url('#')}}"> UPSTREAM </a>
-            <ul id="company-dropdown" class="dropmenu">
-                <ul class="dropmenu" id="sub1upstream-dropdown">
-                    <li><a href="{{ url('#')}}">upstream sub1 </a></li>
-                    		<li> <a href="{{ url('#')}}"> upstream sub2 </a></li>
-                    <li> <a href="{{ url('projects')}}"> Projects </a></li>
-                </ul>
-            </ul>
-        </li>
-        <li class="has-chevron" id="services-drop-nav"><a href="{{ url('#')}}"> DOWNSTREAM </a>
-            <ul class="dropmenu" id="sub1upstream-dropdown">
-                <li><a href="{{ url('#')}}">downstream sub1 </a></li>
-                		<li> <a href="{{ url('team')}}"> The team </a></li>
-                	<li> <a href="{{ url('projects')}}"> Projects </a></li>
-            </ul>
-        </li> --}}
-        
-        {{-- @foreach (App\Models\Service::all()->chunk(10) as $service )
-            @php
-                session(['counterServiceClass' => 1]);
-            @endphp
-            @foreach ($service as $service )
-                @php
-                    $service_slug = str_slug($service->title, '-');
-
-                @endphp
-                <li id="{{Session::get('counterServiceClass')}}">
-                    <a href='{{ url('service/'.$service->id.'/'.$service_slug) }}'>{{ $service->title }}</a>
-
-                    <ul id="subservice-subtab" class="dropdown-nav">
-                        @foreach ($service->subService as $sub )
-                            @php
-                                $sub_slug = str_slug($sub->title, '-');
-                            @endphp
-                            <li>
-                                <a href="{{ url('service-child/'.$sub->id.'/'.$sub_slug) }}"> {{ $sub->title }}</a>
-                            </li>
-                        @endforeach
-
-                    </ul>
-
-                </li>
-                @php
-                    //updating service class for next service
-                    session()->put('counterServiceClass', 2);
-
-                @endphp
-            @endforeach
-
-        @endforeach 
-    </ul>
-
-</li>--}}
 
 <li class="has-chevron" id="services-drop-nav"> Services
     <svg class="chevdown" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -122,7 +21,8 @@
     </svg>
     <ul id="services-dropdown" class="dropmenu">
 
-        @foreach (App\Models\Service::all()->chunk(10) as $service )
+
+         @foreach (App\Models\Service::all()->chunk(10) as $service )
             @php
                 session(['counterServiceClass' => 1]);
             @endphp
@@ -131,10 +31,10 @@
                     $service_slug = str_slug($service->title, '-');
 
                 @endphp
-                <li id="{{Session::get('counterServiceClass')}}">
+                <li id="{{Session::get('counterServiceClass')}}" >
                     <a href='{{ url('service/'.$service->id.'/'.$service_slug) }}'>{{ $service->title }}</a>
 
-                    <ul id="subservice-subtab" class="dropdown-nav">
+                    <ul id="subservice-subtab">
                         @foreach ($service->subService as $sub )
                             @php
                                 $sub_slug = str_slug($sub->title, '-');
@@ -143,11 +43,15 @@
                                 <a href="{{ url('service-child/'.$sub->id.'/'.$sub_slug) }}"> {{ $sub->title }}</a>
                             </li>
                         @endforeach
+
+
                     </ul>
+
                 </li>
                 @php
                     //updating service class for next service
-                    session()->put('counterServiceClass', 2);
+                    session()->put('counterServiceClass', Session::get('counterServiceClass')+1);
+
                 @endphp
             @endforeach
 
@@ -155,7 +59,6 @@
     </ul>
 
 </li>
-
 
 <li class="has-chevron" id="solution-drop-nav"> Solutions
     <svg class="chevdown" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
