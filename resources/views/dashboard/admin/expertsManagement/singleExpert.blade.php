@@ -92,7 +92,7 @@
                                                 <div class="submit-field">
                                                     <h5>Email</h5>
                                                     <input type="text" class="with-border"
-                                                           value="{{ auth::user()->email }}" disabled>
+                                                           value="{{ $expert->email }}" disabled>
                                                 </div>
                                             </div>
                                             <div class="account-type">
@@ -116,7 +116,16 @@
                         </div>
                     </div>
 
-                    <!-- Education  -->
+                  <!--Skills -->
+
+                    <div class="margin-top-30 margin-left-30">
+                        <h3><i class="icon-material-outline-business "></i> Expert Skills List </h3>
+                        <ol class="list-group list-group-numbered">
+                            @foreach($skills  as $skill)
+                                <li class="list-group-item">{{$skill->skill}}</li>
+                            @endforeach
+                        </ol>
+                    </div>
 
 
                     <!-- Added Education -->

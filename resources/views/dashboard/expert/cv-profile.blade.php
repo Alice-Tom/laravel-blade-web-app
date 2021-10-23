@@ -137,11 +137,6 @@
                     </div>
 
 
-                    <!-- Added Skills -->
-
-                    <!-- Skills list end -->
-
-
                 </div>
 
 

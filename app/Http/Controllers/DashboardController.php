@@ -234,12 +234,16 @@ class DashboardController extends Controller
         $expert =$this->profile->findById($id);
         $education=$expert->education()->get();
             $experience=$expert->experiences()->get();
+            $skills=$expert->skills()->get();
+
+
 
 
         return view('dashboard.admin.expertsManagement.singleExpert',[
             'expert'=>$expert,
             'educations'=>$education,
-            'experiences'=>$experience
+            'experiences'=>$experience,
+            'skills'=>$skills,
         ]);
     }
 
