@@ -13,6 +13,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\SkillsController;
+use App\Http\Controllers\LanguagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -125,6 +126,8 @@ Route::middleware([Authenticate::class])->group(function () {
         Route::post('/update-experience', [DashboardController::class, 'updateExperience'])->name('update-experience');
 
       Route::post('/add-skill',[SkillsController::class,'store']);
+
+      Route::post('/add-language',[LanguagesController::class,'store']);
 
         // Route::get('/jobs',[DashboardController::class,'jobsList']);
 
