@@ -138,7 +138,7 @@
 
 
                 </div>
-
+<!-- Added Skills -->
 
                 <div class="row dashboard-box ">
                     <div class="col-6 margin-left-30">
@@ -148,8 +148,10 @@
                                 <h3><i class="icon-material-outline-lock"></i> Skills </h3>
                             </div>
                             <label>Select a skill</label>
+
                             <select name="skill" class="form-select form-select m-3 w-50">
                                 <option value="0" selected>Select a skill</option>
+
                                 @foreach($allSkills as $skill)
                                     <option value="{{$skill->id}}">{{$skill->skill}}</option>
                                 @endforeach
@@ -176,7 +178,47 @@
                     </div>
                 </div>
 
-                <!-- Skills List  -->
+
+                {{-- language --}}
+                <div class="row dashboard-box ">
+                    <div class="col-6 margin-left-30">
+                        <form method="post">
+                            @csrf
+                            <div class="headline">
+                                <h3><i class="icon-material-outline-lock"></i> Language </h3>
+                            </div>
+                            {{-- <label>Select a skill</label> --}}
+                            <select class="form-select form-select m-3 w-50">
+                                <option value="Status" disabled selected hidden>Select Language</option>
+                                @foreach($allLanguages as $language)
+                                    <option value="{{$language->id}}">{{$language->language}}</option>
+                                @endforeach
+
+                            </select>
+
+                            <button class="button ripple-effect big margin-bottom-20 margin-left-30" type="submit">
+                                Update
+                            </button>
+
+                        </form>
+                    </div>
+                    <div class="col-6 margin-left-30">
+                        <form method="post" action="{{url('add-language')}}">
+                            @csrf
+                            <div class="headline">
+                                <h4>Add A New Language </h4>
+                            </div>
+                            <label>New Language</label>
+                            <input required type="text" class="w-50 with-border" name="language">
+                            <button class="button ripple-effect big margin-bottom-20 margin-left-30" type="submit"> Add
+                                New
+                            </button>
+                        </form>
+                    </div>
+                </div>
+<!-- Skills list end -->
+
+          <!-- Skills List  -->
                 <div class="margin-top-30 margin-left-30">
                     <h3><i class="icon-material-outline-business "></i> My Skills List </h3>
                     <ol class="list-group list-group-numbered">
@@ -186,7 +228,8 @@
                     </ol>
                 </div>
                 <!-- end Skills List  -->
-
+                
+                
 
                 <!-- Education  -->
                 <form method="post" action="{{ route('update-education') }}" enctype="multipart/form-data">

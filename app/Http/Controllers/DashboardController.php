@@ -12,6 +12,7 @@ use App\Http\Requests\JobRequest;
 use App\Notifications\ActivatedJob;
 use App\Notifications\NewJobExpert;
 use App\Models\Skill;
+use App\Models\Language;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -74,13 +75,13 @@ class DashboardController extends Controller
     public function profile(){
 
         $allSkills=Skill::all();
-
+      $allLanguages=Language::all();
         $userSkills=Auth::user()->skills()->get();
-
 
         return view('dashboard.expert.cv-profile',[
             'allSkills'=>$allSkills,
-            'userSkills'=>$userSkills
+            'userSkills'=>$userSkills,
+          'allLanguages'=>$allLanguages
         ]);
     }
 

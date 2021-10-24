@@ -1,3 +1,4 @@
+
 @extends('layouts.app-dashboard')
 
 @section('content')
@@ -17,7 +18,7 @@
                     <!-- Responsive Navigation Trigger -->
                     <a href="#" class="dashboard-responsive-nav-trigger">
 					<span class="hamburger hamburger--collapse">
-						<span class="hamburger-box">
+						<span class=<<<<<<< feature"hamburger-box">
 							<span class="hamburger-inner"></span>
 						</span>
 					</span>
@@ -285,3 +286,4 @@
 
 
 @endsection
+
