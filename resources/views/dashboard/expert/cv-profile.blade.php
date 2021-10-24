@@ -111,6 +111,15 @@
                                                                value="{{ auth::user()->email }}" disabled>
                                                     </div>
                                                 </div>
+
+                                                <div class="col-xl-6">
+                                                    <div class="submit-field">
+                                                        <h5>Location</h5>
+                                                        <input type="text" class="with-border"
+                                                               value="{{ auth::user()->location }}" disabled>
+                                                    </div>
+                                                </div>
+                                                
                                                 <div class="account-type">
                                                     <div>
                                                         <h5>About me (maximum 100 words) </h5>
@@ -177,6 +186,7 @@
                         </form>
                     </div>
                 </div>
+                {{-- skills end --}}
 
 
                 {{-- language --}}
@@ -216,7 +226,34 @@
                         </form>
                     </div>
                 </div>
-<!-- Skills list end -->
+                <!-- language end -->
+
+                {{-- language proficiency --}}
+                <div class="row dashboard-box ">
+                    <div class="col-6 margin-left-30">
+                        <form method="post">
+                            @csrf
+                            <div class="headline">
+                                <h3><i class="icon-material-outline-lock"></i> Language Proficiency</h3>
+                            </div>
+                            {{-- <label>Select a skill</label> --}}
+                            <select class="form-select form-select m-3 w-50">
+                                <option value="Status" disabled selected hidden>Select Language</option>
+                                @foreach($allLanguages as $language)
+                                    <option value="{{$language->id}}">{{$language->language}}</option>
+                                @endforeach
+
+                            </select>
+
+                            
+                            <button class="button ripple-effect big margin-bottom-20 margin-left-30" type="submit">
+                                Update
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+                <!-- language proficiency end -->
 
           <!-- Skills List  -->
                 <div class="margin-top-30 margin-left-30">
@@ -254,7 +291,7 @@
                                     <div class="col-xl-6">
                                         <div class="submit-field">
                                             <h5>Qualification</h5>
-                                            <select class="selectpicker with-border" data-size="7"
+                                            <select data-size="7"
                                                     name="qualification" title="Select Job Type"
                                                     data-live-search="true">
                                                 <option>Secondary / High School</option>

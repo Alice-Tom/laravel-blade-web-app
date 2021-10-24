@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 @extends('layouts.app-dashboard')
 
 @section('content')
@@ -88,6 +91,17 @@
                                                 </div>
                                             </div>
 
+<<<<<<< Updated upstream
+=======
+                                            <div class="col-xl-6">
+                                                <div class="submit-field">
+                                                    <h5>Location</h5>
+                                                    <input disabled type="text" class="with-border" name="location"
+                                                           value="{{ $expert->location }}">
+                                                </div>
+                                            </div>
+
+>>>>>>> Stashed changes
 
                                             <div class="col-xl-6">
                                                 <div class="submit-field">
@@ -286,4 +300,7 @@
 
 
 @endsection
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes

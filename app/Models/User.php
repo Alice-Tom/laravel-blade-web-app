@@ -27,6 +27,7 @@ class User extends Authenticatable
         'about',
         'short_description',
         'experience_years',
+        'location',
 
     ];
 
