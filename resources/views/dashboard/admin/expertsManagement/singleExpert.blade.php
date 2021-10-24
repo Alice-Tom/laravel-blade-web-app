@@ -96,6 +96,20 @@
                                                            value="{{ $expert->email }}" disabled>
                                                 </div>
                                             </div>
+
+                                            <div class="col-xl-6">
+                                                <div class="submit-field">
+                                                    <h5>Update Mobilization Option</h5>
+                                                    <select disabled name="mobilization"
+                                                            class="form-select form-select m-3 w-50">
+                                                        <option value="0" {{$expert->mobilization ==0? "selected":""}} >Consultant, Ability to invoice included</option>
+                                                        <option value="1" {{$expert->mobilization ==1? "selected":""}}>Full Time Contract, Ability to invoice excluded</option>
+                                                        <option value="2" {{$expert->mobilization ==2? "selected":""}} >Part Time Contract, Ability to invoice excluded</option>
+                                                    </select>
+                                                </div>
+
+                                            </div>
+
                                             <div class="account-type">
                                                 <div>
                                                     <h5>About Expert (maximum 100 words) </h5>
