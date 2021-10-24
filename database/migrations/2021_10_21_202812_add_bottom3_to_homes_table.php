@@ -16,7 +16,7 @@ class AddBottom3ToHomesTable extends Migration
         Schema::table('homes', function (Blueprint $table) {
             $table->text('bottom3_title')->nullable();
             $table->text('bottom3_link')->nullable();
-            $table->text('bottom3_description')->nullable(); 
+            $table->text('bottom3_description')->nullable();
         });
     }
 
@@ -29,6 +29,9 @@ class AddBottom3ToHomesTable extends Migration
     {
         Schema::table('homes', function (Blueprint $table) {
             //
+            $table->dropColumn('bottom3_title');
+            $table->dropColumn('bottom3_link');
+            $table->dropColumn('bottom3_description');
         });
     }
 }

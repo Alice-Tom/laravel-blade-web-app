@@ -32,6 +32,7 @@ class Profile
             $params['firstname'] = $request->firstname;
             $params['lastname'] = $request->lastname;
             $params["about"]=$request->about;
+            $params['mobilization']=$request->mobilization;
 
         return $this->profileInterface->update(auth::id(),$params);
     }

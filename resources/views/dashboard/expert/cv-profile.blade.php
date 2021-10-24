@@ -111,6 +111,21 @@
                                                                value="{{ auth::user()->email }}" disabled>
                                                     </div>
                                                 </div>
+
+                                                <div class="col-xl-6">
+                                                    <div class="submit-field">
+                                                        <h5>Update Mobilization Option</h5>
+                                                        <select name="mobilization"
+                                                                class="form-select form-select m-3 w-50">
+                                                            <option value="0" {{auth::user()->mobilization ==0? "selected":""}} >Consultant, Ability to invoice included</option>
+                                                            <option value="1" {{auth::user()->mobilization ==1? "selected":""}}>Full Time Contract, Ability to invoice excluded</option>
+                                                            <option value="2" {{auth::user()->mobilization ==2? "selected":""}} >Part Time Contract, Ability to invoice excluded</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+
+
                                                 <div class="account-type">
                                                     <div>
                                                         <h5>About me (maximum 100 words) </h5>
@@ -138,7 +153,7 @@
 
 
                 </div>
-<!-- Added Skills -->
+                <!-- Added Skills -->
 
                 <div class="row dashboard-box ">
                     <div class="col-6 margin-left-30">
@@ -178,6 +193,16 @@
                     </div>
                 </div>
 
+                <!-- Skills List  -->
+                <div class="margin-top-30 margin-left-30">
+                    <h3><i class="icon-material-outline-business "></i> My Skills List </h3>
+                    <ol class="list-group list-group-numbered">
+                        @foreach($userSkills  as $skill)
+                            <li class="list-group-item">{{$skill->skill}}</li>
+                        @endforeach
+                    </ol>
+                </div>
+                <!-- end Skills List  -->
 
                 {{-- language --}}
                 <div class="row dashboard-box ">
@@ -216,19 +241,6 @@
                         </form>
                     </div>
                 </div>
-<!-- Skills list end -->
-
-          <!-- Skills List  -->
-                <div class="margin-top-30 margin-left-30">
-                    <h3><i class="icon-material-outline-business "></i> My Skills List </h3>
-                    <ol class="list-group list-group-numbered">
-                        @foreach($userSkills  as $skill)
-                            <li class="list-group-item">{{$skill->skill}}</li>
-                        @endforeach
-                    </ol>
-                </div>
-                <!-- end Skills List  -->
-
 
 
                 <!-- Education  -->
