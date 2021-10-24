@@ -105,14 +105,14 @@
                 <div class="col-lg-6">
                     <h2 class="title_01"> {{$home->sec3_title ?? ''}} </h2>
                     <p class="m40"> {{$home->sec3_content ?? 'With creative minds and disruptive thinking, we are able to deliver higher values to our clients. This is attributed by our readiness as local expertise to make difference in the industry for the better tomorrow'}} </p>
-                    <a href="{{$home->sec3_link ?? ''}}" class="btn-type-1 magic-hover magic-hover__square">
-                        {{--						<span>--}}
-                        {{--							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"--}}
-                        {{--                                 xmlns="http://www.w3.org/2000/svg"><path--}}
-                        {{--                                    d="M12 4C11.4477 4 11 4.44772 11 5V11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H11V19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19V13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11H13V5C13 4.44772 12.5523 4 12 4Z"--}}
-                        {{--                                    fill="currentColor"/></svg>--}}
-                        {{--						</span>--}}
-                        {{--                            <label> <em> Read more </em></label>--}}
+                    <a href="{{'/training'}}" class="btn-type-1 magic-hover magic-hover__square">
+                        						<span>
+                        							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg"><path
+                                                            d="M12 4C11.4477 4 11 4.44772 11 5V11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H11V19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19V13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11H13V5C13 4.44772 12.5523 4 12 4Z"
+                                                            fill="currentColor"/></svg>
+                        						</span>
+                        <label> <em> Read more </em></label>
                     </a>
                 </div>
             </div>
@@ -180,17 +180,17 @@
     <section class="container-lg-stag">
 
         <div class="center-cols train-section">
-            <div class="row w-100 m200">
+            <div class="row w-100 m40">
                 <div class="col-lg-6 ">
                     <h2 class="title_01"> {{$home->sec4_title ?? ''}} </h2>
                     <p class="m40"> {{$home->sec4_content ?? 'In Tanzania oil and gas industry, technical skills gap, awareness, and sensitization to local community are mentioned as some of the key challenges.'}} </p>
-                    <a href="{{$home->sec4_link ?? '' }}" class="btn-type-1 magic-hover magic-hover__square">
+                    <a href="{{ '/services' }}" class="btn-type-1 magic-hover magic-hover__square">
 					<span>
-{{--						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path--}}
-                        {{--                                d="M12 4C11.4477 4 11 4.44772 11 5V11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H11V19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19V13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11H13V5C13 4.44772 12.5523 4 12 4Z"--}}
-                        {{--                                fill="currentColor"/></svg>--}}
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path
+                                d="M12 4C11.4477 4 11 4.44772 11 5V11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H11V19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19V13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11H13V5C13 4.44772 12.5523 4 12 4Z"
+                                fill="currentColor"/></svg>
 					</span>
-                        <label> <em> </em></label>
+                        <label> <em> Read More</em></label>
                     </a>
                 </div>
                 <div class="col-lg-6   ">
@@ -207,15 +207,14 @@
     {{--    featured experts--}}
     <section class="recruit-members-home-view">
         <div class="container-lg-stag">
-            <div class="m200">
+            <div class="">
                 <div class="row m-0">
-                    <div class="@if($featured->isEmpty()) col-lg-12 @else col-lg-6  @endif  br-bb pb-5">
+                    <div class="@if($featured->isEmpty()) col-lg-12 @else col-lg-4  @endif  br-bb pb-5">
                         <h2 class="title_01"><span class="decor"> {{$home->staff_title ?? 'TECHNICAL STAFFING'}} </span>
                         </h2>
                         <p class="p40"> {{$home->staff_content ?? 'At SolutionsTag we are determined to promote local Tanzanian experts in the oil and gas industry. We offer staffing solutions for our clients.'}} </p>
 
-                        @if($home->staff_link)
-                            <a href="{{$home->staff_link ?? ''}}" class="btn-type-1 magic-hover magic-hover__square">
+                        <a href="{{$home->staff_link ?? ''}}" class="btn-type-1 magic-hover magic-hover__square">
 						<span>
 
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -223,23 +222,22 @@
                                     d="M12 4C11.4477 4 11 4.44772 11 5V11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H11V19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19V13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11H13V5C13 4.44772 12.5523 4 12 4Z"
                                     fill="currentColor"/></svg>
 						</span>
-                                <label>
-                                    <em> Read more </em>
-                                </label>
-                            </a>
-                        @endif
+                            <label>
+                                <em> Read more </em>
+                            </label>
+                        </a>
 
                     </div>
                     @if(!$featured->isEmpty())
-                        <div class="col-lg-6">
+                        <div class="col-lg-8">
                             <div class="members-seg-container">
                                 <div class="row m-0">
                                     <div class="col-lg-6">
                                         <h1 class="title_03"> FEATURED EXPERTS </h1>
                                     </div>
                                     <div class="col-lg-6">
-                                        {{--                                        <a href="#" class="float-right"><h1 class="title_03"><span class="decor"> VIEW ALL </span>--}}
-                                        {{--                                            </h1></a>--}}
+                                        <a href="#" class="float-right"><h1 class="title_03"><span class="decor"> VIEW ALL </span>
+                                            </h1></a>
                                     </div>
                                 </div>
                                 <div class="row m-0 pt-3 pb-3">
@@ -277,7 +275,7 @@
                         </div>
                     @endif
                 </div>
-                <div class="row" id="bottom">
+                <div class="row m40" id="bottom">
                     <div class="col-lg-6 cta-col-2 pt-5 pb-5">
                         <h2 class="title_01"><span
                                 class="light-text"> {{$home->bottom1_title ?? 'LOOKING FOR PROFESSIONALS IN THE OIL & GAS INDUSTRY IN TANZANIA?'}} </span>

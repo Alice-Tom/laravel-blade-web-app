@@ -228,8 +228,8 @@
                     </ol>
                 </div>
                 <!-- end Skills List  -->
-                
-                
+
+
 
                 <!-- Education  -->
                 <form method="post" action="{{ route('update-education') }}" enctype="multipart/form-data">

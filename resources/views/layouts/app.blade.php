@@ -31,7 +31,7 @@
 </head>
 <body>
 
-	<section id="app">
+	<section id="app" >
 
 		<header class="main-header bg-white">
 
