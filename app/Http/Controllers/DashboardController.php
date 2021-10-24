@@ -75,9 +75,13 @@ class DashboardController extends Controller
     public function profile(){
 
         $allSkills=Skill::all();
-        $allLanguages=Language::all();
+      $allLanguages=Language::all();
+        $userSkills=Auth::user()->skills()->get();
+
         return view('dashboard.expert.cv-profile',[
-            'allSkills'=>$allSkills, 'allLanguages'=>$allLanguages
+            'allSkills'=>$allSkills,
+            'userSkills'=>$userSkills,
+          'allLanguages'=>$allLanguages
         ]);
     }
 
@@ -231,12 +235,16 @@ class DashboardController extends Controller
         $expert =$this->profile->findById($id);
         $education=$expert->education()->get();
             $experience=$expert->experiences()->get();
+            $skills=$expert->skills()->get();
+
+
 
 
         return view('dashboard.admin.expertsManagement.singleExpert',[
             'expert'=>$expert,
             'educations'=>$education,
-            'experiences'=>$experience
+            'experiences'=>$experience,
+            'skills'=>$skills,
         ]);
     }
 

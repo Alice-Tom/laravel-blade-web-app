@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientsController;
+use App\Http\Controllers\UserSkillController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\Expert;
 use App\Http\Middleware\Recruiter;
@@ -125,7 +126,8 @@ Route::middleware([Authenticate::class])->group(function () {
         Route::post('/update-education', [DashboardController::class, 'updateEducation'])->name('update-education');
         Route::post('/update-experience', [DashboardController::class, 'updateExperience'])->name('update-experience');
 
-      Route::post('/add-skill',[SkillsController::class,'store']);
+        Route::post('/update-user-skill',[UserSkillController::class,'store']);
+        Route::post('/add-skill',[SkillsController::class,'store']);
 
       Route::post('/add-language',[LanguagesController::class,'store']);
 

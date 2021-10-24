@@ -85,7 +85,6 @@
                             {!! $home->intro_video ?? '' !!}
 
 
-
                         </div>
                     </div>
                 </div>
@@ -246,19 +245,29 @@
                                 <div class="row m-0 pt-3 pb-3">
                                     @foreach($featured as $f)
                                         <div class="col-lg-4 experts-items"
-                                             style="background-image: url('{{ asset($f->avator)}}');"
+                                             style="background-image: url('{{ asset($f["avator"])}}');"
                                              onclick="window.location.href='#'">
                                             <div class="member-names">
                                                 <span class="expt-name">
-                                                    @if(isset($f->firstname))
-                                                        {{ $f->firstname ." ".$f->lastname }}
+                                                    @if(isset($f["firstname"]))
+                                                        {{ $f["firstname"] ." ".$f["lastname"] }}
                                                     @else
-                                                        {{ $f->name }}
+                                                        {{ $f["name"] }}
                                                     @endif
                                                 </span>
-                                                {{-- <span class="expt-profession">
-                                                    Software engineer
-                                                </span> --}}
+
+                                                <span class="expt-profession">
+                                                       {{$f["bio"]}} <br>
+                                                    @if(!$f["skills"]->isEmpty())
+                                                        SKILLS:
+                                                    @endif
+                                                    @foreach($f["skills"] as $sk)
+                                                        {{$sk . ", "}}
+                                                    @endforeach
+                                                    @if(!$f["skills"]->isEmpty())
+                                                        and others
+                                                    @endif
+                                                </span>
                                             </div>
                                         </div>
                                     @endforeach

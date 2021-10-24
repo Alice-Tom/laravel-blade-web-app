@@ -28,7 +28,7 @@ class HomeController extends Controller
     private $education;
 
 
-    public function __construct(Home $home, Service $service, SubService $subService, Profile $profile, Client $client, Training $training, Blog $blog,Education $education)
+    public function __construct(Home $home, Service $service, SubService $subService, Profile $profile, Client $client, Training $training, Blog $blog, Education $education)
     {
         $this->home = $home;
         $this->service = $service;
@@ -37,7 +37,7 @@ class HomeController extends Controller
         $this->client = $client;
         $this->training = $training;
         $this->blog = $blog;
-        $this->education=$education;
+        $this->education = $education;
     }
 
     /**
@@ -59,28 +59,43 @@ class HomeController extends Controller
             ->where('account_type', 'expert')
             ->where('feature', "1")
             ->sortByDesc('experience_years')->first(function ($value) {
-
                 return true;
             });
 
         $featured2 =
             ($this->user->all()
-            ->where('account_type', 'expert')
-            ->where('feature', "1")->where('experience_years', '<', "5")
+                ->where('account_type', 'expert')
+                ->where('feature', "1")->where('experience_years', '<', "5")
+                ->sortByDesc('experience_years')->first(function ($value) {
+                    return true;
+                }
+                ));
+
+        $featured3 = $this->education->getTechnicalExperts()
             ->sortByDesc('experience_years')->first(function ($value) {
                 return true;
-            }
-            ));
+            });
 
-        $featured3=$this->education->getTechnicalExperts()
-            ->sortByDesc('experience_years')->first(function ($value) {
-            return true;
-        });
-
-
-        array_push($all_featured, $featured, $featured2,$featured3);
+        array_push($all_featured, $featured, $featured2, $featured3);
         $all_featured = collect($all_featured);
 
+
+        $all_featured = $all_featured->map(function ($item) {
+            $skills = User::find($item->id)->skills()->limit(2)->get();
+//            $item->concat($skills)->all();
+
+            $feat = [
+                "id" => $item->id, "avator" => $item->avator,
+                "firstname" => $item->firstname, "lastname" => $item->lastname,
+                "name" => $item->name, "bio" => $item->short_description,
+                "skills" =>
+                    $skills->map(function ($sk) {
+                        return $sk->skill;
+                    })
+            ];
+            return $feat;
+
+        });
 
         return view('welcome', [
             'home' => $home,
