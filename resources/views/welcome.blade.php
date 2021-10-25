@@ -97,7 +97,7 @@
 
         <div class="after-hero">
 
-            <div class="row squash w-100 m250">
+            <div class="row squash w-100 m40">
                 <div class="col-lg-6">
                     <img src="{{ asset($home->sec3_image ?? 'img/staff.png')}}" class="leftimage" role="img"
                          title="local staff" alt="local staff solutions tag"/>
@@ -214,7 +214,7 @@
                         </h2>
                         <p class="p40"> {{$home->staff_content ?? 'At SolutionsTag we are determined to promote local Tanzanian experts in the oil and gas industry. We offer staffing solutions for our clients.'}} </p>
 
-                        <a href="{{$home->staff_link ?? ''}}" class="btn-type-1 magic-hover magic-hover__square">
+                        <a href="{{ url('/expert')}}" class="btn-type-1 magic-hover magic-hover__square">
 						<span>
 
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -236,7 +236,7 @@
                                         <h1 class="title_03"> FEATURED EXPERTS </h1>
                                     </div>
                                     <div class="col-lg-6">
-                                        <a href="#" class="float-right"><h1 class="title_03"><span class="decor"> VIEW ALL </span>
+                                        <a href="{{ url('/expert')}}"  class="float-right"><h1 class="title_03"><span class="decor"> VIEW ALL </span>
                                             </h1></a>
                                     </div>
                                 </div>
@@ -392,7 +392,7 @@
 
     <section class="client-logos-section">
         <div class="container-lg-stag ">
-            <div class="m200">
+            <div class="m40">
                 <div class="row m-0">
                     <h3 class="title_02"><span class="light-text"> CLIENTS </span></h3>
                 </div>

@@ -22,9 +22,7 @@ class Client
     private function getAllParams($request){
         $params=[
             'name'=>$request->name,
-
         ];
-
         if($request->cover!=""){
             $params=$this->image->upload($params ,$request,'uploads/client/','cover');
         }

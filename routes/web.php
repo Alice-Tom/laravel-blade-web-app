@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ClientsController;
+use App\Http\Controllers\ExpertController;
+use App\Http\Controllers\TeamController;
 use App\Http\Controllers\UserSkillController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\Expert;
@@ -50,6 +52,7 @@ Route::get('services', function () {
 
 Route::get('training', [TrainingController::class, 'indexPublic']);
 
+Route::get('expert',[ExpertController::class,'index']);
 
 Route::get('resources', [BlogController::class, 'indexPublic']);
 Route::get('view-blog/{id}',[BlogController::class,'show']);
@@ -182,8 +185,19 @@ Route::middleware([Authenticate::class])->group(function () {
         Route::get('edit-home', [HomeController::class, 'form']);
         Route::post('home/update', [HomeController::class, 'createOrUpdate']);
 
+        //about
         Route::get('edit-about', [AboutController::class, 'index']);
         Route::post('about/update', [AboutController::class, 'createOrUpdate']);
+
+
+        //team
+        Route::get('all-team',[TeamController::class,'index']);
+        Route::get('add-team',[TeamController::class,'create']);
+        Route::post('new-team',[TeamController::class,'store']);
+
+
+
+
 
         //add features expert
         Route::any('update-feature/{id}', [DashboardController::class, 'changeFeature']);

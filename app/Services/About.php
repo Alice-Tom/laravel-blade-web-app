@@ -25,7 +25,9 @@ class About
     }
 
     public function createOrUpdate($request,$id=null){
+        $request["intro_link"] =str_replace("width=\"560\" height=\"315\"","width=\"860\" height=\"500\"", $request["intro_link"]);   //formatting size of video for display
         $arrayRequest = $request->all();
+
         if(!empty($request['intro_image'])){
             $arrayRequest =  $this->image->upload($arrayRequest ,$request,'uploads/About/','intro_image');
         }
@@ -42,4 +44,4 @@ class About
         }
         return $request->all();
     }
-}   
+}

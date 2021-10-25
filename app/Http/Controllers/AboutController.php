@@ -27,6 +27,7 @@ class AboutController extends Controller
     }
 
     public function createOrUpdate(Request $request){
+
         $data = $this->about->createOrUpdate($request);
         return redirect()->to('/edit-about');
     }

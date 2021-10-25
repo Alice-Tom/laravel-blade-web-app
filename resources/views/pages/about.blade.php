@@ -12,7 +12,7 @@
 	<div class="container-lg-stag inner-title">
 		<div class="row m-0 w-100">
 			<div class="col-lg-6">
-				<h2 class="title "> The Company <span class="circle"></span> About us</h2>
+				<h2 class="title "> The Company </h2>
 			</div>
 		</div>
 	</div>
@@ -43,15 +43,16 @@
 	<div class="forcetocenter">
 		<div class="videolg-container container-lg-stag">
 			<div class="video-container">
-				<video playsinline="playsinline" id="videostag" poster="{{ asset('img/stagvideo.jpg') }}">
-					<source src="{{ asset('video/stagvideo.mp4') }}" type="video/mp4">
-				</video>
-				<a href="{{$about->intro_link ?? ''}}" target="_blank" class="btn-type-1 magic-hover magic-hover__square light-text">
-						<span>
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 12.3301L9 16.6603L9 8L15 12.3301Z" fill="currentColor" /></svg>
-						</span>
-						<label> <em> Watch our story </em></label>
-				</a>
+                {!! $about->intro_link ?? '' !!}
+{{--				<video playsinline="playsinline" id="videostag" poster="{{ asset('img/stagvideo.jpg') }}">--}}
+{{--					<source src="{{ asset('video/stagvideo.mp4') }}" type="video/mp4">--}}
+{{--				</video>--}}
+{{--				<a href="{{$about->intro_link ?? ''}}" target="_blank" class="btn-type-1 magic-hover magic-hover__square light-text">--}}
+{{--						<span>--}}
+{{--							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 12.3301L9 16.6603L9 8L15 12.3301Z" fill="currentColor" /></svg>--}}
+{{--						</span>--}}
+{{--						<label> <em> Watch our story </em></label>--}}
+{{--				</a>--}}
 			</div>
 	</div>
 	</div>
@@ -71,23 +72,23 @@
 	</div>
 
 	<div class="row">
-		<div class="col-lg-6 cta-col-2 pt-5 pb-5">
+		<div class="col-lg-6 cta-col-2 pt-4 pb-4">
 			<i class="icon-feather-sun abs-inner-item"></i>
 			<h2 class="title_01"> <span class="light-text"> OUR MISSION </span> </h2>
-			<p class="p40">
+			<p >
 				{{$about->mission1_title ?? 'To engage collaboratively in creating better oil and gas sector through which, companies, government and local citizens will benefit from the sector.'}}
 			</p>
 		</div>
-		<div class="col-lg-6 cta-col-1 pt-5 pb-5">
+		<div class="col-lg-6 cta-col-1 pt-4 pb-4">
 			<i class="icon-feather-target abs-inner-item"></i>
 			<h2 class="title_01"> <span class="light-text"> OUR VISION </span> </h2>
-			<p class="p40">
+			<p >
 			{{$about->mission2_title ?? 'To engage collaboratively in creating better oil and gas sector through which, companies, government and local citizens will benefit from the sector.'}}
 			</p>
 		</div>
 	</div>
 
-	<div class="p200">
+	<div class="p40">
 		<div class="row m-0">
 			<div class="col-lg-4 greybg">
 				<!--<div class="lg-icon-cont">
@@ -108,7 +109,7 @@
 
 <section class="bgtxt">
 	<div class="container-lg-stag bgcutout">
-		<h1 class="lg-txt"> A better tomorrow </h1>
+		<h1 class="lg-txt"> Creating A better tomorrow </h1>
 	</div>
 </section>
 
@@ -125,7 +126,7 @@
 	</div>
 </section>
 
-<section class="container-lg-stag p200">
+<section class="container-lg-stag p90">
 	<div class="row m-0">
 		<h2 class="title_01 text-center pb-5"> OUR VALUE PROPOSITION </h2>
 	</div>

@@ -67,7 +67,7 @@
             fill="currentColor"/>
     </svg>
     <ul class="dropmenu" id="solution-dropdown">
-        <li><a href="{{ url('#')}}"> Experts </a></li>
+        <li><a href="{{ url('/expert')}}"> Experts </a></li>
         <li><a href="{{ url('#')}}"> Job Vacancies </a></li>
         {{-- <li><a href="{{ url('#')}}"> Experts </a></li>
         <li><a href="{{ url('#')}}"> Experts </a></li> --}}

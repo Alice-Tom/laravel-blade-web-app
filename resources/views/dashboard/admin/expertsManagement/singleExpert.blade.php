@@ -43,7 +43,6 @@
         <div class="dashboard-content-container" data-simplebar>
             <div class="dashboard-content-inner">
 
-
                 <!-- Row -->
                 <div class="row">
 
