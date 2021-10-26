@@ -115,12 +115,12 @@
 
 <section class="container-lg-stag">
 	<div class="smbox bgprimary-main">
-		<h2 class="title_01 text-center"> Our Tagline means </h2>
+		<h2 class="title_01 text-center"> {{$about->tag_title ?? ''}} </h2>
 		<div class="row m-0">
 			<ul class="listPrimary">
-				<li> A better tomorrow for local oil and gas industry</li>
-				<li> A better tomorrow for local expertise.</li>
-				<li>A better tomorrow for our partners</li>
+				<li> {{$about->tag_description1 ?? ''}}</li>
+				<li> {{$about->tag_description2 ?? ''}}</li>
+				<li>{{$about->tag_description3 ?? ''}}</li>
 			</ul>
 		</div>
 	</div>
@@ -128,27 +128,27 @@
 
 <section class="container-lg-stag p90">
 	<div class="row m-0">
-		<h2 class="title_01 text-center pb-5"> OUR VALUE PROPOSITION </h2>
+		<h2 class="title_01 text-center pb-5"> {{$about->proposition_title ?? ''}} </h2>
 	</div>
 	<div class="row m-0">
 		<div class="col-lg-4">
 			<i class="icon-material-outline-account-balance-wallet s-icon"></i>
-			<h3 class="title_03"> Cost Minimization </h3>
+			<h3 class="title_03"> {{$about->proposition_name1 ?? ''}} </h3>
 			<p>
-				We are cost conscious for our clients because we do understand how important it is in optimizing business profitability.
+				{{$about->proposition_description1 ?? ''}}
 			</p>
 		</div>
 		<div class="col-lg-4">
 			<i class="icon-material-outline-explore s-icon"></i>
-			<h3 class="title_03">  Performance Optimization </h3>
+			<h3 class="title_03">  {{$about->proposition_name2 ?? ''}} </h3>
 			<p>
-				Being team or facilities performance, when optimized, it reduces OPEX which is the key to any business operations. We want to help our clients, optimizeperformance.			</p>
+				{{$about->proposition_description2 ?? ''}}</p>
 		</div>
 		<div class="col-lg-4">
 			<i class="icon-material-outline-beach-access s-icon"></i>
-			<h3 class="title_03">   Environmental Footprint </h3>
+			<h3 class="title_03">   {{$about->proposition_name3 ?? ''}} </h3>
 			<p>
-			We understand that, if not well attended has cost implication in business. As we are partnering with our clients, we want to help them eliminate environmental associated costs.		</div>
+				{{$about->proposition_description3 ?? ''}}	</div>
 	</div>
 </section>
 
