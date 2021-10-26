@@ -60,7 +60,7 @@
                         <div class="content with-padding padding-bottom-10">
                             <div class="row m-0">
                                 <label> Client Name </label>
-                                <input class="with-border" name="name" value="">
+                                <input required class="with-border" name="name" value="">
                             </div>
 
 
@@ -72,7 +72,7 @@
                                         <div class="avatar-wrapper" data-tippy-placement="bottom">
                                             <img class="profile-pic" src="" alt="" />
                                             <div class="upload-button"></div>
-                                            <input class="file-upload" type="file" name="cover" accept="image/*" />
+                                            <input required class="file-upload" type="file" name="cover" accept="image/*" />
                                         </div>
                                     </div>
                                 </div>

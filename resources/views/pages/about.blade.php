@@ -152,4 +152,40 @@
 	</div>
 </section>
 
+
+<section class="container-lg-stag p90">
+    <div class="row m-0">
+        <h2 class="title_01 text-center pb-5">{{$about->team_title ?? ''}}   </h2>
+    </div>
+    <div class="row m-0">
+        <div class="col-lg-4">
+
+            <p>
+               {{$about->team_description ?? ''}}
+            </p>
+        </div>
+
+    </div>
+
+    <div class="">
+        @foreach($team as $t)
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src=" {{URL::asset($t->avator)}}" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{$t->name}}</h5>
+                            <p class="card-text">{{$t->position}}</p>
+                            <p class="card-text"><small class="text-muted">{{$t->link}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
+</section>
+
+
 @endsection

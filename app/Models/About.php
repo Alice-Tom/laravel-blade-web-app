@@ -30,7 +30,10 @@ class About extends Model
         'culture_description_blockquote',
 
         'proposition_title',
-        'proposition_icon'
+        'proposition_icon',
+
+        'team_title',
+        'team_description',
 
     ];
 }
