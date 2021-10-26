@@ -153,7 +153,7 @@
 </section>
 
 
-<section class="container-lg-stag p90">
+<section class="container-lg-stag p90" id="team" >
     <div class="row m-0">
         <h2 class="title_01 text-center pb-5">{{$about->team_title ?? ''}}   </h2>
     </div>

@@ -33,6 +33,7 @@ use App\Http\Controllers\LanguagesController;
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/about', [AboutController::class, 'aboutPage']);
+Route::get('/team', [AboutController::class, 'aboutPageTeam']);
 
 
 Route::get('/privacy-policy', function () {
@@ -75,9 +76,9 @@ Route::get('new-service-category', function () {
 
 Route::get('view-training/{id}',  [TrainingController::class, 'viewPublic']);
 
-Route::get('team', function () {
-    return view('pages.team');
-});
+//Route::get('team', function () {
+//    return view('pages.team');
+//});
 
 Route::get('projects', function () {
     return view('pages.projects');

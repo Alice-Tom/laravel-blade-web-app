@@ -19,12 +19,21 @@ class AboutController extends Controller
     public function aboutPage()
     {
         $about = $this->about->all();
-
-        $team=Team::all();
+        $team = Team::all();
 
         return view('pages.about', [
             'about' => $about,
-            'team'=>$team
+            'team' => $team
+        ]);
+    }
+    public function aboutPageTeam()
+    {
+        $about = $this->about->all();
+        $team = Team::all();
+
+        return view('pages.about', [
+            'about' => $about,
+            'team' => $team
         ]);
     }
 

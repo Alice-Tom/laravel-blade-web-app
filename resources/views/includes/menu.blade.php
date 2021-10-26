@@ -7,7 +7,7 @@
 
     <ul class="dropmenu" id="company-dropdown">
         <li><a href="{{ url('about') }}"> About us </a></li>
-        {{--		<li> <a href="{{ url('team')}}"> The team </a></li>--}}
+        		<li> <a href="{{ url('team')}}#team"> The team </a></li>
         {{--		<li> <a href="{{ url('projects')}}"> Projects </a></li>--}}
     </ul>
 </li>
