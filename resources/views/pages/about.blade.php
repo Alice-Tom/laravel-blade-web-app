@@ -167,10 +167,11 @@
 
     </div>
 
-    <div class="">
+    <div class="team_row">
+		{{-- <div class="col-lg-6"> --}}
         @foreach($team as $t)
             <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
+                <div class="team_row2 no-gutters">
                     <div class="col-md-4">
                         <img src=" {{URL::asset($t->avator)}}" class="card-img" alt="...">
                     </div>
@@ -183,8 +184,11 @@
                     </div>
                 </div>
             </div>
+			&nbsp
+			&nbsp
         @endforeach
-    </div>
+    {{-- </div> --}}
+	</div>
 </section>
 
 

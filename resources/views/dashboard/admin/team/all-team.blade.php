@@ -49,22 +49,26 @@
                     <h4> ALL TEAM MEMBER </h4>
                 </div>
 
-                @foreach($team as $t)
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src=" {{URL::asset($t->avator)}}" class="card-img" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{$t->name}}</h5>
-                                    <p class="card-text">{{$t->positon}}</p>
-                                    <p class="card-text"><small class="text-muted">{{$t->link}}</small></p>
+                <div class="team_row">
+                    <div class="col-lg-6">
+                    @foreach($team as $t)
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src=" {{URL::asset($t->avator)}}" class="card-img" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{$t->name}}</h5>
+                                        <p class="card-text">{{$t->position}}</p>
+                                        <p class="card-text"><small class="text-muted">{{$t->link}}</small></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
+                </div>
 
             </div>
         </div>
