@@ -12,7 +12,7 @@
         <div class="container-lg-stag inner-title">
             <div class="row m-0 w-100">
                 <div class="col-lg-12">
-                    <h2 class="title">{{ $service->service->title }} </h2>
+                    <h2 class="title">{{ $service->title }} </h2>
                 </div>
             </div>
         </div>

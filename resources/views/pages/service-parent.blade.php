@@ -13,7 +13,7 @@
             <div class="row m-0 w-100">
                 <div class="col-lg-6">
                     <h2 class="title text-white">
-                        {{ $service->title }}
+                        {{ $selectedService->title }}
                         {{-- <span class="circle"></span> Reservoir Management Services --}}
                     </h2>
                 </div>
@@ -28,12 +28,12 @@
         <div class="center-cols train-section">
             <div class="row w-100 ">
                 <div class="col-lg-6">
-                    <h2 class="title_01"> {{ $service->title }} </h2>
-                    <p class="m40"> {{ $service->description }} </p>
+                    <h2 class="title_01"> {{ $selectedService->title }} </h2>
+                    <p class="m40"> {{ $selectedService->description }} </p>
                 </div>
                 <div class="col-lg-6">
                     <div class="training-img-container">
-                        <img src="{{ asset($service->cover)}}" class="leftimage" role="img" title="local staff"
+                        <img src="{{ asset($selectedService->cover)}}" class="leftimage" role="img" title="local staff"
                              alt="local staff solutions tag"/>
                     </div>
                 </div>
@@ -56,6 +56,7 @@
                                     href="/service/{{$service->id."/".$service->title}}">{{$service->title}}</a>
                             </button>
                         @endforeach
+
                     </div>
                 </div>
 
@@ -64,59 +65,66 @@
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <h2 class="title_01"> {{ $service->bottom_title }} </h2>
+                                <h2 class="title_01"> {{ $selectedService->bottom_title }} </h2>
                                 <p class="m40" style="text-align: justify;">
-                                    {{ $service->bottom_description }}
+                                    {{ $selectedService->bottom_description }}
                                 </p>
                                 <div class="btn-descr-img"
-                                     style="background-image: url('{{URL::asset($service->bottom_cover)}}') ;">
+                                     style="background-image: url('{{URL::asset($selectedService->bottom_cover)}}') ;">
 
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <h2 class="title_01"> {{ $service->bottom_title }} </h2>
-                                <p class="m40" style="text-align: justify;">
-                                    {{ $service->bottom_description }}
-                                </p>
-                                <div class="btn-descr-img"
-                                     style="background-image: url('{{URL::asset($service->bottom_cover)}}') ;">
+                            @if($selectedService->bottom_title2!=null)
+                                <div class="carousel-item">
+                                    <h2 class="title_01"> {{ $selectedService->bottom_title2 }} </h2>
+                                    <p class="m40" style="text-align: justify;">
+                                        {{ $selectedService->bottom_description2 }}
+                                    </p>
+                                    <div class="btn-descr-img"
+                                         style="background-image: url('{{URL::asset($selectedService->bottom_cover2)}}') ;">
 
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="carousel-item">
-                                <h2 class="title_01"> {{ $service->bottom_title }} </h2>
-                                <p class="m40" style="text-align: justify;">
-                                    {{ $service->bottom_description }}
-                                </p>
-                                <div class="btn-descr-img"
-                                     style="background-image: url('{{URL::asset($service->bottom_cover)}}') ;">
+                            @endif
+                            @if($selectedService->bottom_title3!=null)
+                                <div class="carousel-item">
+                                    <h2 class="title_01"> {{ $selectedService->bottom_title3 }} </h2>
+                                    <p class="m40" style="text-align: justify;">
+                                        {{ $selectedService->bottom_description3 }}
+                                    </p>
+                                    <div class="btn-descr-img"
+                                         style="background-image: url('{{URL::asset($selectedService->bottom_cover3)}}') ;">
 
+                                    </div>
                                 </div>
-                            </div>
+                            @endif
+
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                           data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                           data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
 
-{{--                    <h2 class="title_01"> {{ $service->bottom_title }} </h2>--}}
-{{--                    <p class="m40" style="text-align: justify;">--}}
-{{--                        {{ $service->bottom_description }}--}}
-{{--                    </p>--}}
-{{--                    <div class="btn-descr-img"--}}
-{{--                         style="background-image: url('{{URL::asset($service->bottom_cover)}}') ;">--}}
+                    {{--                    <h2 class="title_01"> {{ $service->bottom_title }} </h2>--}}
+                    {{--                    <p class="m40" style="text-align: justify;">--}}
+                    {{--                        {{ $service->bottom_description }}--}}
+                    {{--                    </p>--}}
+                    {{--                    <div class="btn-descr-img"--}}
+                    {{--                         style="background-image: url('{{URL::asset($service->bottom_cover)}}') ;">--}}
 
-{{--                    </div>--}}
+                    {{--                    </div>--}}
                 </div>
             </div>
 
             <div class="row m-0 pt-10 service-items">
-                @foreach ($service->subService as $sub )
+                @foreach ($selectedService->subService as $sub )
                     @php
                         $sub_slug = str_slug($sub->title, '-');
                     @endphp
