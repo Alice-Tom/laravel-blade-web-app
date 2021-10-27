@@ -43,7 +43,14 @@ a {
     display: block;
 }
 
-
+.team_row{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    align-items: center;
+    justify-content: space-between;
+}
 
 /* Slider */
 .slider-item {
