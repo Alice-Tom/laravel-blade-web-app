@@ -120,7 +120,7 @@
 			<ul class="listPrimary">
 				<li> A better tomorrow for local oil and gas industry</li>
 				<li> A better tomorrow for local expertise.</li>
-				<li>A better tomorrow for our partners</li>
+				<li>A better tomorrow for our partners  </li>
 			</ul>
 		</div>
 	</div>

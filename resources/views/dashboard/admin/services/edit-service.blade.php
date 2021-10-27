@@ -64,13 +64,13 @@
 							<input class="with-border" name="title" value="{{ $service->title }}" required>
 						</div>
 
-						<div class="row mt-2"> 
+						<div class="row mt-2">
 							<div class="col-xl-12">
 								<label> Service Description </label>
 								<textarea rows="10" name="description">{{ $service->description }}</textarea>
 							</div>
 						</div>
-						
+
 						<div class="row mt-2">
 							<div class="col-xl-12">
 								<label> Service Cover Image Replace </label>
@@ -101,13 +101,13 @@
 							<input class="with-border" name="bottom_title" value="{{ $service->bottom_title }}">
 						</div>
 
-						<div class="row mt-2"> 
+						<div class="row mt-2">
 							<div class="col-xl-12">
 								<label> Description </label>
 								<textarea rows="10" name="bottom_description"> {{ $service->bottom_description }}</textarea>
 							</div>
 						</div>
-						
+
 						<div class="row mt-2">
 							<div class="col-xl-12">
 								<label> Image Replace</label>
@@ -123,6 +123,63 @@
 						</div>
 
 					</div>
+
+                    <div class="content with-padding padding-bottom-10">
+                        <div class="row m-0">
+                            <label> Title </label>
+                            <input class="with-border" name="bottom_title2" value="{{ $service->bottom_title2 }}">
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-xl-12">
+                                <label> Description </label>
+                                <textarea rows="10" name="bottom_description2"> {{ $service->bottom_description2 }}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-xl-12">
+                                <label> Image Replace</label>
+                                <div class="submit-field">
+                                    <div class="avatar-wrapper" data-tippy-placement="bottom">
+                                        <img class="profile-pic2" src="" alt="" />
+                                        <div class="upload-button2"></div>
+                                        <input class="file-upload2" type="file" name="bottom_cover2" accept="image/*" />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="content with-padding padding-bottom-10">
+                        <div class="row m-0">
+                            <label> Title </label>
+                            <input class="with-border" name="bottom_title3" value="{{ $service->bottom_title3 }}">
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-xl-12">
+                                <label> Description </label>
+                                <textarea rows="10" name="bottom_description3"> {{ $service->bottom_description3 }}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-xl-12">
+                                <label> Image Replace</label>
+                                <div class="submit-field">
+                                    <div class="avatar-wrapper" data-tippy-placement="bottom">
+                                        <img class="profile-pic3" src="" alt="" />
+                                        <div class="upload-button3"></div>
+                                        <input class="file-upload3" type="file" name="bottom_cover3" accept="image/*" />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
 				</div>
 
 				{{-- <!-- Segment -->
