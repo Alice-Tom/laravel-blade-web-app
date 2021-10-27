@@ -84,13 +84,8 @@
                                 <label> Linkedin Profile Link </label>
                                 <input required class="with-border" name="link" value="">
                             </div>
-
-
                         </div>
                     </div>
-
-
-
                     <div class="row m-0 mt-5 mb-5">
                         <button type="submit" class="button btn-outline-primary ripple-effect" > SUBMIT </button>
                     </div>

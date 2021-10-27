@@ -206,6 +206,46 @@
                     <div class="dashboard-box mt-3 mb-3">
                         <!-- Headline -->
                         <div class="headline">
+                            <h3><i class="icon-feather-folder-plus"></i>OUR TAGLINE MEANS </h3>
+                        </div>
+
+                        <div class="content with-padding padding-bottom-10">
+                            <div class="row m-0">
+                                <label> Tag Title </label>
+                                <input class="with-border" name="tag_title"
+                                       value="{{$about->tag_title ?? '' }}">
+                            </div>
+    
+                            
+                            <div class="row mt-2">
+                                <div class="col-xl-12">
+                                    <label> Tag description one </label>
+                                    <textarea rows="2"
+                                              name="tag_description1">{{$about->tag_description1 ?? '' }}</textarea>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-xl-12">
+                                    <label> Tag description two </label>
+                                    <textarea rows="2"
+                                              name="tag_description2">{{$about->tag_description2 ?? '' }}</textarea>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-xl-12">
+                                    <label> Tag description three </label>
+                                    <textarea rows="2"
+                                              name="tag_description3">{{$about->tag_description3 ?? '' }}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-box mt-3 mb-3">
+                        <!-- Headline -->
+                        <div class="headline">
                             <h3><i class="icon-feather-folder-plus"></i> VALUE PROPOSITION </h3>
                         </div>
 
@@ -221,6 +261,42 @@
                                     <label> Icon </label>
                                     <input class="with-border icon-select" placeholder="select icon"
                                            name="proposition_icon" name="{{$about->proposition_icon ?? ''}}">
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="row m-0">
+                                    <label> First proposition name </label>
+                                    <input class="with-border" name="proposition_name1"
+                                           name="{{$about->proposition_name1 ?? ''}}">
+                                </div>
+                                <div class="col-xl-12">
+                                    <label> Description one </label>
+                                    <textarea rows="2"
+                                              name="proposition_description1">{{$about->proposition_description1 ?? '' }}</textarea>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="row m-0">
+                                    <label> Proposition name 2 </label>
+                                    <input class="with-border" name="proposition_name2"
+                                           name="{{$about->proposition_name2 ?? ''}}">
+                                </div>
+                                <div class="col-xl-12">
+                                    <label> Description two </label>
+                                    <textarea rows="2"
+                                              name="proposition_description2">{{$about->proposition_description2 ?? '' }}</textarea>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="row m-0">
+                                    <label> Proposition name 3 </label>
+                                    <input class="with-border" name="proposition_name3"
+                                           name="{{$about->proposition_name3 ?? ''}}">
+                                </div>
+                                <div class="col-xl-12">
+                                    <label> Description three </label>
+                                    <textarea rows="2"
+                                              name="proposition_description3">{{$about->proposition_description3 ?? '' }}</textarea>
                                 </div>
                             </div>
 
