@@ -46,7 +46,7 @@
         </div>
     </section>
 
-    <section class="container-lg-stag pt-5 pb-5">
+    <section class="container-lg-stag-2 pt-5 pb-5">
         {{-- <div class="row m-0">
             <h2 class="title_01 text-center pb-5"> {{ $service->bottom_title }} </h2>
         </div> --}}

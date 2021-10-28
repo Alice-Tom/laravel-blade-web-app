@@ -44,7 +44,7 @@
 
     <section class="featuresmain ">
 
-        <div class="container-lg-stag">
+        <div class="container-lg-stag-2">
 
             <div class="row m-0">
 
