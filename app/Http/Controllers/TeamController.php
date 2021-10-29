@@ -10,7 +10,7 @@ class TeamController extends Controller
 {
 
     protected $image;
-
+    private $team;
 
     public function __construct(Image $image)
     {
@@ -120,8 +120,9 @@ class TeamController extends Controller
      * @param \App\Models\Team $team
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Team $team)
+    public function destroy($id)
     {
-        //
+        $t = Team::where('id',$id)->delete();
+        return redirect()->back();
     }
 }

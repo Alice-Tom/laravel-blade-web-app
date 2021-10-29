@@ -170,10 +170,10 @@
     <div class="team_row">
 		{{-- <div class="col-lg-6"> --}}
         @foreach($team as $t)
-            <div class="card mb-3" style="max-width: 540px;">
+            <div class="card mb-3" style="max-width: 540px; max-height: 540px;">
                 <div class="team_row2 no-gutters">
                     <div class="col-md-4">
-                        <img src=" {{URL::asset($t->avator)}}" class="card-img" alt="...">
+                        <img src=" {{URL::asset($t->avator)}}" class="card-img" alt="..." style="max-width: 540px; max-height: 540px;">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">

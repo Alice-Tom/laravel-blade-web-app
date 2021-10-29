@@ -195,9 +195,7 @@ Route::middleware([Authenticate::class])->group(function () {
         Route::get('all-team',[TeamController::class,'index']);
         Route::get('add-team',[TeamController::class,'create']);
         Route::post('new-team',[TeamController::class,'store']);
-
-
-
+        Route::get('delete-team/{id}',[TeamController::class,'destroy']);
 
 
         //add features expert

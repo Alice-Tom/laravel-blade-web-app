@@ -62,6 +62,10 @@
                                         <h5 class="card-title">{{$t->name}}</h5>
                                         <p class="card-text">{{$t->position}}</p>
                                         <p class="card-text"><small class="text-muted">{{$t->link}}</small></p>
+
+                                        <a class="button ripple-effect big margin-top-30" href={{'delete-team/'.$t->id}}>
+                                          <button class="btn btn-danger">Delete {{$t->name}}</button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

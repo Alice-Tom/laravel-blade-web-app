@@ -54,7 +54,7 @@
 
                             </div>
 
-                            <a href={{'delete-client/'.$client->id}}>
+                            <a class="button ripple-effect big margin-top-30" href={{'delete-client/'.$client->id}}>
                                 <button class="btn btn-danger">delete {{$client->name}}</button>
                             </a>
                         </div>
